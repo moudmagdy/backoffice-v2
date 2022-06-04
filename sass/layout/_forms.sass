@@ -1,0 +1,602 @@
+fieldset
+    &:not(.collapsible)
+        &:not(:last-child)
+            padding-bottom: rem(15px)
+            border-bottom: rem(1px) solid #ececec
+            margin-bottom: rem(15px)
+
+        legend
+            display: flex
+            color: #4D4D4D
+            margin-bottom: rem(18px)
+
+    &.collapsible
+        border-bottom: rem(1px) solid #ececec
+        padding-bottom: rem(15px)
+
+        legend
+            margin-bottom: 0
+
+        &:not(:last-child)
+            margin-bottom: rem(15px)
+
+    // &:not(:first-child)
+    //     padding-top: rem(20px)
+
+input
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+
+    &[type="number"]
+        -moz-appearance: textfield
+
+.btn,
+button,
+[type="submit"],
+[type="button"]
+    &:focus
+        box-shadow: none !important
+
+[type="number"]
+    [dir="rtl"] &
+        direction: rtl
+
+    [dir="ltr"] &
+        direction: ltr
+
+.form-label,
+.col-form-label,
+.form-check-label
+    color: #4D4D4D
+
+.form-control
+    &::placeholder
+        color: #C6CFD9
+
+    &[readonly]
+        background-color: #F5F5F5
+        border-color: #F5F5F5
+
+        &:focus
+            border-color: #F5F5F5
+            box-shadow: none
+
+.form-control:not(textarea),
+.form-select,
+.form-tags-control
+    max-height: rem(48px)
+
+.form-control,
+.form-select,
+.form-tags-control
+    line-height: 1.5
+    border: rem(2px) solid #C6CFD9
+    border-radius: rem(12px)
+    padding: 0.725rem 0.75rem
+
+    &:focus
+        +var(border-color, color-brand)
+        box-shadow: 0 0 0 0.25rem lighten($color-brand, 40%)
+
+.form-check
+    display: inline-flex
+    align-items: center
+    gap: rem(8px)
+    padding-right: 0
+    margin-bottom: 0
+
+.form-check-input
+    &:not(.form-switch &)
+        width: rem(18px)
+        height: rem(18px)
+        border: rem(2px) solid #CBD0D6
+        float: none
+        margin-top: 0
+        margin-right: 0
+
+        &:checked
+            +var(background-color, color-brand)
+            +var(border-color, color-brand)
+
+    &:not(.form-switch &, &[type="radio"])
+        border-radius: rem(5px)
+
+.form-file
+    display: none
+
+    & + label
+        display: flex
+        align-items: center
+        gap: rem(15px)
+        line-height: 1.15
+        border: rem(2px) solid #CBD0D6
+        border-radius: rem(12px)
+        cursor: pointer
+        padding: 0.625rem 0.95rem
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+
+        svg
+            fill: #4D4D4D
+
+        .form-file__label
+            direction: ltr
+            color: #65676B
+
+        &:active
+            +var(border-color, color-brand)
+            box-shadow: 0 0 0 0.25rem lighten($color-brand, 40%)
+
+.form-select
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.8' height='16.2' viewBox='0 0 8.8 16.2'%3E%3Cpath fill='%23E4E6EB' d='M0,11.8l4.4,4.4l4.4-4.4H0z M0,4.4L4.4,0l4.4,4.4L0,4.4z'/%3E%3C/svg%3E")
+    background-size: rem(8.8px) rem(16.2px)
+    padding-inline-end: 2rem
+
+.currency-symbol
+    position: relative
+
+    &::before
+        content: attr(data-symbol)
+        position: absolute
+        inset-inline-end: 0.95rem
+        display: flex
+        align-items: center
+        height: 100%
+        font-size: rem(12px)
+
+    .form-control
+        padding-inline-end: 2.8rem
+
+.unit-symbol
+    position: relative
+
+    &::before
+        content: attr(data-unit)
+        position: absolute
+        inset-inline-end: 0.95rem
+        display: flex
+        align-items: center
+        height: 100%
+        font-size: rem(12px)
+
+    .form-control
+        padding-inline-end: 2.8rem
+
+.percentage-symbol
+    position: relative
+
+    &::before
+        position: absolute
+        right: 0.95rem
+        top: 50%
+        transform: translateY(-50%)
+        content: "%"
+        font-size: 12px
+
+    .form-control
+        padding-right: 2.8rem
+        text-align: left
+
+.input-with-icon
+    position: relative
+    display: flex
+    align-items: center
+
+    svg
+        position: absolute
+        inset-inline-start: 0.95rem
+        width: 20px
+        height: 20px
+        pointer-events: none
+        fill: #C6CFD9
+
+    .form-control,
+    .form-select
+        padding-inline-start: calc((0.95rem * 2) + 20px)
+
+.form-datepicker
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.8' height='16.2' viewBox='0 0 8.8 16.2'%3E%3Cpath fill='%23E4E6EB' d='M0,11.8l4.4,4.4l4.4-4.4H0z M0,4.4L4.4,0l4.4,4.4L0,4.4z'/%3E%3C/svg%3E")
+    background-size: rem(8.8px) rem(16.2px)
+    background-repeat: no-repeat
+    background-position: left .75rem center
+
+    .home-page &
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.8' height='16.2' viewBox='0 0 8.8 16.2'%3E%3Cpath fill='%233892FF' d='M0,11.8l4.4,4.4l4.4-4.4H0z M0,4.4L4.4,0l4.4,4.4L0,4.4z'/%3E%3C/svg%3E")
+
+.form-switch
+    display: flex
+    align-items: center
+    gap: rem(10px)
+    padding-right: 0
+
+.form-switch-input
+    display: none
+    appearance: none
+    -webkit-print-color-adjust: exact
+    color-adjust: exact
+
+.form-switch-btn
+    position: relative
+    display: flex
+    align-items: center
+    cursor: pointer
+    padding: rem(2px)
+
+    &::before,
+    &::after
+        content: ""
+        transition: all 0.3s
+
+    &::before
+        width: rem(34px)
+        height: rem(18px)
+        background-color: #dae0e7
+        border-radius: rem(9px)
+
+    &::after
+        position: absolute
+        inset-inline-start: 0
+        width: rem(20px)
+        height: rem(20px)
+        border-radius: 50%
+        background-color: #F6F6F6
+        box-shadow: 0 0 rem(3px) rgba(0, 0, 0, 0.15)
+
+    .form-switch-input:checked + &
+        &::before
+            background-color: #c4e0fc
+
+        &::after
+            +var(background-color, color-brand)
+            inset-inline-start: calc(100% - 20px)
+
+.form-tags-control__container
+    position: relative
+
+.form-tags-control
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: rem(10px)
+    width: 100%
+    min-height: rem(48px)
+    padding: rem(6px) 0.75rem
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+
+    &:focus-within
+        +var(border-color, color-brand)
+        box-shadow: 0 0 0 0.25rem lighten($color-brand, 40%)
+
+.form-tags-control__tag
+    display: flex
+    align-items: center
+    gap: rem(5px)
+    height: rem(32px)
+    line-height: inherit
+    background-color: rgba(198, 207, 217, 0.48)
+    border: rem(1px) solid #C6CFD9
+    border-radius: rem(16px)
+    pointer-events: auto
+    padding: 0 rem(5px)
+    padding-inline-start: rem(10px)
+    margin: 0
+    transition: background-color 0.3s
+
+    &:hover
+        background-color: rgba(198, 207, 217, 0.68)
+
+.form-tags-control__tag__label
+    display: flex
+    font-size: rem(12px)
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif
+
+.form-tags-control__tag__delete
+    +flex-center
+    align-self: center
+    justify-self: flex-end
+    width: rem(22px)
+    height: rem(22px)
+    border-radius: 50%
+    transition: background-color 0.3s
+
+    svg
+        width: rem(8px)
+        height: rem(8px)
+        fill: #060505
+        pointer-events: none
+
+    &:hover
+        background-color: rgba(198, 207, 217, 0.78)
+
+.form-tags-control__input
+    display: flex
+    flex: 1 1 auto
+    height: 100%
+
+.search-result
+    position: absolute
+    top: 100%
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    gap: rem(10px)
+    background-color: #eef0f8
+    border-radius: rem(6px)
+    padding: rem(10px)
+    z-index: 1
+    box-shadow: 0 rem(6px) rem(10px) rgba(0, 0, 0, 0.12)
+
+    a
+        display: inline-flex
+        align-items: center
+        height: rem(32px)
+        line-height: inherit
+        font-size: rem(12px)
+        text-decoration: none
+        color: inherit
+        background-color: rgba(198, 207, 217, 0.48)
+        border: rem(1px) solid #C6CFD9
+        border-radius: rem(16px)
+        padding: 0 rem(10px)
+        transition: background-color 0.3s
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
+
+        &:hover
+            background-color: rgba(198, 207, 217, 0.68)
+
+.form-select--with-icon
+    display: flex
+    align-items: center
+    max-height: rem(48px)
+    border: rem(2px) solid #C6CFD9
+    border-radius: rem(12px)
+    overflow: hidden
+
+    &:focus-within
+        +var(border-color, color-brand)
+        box-shadow: 0 0 0 0.25rem lighten($color-brand, 40%)
+
+    label
+        +flex-center
+        height: 100%
+        padding-inline-start: rem(12px)
+
+    svg
+        width: rem(15px)
+
+    .form-select
+        height: rem(44px)
+        appearance: none
+        border: none
+        padding: 0.6rem 0.75rem !important
+
+        &:focus
+            box-shadow: none
+
+.form__group
+    display: flex
+
+.form__group__col
+    flex: 1 1
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+
+    & > *
+        &:focus-within,
+        &:focus
+            z-index: 1
+
+    &:first-child,
+    &:last-child
+        flex-basis: 15%
+
+    &:not(:first-child, :last-child)
+        & > *
+            border-radius: 0 !important
+
+    &:not(:first-child)
+        margin-right: rem(-2px)
+
+    &:first-child
+        & > *
+            border-start-end-radius: 0 !important
+            border-end-end-radius: 0 !important
+
+    &:last-child
+        & > *
+            border-start-start-radius: 0 !important
+            border-end-start-radius: 0 !important
+
+.password__field
+    &:not(.passcode--field)
+        position: relative
+        display: flex
+        align-items: center
+
+    &:not(.passcode--field)
+        .show__password
+            position: absolute
+            inset-inline-end: 0.95rem
+
+    .show__password
+        +flex-center
+
+        svg
+            fill: #C6CFD9
+            transition: fill 0.3s
+
+            &:last-child
+                display: none
+
+        &:hover
+            svg
+                fill: #8E949A
+
+    &.password--shown
+        .show__password
+            svg
+                fill: #060505
+
+                &:first-child
+                    display: none
+
+                &:last-child
+                    display: block
+
+    &:not(.passcode--field)
+        [type="password"]
+            padding-inline-end: calc(0.95rem + 18px + 0.95rem)
+
+.passcode--field
+    display: flex
+    gap: rem(30px)
+
+.code__inputs
+    display: flex
+    justify-content: space-between
+    gap: rem(25px)
+    max-width: max-content
+
+    [dir="rtl"] &
+        direction: ltr
+
+    .form-control
+        width: rem(65px)
+        height: rem(78px)
+        font-size: rem(30px)
+        text-align: center
+        padding: 0.725rem 0.65rem
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
+
+.error-msg
+    display: block
+    font-size: rem(12px)
+
+.iti__flag-container
+    direction: ltr
+
+    .dropdown-toggle
+        transition: background-color 0.3s ease-in-out
+
+    .dropdown-menu
+        border: none !important
+        overflow: hidden
+        padding: 0 !important
+
+.iti__selected-flag
+    width: auto !important
+    gap: rem(5px)
+    border-radius: rem(12px) 0 0 rem(12px)
+    padding: 0.725rem 0.75rem !important
+
+.selected-dial-code
+    font-size: rem(14px)
+    color: #212529
+    margin-left: 0 !important
+
+.iti__arrow
+    width: 0
+    height: 0
+    border-left: rem(5px) solid transparent !important
+    border-right: rem(5px) solid transparent !important
+    border-top: rem(5px) solid #c6cfd9 !important
+    margin-left: 0 !important
+
+.iti
+    .search-container
+        cursor: default
+        padding: rem(10px)
+
+        input
+            line-height: 1.2
+            font-size: rem(14px)
+            border: rem(2px) solid #C6CFD9 !important
+            border-radius: rem(12px)
+            padding: 0.725rem 0.75rem !important
+
+    .form-control
+        padding: 0.725rem 0.75rem !important
+        padding-inline-start: calc(85px + 0.75rem) !important
+
+.iti__country
+    display: flex
+    align-items: center
+    gap: rem(5px)
+    padding-block: rem(8px) !important
+
+.iti__divider
+    padding-bottom: rem(1px) !important
+    margin-bottom: 0 !important
+    border-color: #f0f0f0 !important
+
+.iti__flag-box,
+.iti__country-name
+    margin-right: 0
+
+.iti__country-name,
+.iti__dial-code
+    font-size: rem(14px)
+
+.iti__dial-code
+    margin-inline-start: auto
+
+.iti__country-list
+    box-shadow: 0 rem(1px) rem(4px) rgba(0, 0, 0, 0.2) !important
+    +scrollbar
+
+.iti__flag
+    border-radius: rem(2px)
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid,
+.form-select.is-invalid:not([multiple]):not([size]),
+.form-select.is-invalid:not([multiple])[size="1"],
+.was-validated .form-select:invalid:not([multiple]):not([size]),
+.was-validated .form-select:invalid:not([multiple])[size="1"]
+    background-image: none
+
+.ng-dropdown-panel
+    top: 100%
+    left: 0
+    display: flex
+    flex-direction: column
+    gap: rem(10px)
+    background-color: #fff
+    border-radius: rem(12px)
+    box-shadow: 0 0 rem(5px) rgba(0, 0, 0, 0.15)
+    padding: rem(8px) 0
+    transition: all 0.2s ease-in-out
+
+    .ng-dropdown-panel-items
+        .ng-option
+            display: flex !important
+            align-items: center
+            padding: rem(8px) rem(12px)
+
+            &:hover
+                background-color: rgba(0, 0, 0, 0.03)
+
+    .ng-dropdown-footer
+        display: flex
+        padding: 0 rem(12px)
+
+        .btn
+            width: 100%
+            justify-content: center

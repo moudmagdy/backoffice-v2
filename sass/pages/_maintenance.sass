@@ -1,0 +1,84 @@
+.maintenance-page
+    @media (max-width: 768px)
+        overflow: auto
+        +scrollbar
+
+    .single-column-layout
+        @media (max-width: 768px)
+            height: auto
+
+        header
+            gap: 0 rem(30px)
+
+    .layout__tabs
+        margin-inline-start: auto
+
+    .invoice__item__data
+        flex-basis: 40%
+
+    [data-panel="delivered-request"]
+        .side-panel__header
+            color: #fff
+
+        .side-panel__header,
+        .side-panel__tabs
+            background-color: #2BAB5A
+
+        .side-panel__close-btn
+            background-color: rgba(255, 255, 255, 0.05)
+
+            svg
+                fill: #fff
+
+        .side-panel__tabs
+            a
+                color: rgba(255, 255, 255, 0.7)
+
+                &.selected--tab
+                    color: #fff
+
+            .selected__indicator
+                background-color: #fff
+
+.device-issues
+    display: inline-flex
+    font-size: rem(12px)
+    color: #060505
+    white-space: nowrap
+    border: rem(1px) solid #060505
+    border-radius: rem(16px)
+    padding: 0.375rem 0.75rem
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif
+
+.total-parts
+    display: flex
+    flex-direction: column
+    border-top: 1px solid #efefef
+    margin-top: auto
+
+    li
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: rem(56px)
+        padding: rem(10px) rem(20px)
+
+        &:not(:last-child)
+            border-bottom: 1px solid #efefef
+
+        h5
+            font-size: rem(14px)
+
+        .total-parts__amount
+            font-size: rem(22px)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif

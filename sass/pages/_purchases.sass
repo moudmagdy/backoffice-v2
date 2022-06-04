@@ -1,0 +1,184 @@
+.purchases-page
+    header
+        @media (max-width: 920px)
+            gap: 15px
+
+    .filters-open
+        @media (max-width: 920px)
+            order: 1
+
+    .page-filters-container
+        @media (max-width: 920px)
+            order: 1
+
+    .new-invoice--btn
+        margin-inline-start: auto
+
+        @media (max-width: 720px)
+            order: 1
+            margin-inline-start: 0
+
+        @media (max-width: 576px)
+            width: 100%
+
+        svg
+            width: rem(10px)
+            height: rem(10px)
+
+    table
+        td
+            & > *
+                font-size: rem(14px)
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
+
+    .supplier-name
+        color: #65676B
+
+.invoice-products-table
+    th
+        white-space: nowrap
+
+    td
+        font-size: rem(14px)
+        overflow: hidden
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
+
+    .product__details
+        display: flex
+        align-items: center
+        gap: rem(8px)
+        padding-inline-end: rem(15px)
+
+    .product__name
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        line-height: 1.5
+        font-size: rem(14px)
+        overflow: hidden
+        text-overflow: ellipsis
+        -webkit-line-clamp: 2
+        margin-bottom: 0
+
+    .product__image
+        flex: 0 0 auto
+        width: rem(60px)
+        height: rem(60px)
+        border: none
+        border-radius: 0
+        border-start-start-radius: rem(4px)
+        border-end-start-radius: rem(4px)
+        overflow: hidden
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 0
+            border-start-start-radius: rem(4px)
+            border-end-start-radius: rem(4px)
+
+.product-validity-details
+    display: flex
+    align-items: center
+    gap: rem(20px)
+    background-color: #F5F5F5
+    border-radius: rem(6px)
+    padding: rem(18px) rem(20px)
+    margin-bottom: rem(20px)
+
+    .product-name
+        font-size: rem(14px)
+        margin-bottom: 0
+
+    .product-total-quantity
+        display: flex
+        flex-direction: column
+        align-items: center
+        font-size: rem(14px)
+        margin-inline-start: auto
+        margin-inline-end: rem(65px)
+
+        span
+            &:first-child
+                font-size: rem(12px)
+                color: #4D4D4D
+
+            &:last-child
+                font-size: rem(14px)
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
+
+.validity__list
+    display: flex
+    flex-direction: column
+    width: 100%
+    overflow-y: auto
+    +scrollbar
+
+.validity__item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: rem(15px)
+    width: 100%
+    background-color: $color-white
+    border-bottom: rem(1px) solid #F0F0F0
+    padding: rem(10px) rem(20px)
+
+    .form-datepicker
+        +var(color, color-brand)
+
+    .input-with-icon
+        margin-inline-start: auto
+
+    .invoice__item__quantity
+        margin-inline-start: auto
+
+    .form-control
+        border-radius: rem(4px)
+
+        &:focus
+            box-shadow: none
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button
+            -webkit-appearance: none
+            margin: 0
+
+        &[type="number"]
+            text-align: center
+            -moz-appearance: textfield
+
+.validity-status
+    +flex-center
+    width: rem(20px)
+    height: rem(20px)
+    background-color: #C6CFD9
+    border-radius: 50%
+    overflow: hidden
+
+    svg
+        width: rem(12px)
+        height: auto
+        fill: #fff
+        opacity: 0
+
+    .active &
+        +var(background-color, color-brand)
+
+        svg
+            opacity: 1

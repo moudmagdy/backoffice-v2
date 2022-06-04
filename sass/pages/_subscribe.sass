@@ -1,0 +1,428 @@
+
+.subscription-page,
+.subscribe-page
+    .main-menu__toggle
+        align-self: flex-start
+        display: none
+        margin-bottom: rem(30px)
+
+        svg
+            +var(fill, color-text-primary)
+
+        &:hover
+            svg
+                fill: $color-text-primary
+
+        @media (max-width: 1024px)
+            display: flex
+
+    .side-panel
+        .plan-switch
+            display: flex
+            max-width: max-content
+            margin: 0 auto
+
+            label
+                position: relative
+                display: flex
+                align-items: center
+                border: rem(3px) solid #B4D0F3
+                border-radius: rem(27px)
+                cursor: pointer
+                padding: rem(2px)
+
+                &::before
+                    content: ""
+                    flex: 0 0 auto
+                    position: absolute
+                    top: rem(2px)
+                    bottom: rem(2px)
+                    inset-inline-start: rem(2px)
+                    width: rem(110px)
+                    +var(background-color, color-brand)
+                    border-radius: rem(22px)
+                    z-index: -1
+                    transition: transform 0.3s
+
+                span
+                    width: rem(110px)
+                    text-align: center
+                    font-size: rem(14px)
+                    border-radius: rem(22px)
+                    user-select: none
+                    padding: 0.725rem
+                    transition: color 0.3s
+
+                    &:first-child
+                        color: #fff
+
+                    &:last-child
+                        color: #4D4D4D
+
+            input[type="checkbox"]
+                display: none
+
+                &:checked + label
+                    &::before
+                        [dir="rtl"] &
+                            transform: translateX(-100%)
+
+                        [dir="ltr"] &
+                            transform: translateX(100%)
+
+                    span
+                        &:first-child
+                            color: #4D4D4D
+
+                        &:last-child
+                            color: #fff
+
+        .selected-plan
+            +flex-center
+            gap: rem(10px)
+            background-color: #E8F2FF
+            border-radius: rem(8px)
+            padding: rem(20px)
+            margin: rem(15px)
+
+            .plan__name
+                font-size: rem(14px)
+                margin-bottom: 0
+
+            .plan__price__amount
+                +var(color, color-brand)
+                font-size: rem(22px)
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
+
+        .side-panel__body
+            overflow-y: hidden
+            padding-inline: 0
+
+        .invoice__item__data
+            flex: 0 0 25%
+            .package-item__title
+                font-size: rem(16px)
+
+            .package-item__price
+                font-size: rem(12px)
+                white-space: nowrap
+
+            .package-free-item
+                font-size: rem(12px)
+                white-space: nowrap
+
+        .invoice__item__quantity
+            .form-control
+                max-width: rem(50px)
+                background-color: rgba(198, 207, 217, 0.3)
+                border-color: rgba(198, 207, 217, 0.3)
+
+                &::placeholder
+                    color: #acb0b6
+
+            span
+                font-size: rem(12px)
+                color: #A3AAB2
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
+
+        .invoice__item__total-price
+            display: flex
+            justify-content: flex-end
+            flex: 0 0 25%
+
+        .side-panel__bottom-bar
+            .invoice__item__quantity
+                .form-control
+                    max-width: rem(80px)
+                    text-align: center
+                    border-radius: rem(4px)
+
+                    &:focus
+                        box-shadow: none
+
+        .package-total
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: rem(10px)
+            min-height: rem(40px)
+            border-bottom: rem(1px) solid #efefef
+            padding: rem(10px) 0
+            margin-bottom: rem(15px)
+
+            h5
+                flex: 0 0 25%
+                font-size: rem(14px)
+                color: #4D4D4D
+                margin-bottom: 0
+
+            .package-total-amount
+                flex: 0 0 25%
+                display: flex
+                justify-content: flex-end
+                font-size: rem(18px)
+                color: #4D4D4D
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
+
+.subscribe-page
+    overflow-y: auto
+    +scrollbar
+
+    section
+        display: flex
+        flex-direction: column
+        align-items: center
+        min-height: 100%
+        padding: rem(30px) rem(20px)
+
+        & > *
+            &:not(.main-menu__toggle)
+                width: 100%
+
+        .alert
+            max-width: 70vw
+            margin-bottom: rem(30px)
+
+            @media (max-width: 1200px)
+                max-width: none
+
+        .subscription-plans
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+            align-items: flex-start
+            gap: rem(16px)
+            max-width: 70vw
+
+            @media (max-width: 1200px)
+                max-width: 80vw
+
+            @media (max-width: 992px)
+                max-width: none
+
+        .plan
+            flex: 1 0 calc(33.3333% - 10.6666px)
+            min-width: rem(280px)
+            max-width: rem(300px)
+            background-color: #fff
+            border: rem(3px) solid #B4D0F3
+            border-radius: rem(25px)
+            padding: rem(24px) rem(28px)
+            transition: border-color 0.3s
+
+            @media (max-width: 768px)
+                flex: 1 0 100%
+
+            &__header
+                display: flex
+                flex-wrap: wrap
+                align-items: flex-start
+                border-bottom: rem(1px) solid #e5ecf4
+                padding-bottom: rem(18px)
+                margin-bottom: rem(18px)
+
+            &__name
+                font-size: rem(18px)
+                margin-bottom: rem(24px)
+
+            .best-seller
+                font-size: rem(12px)
+                color: #fff
+                +var(background-color, color-brand)
+                border-radius: rem(16px)
+                padding: 0.45rem 1.5rem
+                margin-inline-start: auto
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_Medium', sans-serif
+
+            &__price
+                flex: 1 1 100%
+                display: flex
+                align-items: center
+                gap: rem(5px)
+
+            &__price__amount,
+            &__price__currency
+                line-height: 1.2
+                +var(color, color-brand)
+                font-size: rem(28px)
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
+
+            &__price__period
+                font-size: rem(14px)
+
+            &__details
+                list-style: none
+                padding: 0 rem(8px)
+                margin: 0 0 rem(30px)
+
+                li
+                    display: flex
+                    align-items: center
+                    gap: rem(5px)
+                    font-size: rem(12px)
+                    color: rgba(17, 21, 47, 0.67)
+                    margin-bottom: rem(15px)
+
+                    [dir="rtl"] &
+                        font-family: 'NotoSansArabic_Medium', sans-serif
+
+                    [dir="ltr"] &
+                        font-family: 'NotoSans_Medium', sans-serif
+
+                    &::before
+                        flex: 0 0 auto
+                        content: ""
+                        width: rem(16px)
+                        height: rem(16px)
+                        background-image: url(../images/plan-list-bullets-icon.svg)
+                        background-repeat: no-repeat
+                        border-radius: 50%
+
+            .btn
+                justify-content: center
+                width: 100%
+                border-radius: rem(12px)
+                padding: 0.538rem 1.25rem
+
+                svg
+                    width: rem(16px)
+                    height: rem(16px)
+
+            &.selected
+                +var(border-color, color-brand)
+
+                .btn
+                    +var(color, color-brand)
+                    background-color: rgba(24, 119, 242, 0.07)
+                    border-color: transparent
+
+.subscription-page
+    @media (max-width: 576px)
+        overflow-y: auto
+        +scrollbar
+
+    section
+        @media (max-width: 576px)
+            overflow-y: hidden
+
+        &:first-of-type
+            flex: 0 0 auto
+
+        &:last-of-type
+            flex: 1 1 auto
+
+            @media (max-width: 576px)
+                flex: 1 0 auto
+
+    .main-menu__toggle
+        margin-bottom: rem(15px)
+
+    table
+        .show-invoice
+            +var(color, color-brand)
+
+    .current-package
+        display: flex
+        flex-direction: column
+
+        .package-details
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            justify-content: space-between
+            gap: rem(15px)
+            padding: rem(15px)
+
+            &:first-child
+                box-shadow: inset 0 rem(-0.5px) rem(1px) #edeff4
+
+        .package__list
+            flex: 0 1 80%
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            justify-content: space-between
+            gap: rem(15px)
+
+            @media (max-width: 768px)
+                flex: 0 1 100%
+
+            @media (max-width: 576px)
+                flex-direction: column
+                align-items: flex-start
+
+        .package__item
+            flex: 1 1 calc(25% - 11.25px)
+            display: flex
+            flex-direction: column
+            gap: rem(8px)
+
+        .package__item__title
+            font-size: rem(12px)
+            color: #A3AAB2
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_Medium', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_Medium', sans-serif
+
+        .package__item__data
+            font-size: rem(14px)
+            +var(color, color-brand)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
+
+    .side-panel
+        .selected-plan
+            background-color: #F5F5F5
+            margin-block: 0
+
+            .plan__name,
+            .plan__price,
+            .plan__price__amount
+                color: #4D4D4D
+
+        .package-total
+            padding: 0
+            border-bottom: none
+
+        &[data-panel="invoice"]
+            .package-total
+                margin-bottom: 0
+
+        .alert-message
+            font-size: rem(12px)
+            color: #050505
+            background-color: rgba(245, 200, 207, 0.3)
+            border-radius: rem(10px)
+            padding: rem(15px) rem(20px)
+            margin-bottom: rem(15px)

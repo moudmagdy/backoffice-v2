@@ -1,0 +1,224 @@
+.services-page
+    .single-column-layout
+        padding: rem(20px) 0 0
+
+    header,
+    section
+        background-color: transparent
+        border-radius: 0
+
+    header
+        min-height: rem(65px)
+        padding: 0 rem(60px)
+
+        @media (max-width: 768px)
+            padding: 0 rem(15px)
+
+    section
+        border-radius: 0
+        box-shadow: none
+        padding: 0 rem(60px) rem(40px)
+
+        @media (max-width: 768px)
+            padding: 0 rem(15px) rem(40px)
+
+    h6
+        font-size: rem(14px)
+        color: #65676B
+
+    .subscriptions
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        gap: rem(18px)
+        width: max-content
+        background-color: rgba(217, 221, 238, 0.65)
+        border-radius: rem(57.5px)
+        padding: rem(18px)
+        margin-bottom: rem(40px)
+
+        @media (max-width: 576px)
+            width: auto
+
+        &__item
+            width: rem(80px)
+            height: rem(80px)
+            background-color: #EBF6FF
+            box-shadow: 0 0 0 rem(2px) #B4D0F3
+            border-radius: 50%
+            overflow: hidden
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                border-radius: 50%
+
+    .services
+        display: flex
+        flex-wrap: wrap
+        gap: rem(20px)
+
+        &:not(:last-child)
+            margin-bottom: rem(40px)
+
+    .service
+        flex: 0 0 calc((100% / 4) - #{rem(15px)})
+        display: flex
+        flex-direction: column
+        align-items: center
+        background-color: #fff
+        border: rem(3px) solid #B4D0F3
+        border-radius: rem(16px)
+        padding: rem(15px) rem(15px) 0
+
+        @media (max-width: 1200px)
+            flex: 0 0 calc((100% / 3) - #{rem(13.3333px)})
+
+        @media (max-width: 768px)
+            flex: 0 0 calc((100% / 2) - #{rem(10px)})
+
+        @media (max-width: 576px)
+            flex: 0 0 100%
+
+    .service__icon
+        +flex-center
+        width: rem(80px)
+        height: rem(80px)
+        border-radius: 50%
+        background-color: #F5F5F5
+        margin-bottom: rem(15px)
+
+        svg
+            width: 40px
+            height: 40px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 50%
+
+    .service__title
+        font-size: rem(18px)
+        margin-bottom: rem(20px)
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
+
+    .service__description
+        text-align: center
+        font-size: rem(12px)
+        color: #65676B
+        padding: 0 rem(25px)
+        margin-bottom: rem(25px)
+
+    .service__footer
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: rem(15px)
+        width: 100%
+        padding: rem(10px) 0
+        box-shadow: inset 0 rem(1px) rem(1px) 0 #edeff4
+
+    .service__price
+        font-size: rem(14px)
+        color: #A3AAB2
+
+        span
+            &:first-of-type
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans_SemiBold', sans-serif
+
+    .service__btn
+        font-size: rem(14px)
+        +var(color, color-brand)
+        background-color: #DAEAFF
+        border: none
+        border-radius: rem(20px)
+        padding: 0.6rem 1.6rem
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
+
+    .side-panel__bottom-bar
+        .btn-lg
+            &:only-of-type
+                padding-inline: 2.5rem
+
+                span
+                    &:first-child
+                        font-size: rem(12px)
+
+    .service__info
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        .service__icon
+            +flex-center
+            width: rem(100px)
+            height: rem(100px)
+
+            svg
+                width: 55px
+                height: 55px
+
+        .service__title
+            font-size: rem(22px)
+
+        .service__price
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: rem(5px)
+            margin-bottom: rem(30px)
+
+            span
+                line-height: 1
+
+                &:first-child
+                    font-size: rem(30px)
+                    +var(color, color-brand)
+
+                    [dir="rtl"] &
+                        font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+                    [dir="ltr"] &
+                        font-family: 'NotoSans_SemiBold', sans-serif
+
+                &:last-child
+                    font-size: rem(22px)
+
+        .service__details
+            display: flex
+            flex-direction: column
+            gap: rem(5px)
+            align-self: flex-start
+            list-style: none
+            padding: 0
+            padding-inline-start: rem(50px)
+            margin: 0
+
+            li
+                display: flex
+                align-items: center
+                gap: rem(10px)
+                font-size: rem(14px)
+
+                &::before
+                    content: ""
+                    width: rem(8px)
+                    height: rem(8px)
+                    background-color: #C6CFD9
+                    border-radius: 50%

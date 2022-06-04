@@ -1,0 +1,103 @@
+.notifications-panel
+    position: fixed
+    top: 0
+    inset-inline-start: var(--main-menu-width)
+    width: rem(480px)
+    height: 100%
+    background-color: #fff
+    box-shadow: 0 rem(3px) rem(15px) rgba(0, 0, 0, 0.06)
+    z-index: 998
+    opacity: 0
+    pointer-events: none
+    transform: translateX(calc(100% + var(--main-menu-width)))
+    transition: all 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17)
+
+    [dir="rtl"] &
+        transform-origin: right bottom
+
+    [dir="ltr"] &
+        transform-origin: left bottom
+
+    .main-menu--opened &,
+    .main-menu--hover-opened &
+        --main-menu-width: #{rem(200px)}
+
+    .panel--shown &
+        opacity: 1
+        pointer-events: auto
+        transform: translateX(0)
+
+.notifications-panel__header
+    display: flex
+    align-items: center
+    gap: rem(5px)
+    height: rem(52px)
+    padding: 0 rem(20px)
+    border-bottom: rem(1px) solid #eef2fa
+
+    h2
+        font-size: rem(16px)
+        margin-bottom: 0
+
+.notifications-panel__body
+    display: flex
+    flex-direction: column
+    gap: rem(5px)
+
+.notifications__message
+    display: flex
+    flex-direction: column
+    gap: rem(12px)
+    background-color: rgba(245, 245, 245, 0.3)
+    padding: rem(18px) rem(22px)
+    padding-inline-end: rem(30px)
+
+    &.new--message
+        position: relative
+        background-color: #F5F5F5
+
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            inset-inline-end: 0
+            width: rem(3px)
+            height: 100%
+            +var(background-color, color-brand)
+
+.notifications__message__header
+    display: flex
+    align-items: center
+    gap: rem(10px)
+
+.notifications__message__title
+    font-size: rem(16px)
+    +var(color, color-brand)
+    margin-bottom: 0
+
+    svg
+        width: rem(18px)
+        height: rem(18px)
+        fill: currentColor
+
+    .danger &
+        color: #F02849
+
+.notifications__message__source
+    font-size: rem(12px)
+    color: #A3AAB2
+
+.notifications__message__date
+    font-size: rem(10px)
+    color: rgba(0, 0, 0, 0.8)
+    margin-inline-start: auto
+
+.notifications__message__details
+    font-size: rem(14px)
+    color: #4D4D4D
+
+.panel--shown
+    &::before
+        pointer-events: auto
+        background-color: rgba(6, 5, 5, 0.35)
+        z-index: 998

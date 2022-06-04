@@ -1,0 +1,96 @@
+html
+    font-size: 16px
+
+body
+    font-weight: normal
+    font-style: normal
+    +var(color, color-text-primary)
+    +var(font-size, default-font-size)
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Regular', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Regular', sans-serif
+
+h1,
+h2,
+h3
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_SemiBold', sans-serif
+
+h4,
+h5
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif
+
+h6
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Regular', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Regular', sans-serif
+
+.fw-bold
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_SemiBold', sans-serif
+
+header
+    .page__title
+        font-size: 1rem
+        font-weight: 600
+        font-style: normal
+        +var(color, color-text-primary)
+
+fieldset
+    legend
+        font-size: 14px
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
+
+label
+    font-size: rem(14px)
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif
+
+    & > span
+        &:last-child
+            font-size: rem(12px)
+            color: #A3AAB2
+
+.form-control,
+.form-select
+    font-size: rem(14px)
+
+.collapse__toggle
+    font-size: rem(14px)
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_SemiBold', sans-serif
+
+.btn-link
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif

@@ -1,0 +1,54 @@
+@mixin flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin scrollbar
+    scrollbar-color: #61a0f2 rgba(0, 0, 0, 0.08)
+    scrollbar-width: thin
+
+    &::-webkit-scrollbar
+        width: 8px
+        height: 8px
+
+    &::-webkit-scrollbar-thumb
+        background-color: #61a0f2
+
+    &::-webkit-scrollbar-track
+        background-color: rgba(0, 0, 0, 0.08)
+
+    &::-webkit-scrollbar-corner
+        background-color: transparent
+
+@mixin scrollbar-hidden
+    scrollbar-color: transparent transparent
+    scrollbar-width: thin
+
+    &::-webkit-scrollbar
+        width: 0
+        height: 0
+
+    &::-webkit-scrollbar-thumb
+        background-color: transparent
+
+    &::-webkit-scrollbar-track
+        background-color: transparent
+
+    &::-webkit-scrollbar-corner
+        background-color: transparent
+
+@mixin line-clamp($line-height, $lines-count)
+    display: block
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    position: relative
+    line-height: $line-height
+    overflow: hidden
+    text-overflow: ellipsis
+    -webkit-line-clamp: $lines-count
+    height: calc(1em * #{$line-height} * #{$lines-count})
+    padding: 0 !important
+
+@mixin var($property, $varName)
+    #{$property}: map-get($variables, $varName)
+    #{$property}: var(--#{$varName})

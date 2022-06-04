@@ -1,0 +1,225 @@
+.btn
+    display: inline-flex
+    align-items: center
+    gap: rem(10px)
+    font-size: rem(14px)
+    border-width: rem(2px)
+    border-radius: rem(20px)
+    white-space: nowrap
+    padding: 0.475rem 1.25rem
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif
+
+    svg
+        fill: currentColor
+        transition: fill 0.15s ease-in-out
+
+    &:hover, &:active, &:focus
+        svg
+            fill: currentColor
+
+.btn-lg
+    border-radius: rem(24px)
+    padding: 0.725rem 3rem
+
+.btn-primary
+    color: #fff
+    +var(background-color, color-brand)
+    +var(border-color, color-brand)
+
+    &:hover
+        background-color: darken($color-brand, 10%)
+        border-color: darken($color-brand, 10%)
+
+    &:disabled
+        background-color: lighten($color-brand, 10%)
+        border-color: lighten($color-brand, 10%)
+
+.btn-outline-primary
+    +var(color, color-brand)
+    +var(border-color, color-brand)
+
+    &:hover
+        +var(background-color, color-brand)
+        +var(border-color, color-brand)
+
+.btn-primary,
+.btn-outline-primary
+    &:active, &:focus
+        background-color: darken($color-brand, 15%)
+        border-color: darken($color-brand, 15%)
+
+.btn-secondary
+    +var(color, color-brand)
+    background-color: #e8e8e8
+    border-color: #e8e8e8
+
+    &:hover
+        color: darken($color-brand, 5%)
+        background-color: darken(#e8e8e8, 5%)
+        border-color: darken(#e8e8e8, 5%)
+
+    &:disabled
+        color: lighten($color-brand, 5%)
+        background-color: lighten(#e8e8e8, 5%)
+        border-color: lighten(#e8e8e8, 5%)
+
+.btn-outline-secondary
+    +var(color, color-brand)
+    border-color: #e8e8e8
+
+    &:hover
+        +var(color, color-brand)
+        background-color: #e8e8e8
+        border-color: #e8e8e8
+
+.btn-secondary,
+.btn-outline-secondary
+    &:active, &:focus
+        color: darken($color-brand, 5%)
+        background-color: darken(#e8e8e8, 10%)
+        border-color: darken(#e8e8e8, 10%)
+
+.btn-success
+    color: #fff
+    background-color: #4CC784
+    border-color: #4CC784
+
+    &:hover
+        background-color: darken(#4CC784, 5%)
+        border-color: darken(#4CC784, 5%)
+
+.btn-outline-success
+    color: #4CC784
+    border-color: #4CC784
+
+    &:hover
+        background-color: #4CC784
+        border-color: #4CC784
+
+.btn-success,
+.btn-outline-success
+    &:active, &:focus
+        color: #fff
+        background-color: darken(#4CC784, 10%)
+        border-color: darken(#4CC784, 10%)
+
+.btn-danger
+    color: #fff
+    background-color: #FF6B73
+    border-color: #FF6B73
+
+    &:hover
+        background-color: darken(#FF6B73, 5%)
+        border-color: darken(#FF6B73, 5%)
+
+.btn-outline-danger
+    color: #FF6B73
+    border-color: #FF6B73
+
+    &:hover
+        background-color: #FF6B73
+        border-color: #FF6B73
+
+.btn-danger,
+.btn-outline-danger
+    &:active, &:focus
+        color: #fff
+        background-color: darken(#FF6B73, 10%)
+        border-color: darken(#FF6B73, 10%)
+
+.btn-warning
+    color: #fff
+    background-color: #FFC600
+    border-color: #FFC600
+
+    &:hover
+        color: #fff
+        background-color: darken(#FFC600, 2%)
+        border-color: darken(#FFC600, 2%)
+
+.btn-outline-warning
+    color: #ffa500
+    border-color: #FFC600
+
+    &:hover
+        color: #fff
+        background-color: #FFC600
+        border-color: #FFC600
+
+.btn-warning,
+.btn-outline-warning
+    &:active, &:focus
+        color: #fff
+        background-color: darken(#FFC600, 5%)
+        border-color: darken(#FFC600, 5%)
+
+.btn-info
+    color: #fff
+    background-color: #00C1FA
+    border-color: #00C1FA
+
+    &:hover
+        color: #fff
+        background-color: darken(#00C1FA, 5%)
+        border-color: darken(#00C1FA, 5%)
+
+.btn-outline-info
+    color: #00C1FA
+    border-color: #00C1FA
+
+    &:hover
+        color: #fff
+        background-color: #00C1FA
+
+.btn-info,
+.btn-outline-info
+    &:active, &:focus
+        color: #fff
+        background-color: darken(#00C1FA, 10%)
+        border-color: darken(#00C1FA, 10%)
+
+.btn-light
+    color: #272727
+    background-color: #f6f9fa
+    border-color: #f6f9fa
+
+    &:hover
+        color: #272727
+        background-color: darken(#f6f9fa, 2%)
+        border-color: darken(#f6f9fa, 2%)
+
+.btn-outline-light
+    color: #272727
+    border-color: #f6f9fa
+
+    &:hover
+        color: #272727
+        background-color: #f6f9fa
+        border-color: #f6f9fa
+
+.btn-dark
+    background-color: #272727
+    border-color: #272727
+
+    &:hover
+        background-color: darken(#272727, 5%)
+        border-color: darken(#272727, 5%)
+
+.btn-outline-dark
+    color: #272727
+    border-color: #272727
+
+    &:hover
+        background-color: #272727
+
+.btn-link
+    +var(color, color-brand)
+    text-decoration: none
+
+    &:hover
+        color: darken($color-brand, 10%)

@@ -1,0 +1,438 @@
+.main-menu
+    position: fixed
+    top: 0
+    inset-inline-start: 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    +var(width, main-menu-width)
+    height: 100vh
+    background-color: #1877F2
+    z-index: 999
+    transition: width 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17), transform 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17)
+
+    [dir="rtl"] &
+        transform: translateX(100%)
+
+    [dir="ltr"] &
+        transform: translateX(-100%)
+
+    @media (min-width: 1024px)
+        --main-menu-width: #{rem(70px)}
+
+        [dir="rtl"] &,
+        [dir="ltr"] &
+            transform: translateX(0)
+
+    &__header
+        display: flex
+        align-items: center
+        flex: 0 0 52px
+        height: 52px
+        overflow: hidden
+        padding: 0 rem(25px)
+
+    &__footer
+        display: flex
+        flex-direction: column
+        flex: 0 0 auto
+        margin-top: auto
+
+    &__toggle
+        display: flex
+
+        svg
+            width: rem(20px)
+            height: rem(20px)
+            fill: rgba(255, 255, 255, 0.4)
+            transition: fill 0.3s
+
+        &:hover
+            svg
+                fill: $color-white
+
+    a:not(.main-menu__toggle, .profile__menu a)
+        display: flex
+        align-items: center
+        gap: rem(12px)
+        font-size: rem(14px)
+        line-height: 1.15
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        text-decoration: none
+        padding: rem(14px) rem(24px)
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
+
+        & > *
+            flex: 0 0 auto
+
+    nav
+        display: flex
+        flex-direction: column
+        flex: 0 0 calc(100% - 202px)
+        height: calc(100% - 202px)
+        margin-bottom: 50px
+        overflow: hidden
+        scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.1)
+        scrollbar-width: thin
+
+        &::-webkit-scrollbar
+            width: 8px
+            height: 8px
+
+        &::-webkit-scrollbar-thumb
+            background-color: rgba(255, 255, 255, 0.2)
+
+        &::-webkit-scrollbar-track
+            background-color: rgba(255, 255, 255, 0.1)
+
+        &::-webkit-scrollbar-corner
+            background-color: rgba(255, 255, 255, 0.1)
+
+        ol
+            list-style: none
+            padding: 0
+            margin: 0
+
+            li
+                a
+                    position: relative
+                    display: flex
+                    align-items: center
+                    color: rgba(255, 255, 255, 0.7)
+                    transition: all 0.3s ease-in-out
+
+                    &::before
+                        content: ""
+                        background-color: rgba(255, 255, 255, 0.4)
+                        transition: all 0.3s ease-in-out
+
+                    &:hover,
+                    &.active
+                        color: $color-white
+                        background-color: rgba(255, 255, 255, 0.08)
+
+                    &.active
+                        &::before
+                            background-color: $color-white
+
+        .menu__list
+            & > li
+                & > a
+                    &::before
+                        position: absolute
+                        top: 0
+                        inset-inline-start: 0
+                        width: rem(4px)
+                        height: 100%
+                        background-color: rgba(255, 255, 255, 0.4)
+                        opacity: 0
+
+                    svg
+                        width: rem(22px)
+                        height: rem(22px)
+                        fill: rgba(255, 255, 255, 0.4)
+                        transition: fill 0.3s
+
+                    span
+                        opacity: 0
+                        transition: opacity 0.3s
+
+                    &:hover
+                        &::before
+                            opacity: 1
+
+                        svg
+                            fill: $color-white
+
+                    &.active
+                        &::before
+                            opacity: 1
+
+                        svg
+                            fill: $color-white
+
+                &.has--submenu
+                    position: relative
+
+                    & > a
+                        padding-inline-end: rem(40px)
+
+                        &::after
+                            content: ""
+                            position: absolute
+                            inset-inline-end: rem(15px)
+                            width: rem(15px)
+                            height: rem(15px)
+                            background-image: url(../images/left-arrow.svg)
+                            opacity: 0
+                            pointer-events: none
+                            transition: all 0.3s cubic-bezier(0.9, 0.4, 0.2, 1.17)
+
+                            [dir="ltr"] &
+                                transform: scaleX(-1)
+
+                    .submenu
+                        max-height: 0
+                        background-color: darken(#1877F2, 5%)
+                        overflow: hidden
+                        transition: all 0.3s ease-in-out
+
+                        li
+                            a
+                                gap: 0 rem(10px)
+                                padding-inline-start: rem(35px)
+
+                                &::before
+                                    flex: 0 0 auto
+                                    width: rem(5px)
+                                    height: rem(5px)
+                                    border-radius: 50%
+
+                                &:hover
+                                    background-color: rgba(255, 255, 255, 0.08)
+
+                                    &::before
+                                        background-color: $color-white
+
+                                &.active
+                                    background-color: rgba(255, 255, 255, 0.08)
+
+                    &.submenu--opened
+                        & > a
+                            &::after
+                                transform: rotate(-90deg)
+
+                                [dir="ltr"] &
+                                    transform: scaleX(-1) rotate(-90deg)
+
+    &__notifications,
+    &__profile a
+        position: relative
+        transition: all 0.3s ease-in-out
+
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            inset-inline-start: 0
+            width: rem(4px)
+            height: 100%
+            background-color: rgba(255, 255, 255, 0.4)
+            opacity: 0
+            transition: all 0.3s ease-in-out
+
+        &:hover
+            &::before
+                opacity: 1
+
+    &__notifications
+        svg
+            width: rem(22px)
+            height: rem(22px)
+            fill: rgba(255, 255, 255, 0.4)
+            transition: fill 0.3s
+
+        span
+            &:not(.notifications-count)
+                color: rgba(255, 255, 255, 0.7)
+                opacity: 0
+                transition: opacity 0.3s
+
+        &:hover
+            background-color: rgba(255, 255, 255, 0.08)
+
+            svg
+                fill: rgba(255, 255, 255, 0.8)
+
+            span
+                &:not(.notifications-count)
+                    color: #fff
+
+        .panel--shown &
+            background-color: rgba(255, 255, 255, 0.08)
+
+            svg
+                fill: $color-white
+
+            span
+                &:not(.notifications-count)
+                    color: $color-white
+
+            &::before
+                background-color: $color-white
+                opacity: 1
+
+        .notifications-count
+            position: absolute
+            top: rem(8px)
+            inset-inline-start: rem(16px)
+            +flex-center
+            min-width: rem(16px)
+            min-height: rem(16px)
+            font-size: rem(10px)
+            color: #fff
+            background-color: #FF8591
+            box-shadow: 0 0 0 rem(2px) $color-brand
+            border-radius: rem(7.5px)
+            padding: 0 rem(4px)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
+
+    &__profile
+        & > a
+            img
+                width: rem(22px)
+                height: rem(22px)
+                border-radius: 50%
+
+            span
+                color: rgba(255, 255, 255, 0.7)
+                opacity: 0
+                transition: opacity 0.3s
+
+            &:hover
+                background-color: rgba(255, 255, 255, 0.08)
+
+                span
+                    color: rgba(255, 255, 255, 0.95)
+
+        &.menu--shown
+            & > a
+                background-color: rgba(255, 255, 255, 0.08)
+
+                span
+                    color: $color-white
+
+                &::before
+                    background-color: $color-white
+                    opacity: 1
+
+    .main-menu--hover-opened &
+        @media (min-width: 992px)
+            --main-menu-width: #{rem(200px)}
+
+            [dir="rtl"] &,
+            [dir="ltr"] &
+                transform: translateX(0)
+
+            nav
+                overflow-y: scroll
+                overflow-x: hidden
+
+                .menu__list
+                    & > li
+                        a
+                            span
+                                opacity: 1
+
+                        &.has--submenu
+                            & > a
+                                &::after
+                                    opacity: 1
+
+            .main-menu__notifications,
+            .main-menu__profile
+                span
+                    opacity: 1
+                    max-width: 192px
+
+    .main-menu--opened &
+        --main-menu-width: #{rem(200px)}
+
+        [dir="rtl"] &,
+        [dir="ltr"] &
+            transform: translateX(0)
+
+        nav
+            overflow-y: scroll
+            overflow-x: hidden
+
+            .menu__list
+                & > li
+                    a
+                        span
+                            opacity: 1
+
+                    &.has--submenu
+                        & > a
+                            &::after
+                                opacity: 1
+
+        .main-menu__notifications,
+        .main-menu__profile
+            span
+                opacity: 1
+                max-width: 192px
+
+.profile__menu
+    position: absolute
+    inset-inline-start: calc(100% - 10px)
+    bottom: rem(10px)
+    display: flex
+    flex-direction: column
+    width: rem(165px)
+    background-color: #fff
+    border-top-left-radius: rem(12px)
+    border-top-right-radius: rem(12px)
+    border-end-end-radius: rem(12px)
+    box-shadow: 0 0 rem(10px) rgba(0, 0, 0, 0.25)
+    z-index: 1
+    opacity: 0
+    pointer-events: none
+    padding: rem(8px) 0
+    transform: rotate(-10deg)
+    transition: all 0.3s ease-in-out
+
+    [dir="rtl"] &
+        transform-origin: right bottom
+
+    [dir="ltr"] &
+        transform-origin: left bottom
+
+    &::before
+        content: ""
+        position: absolute
+        inset-inline-end: 100%
+        bottom: 0
+        width: 0
+        height: 0
+        border-top: rem(10px) solid transparent
+        border-left: rem(10px) solid #fff
+        z-index: 2
+
+    a
+        display: flex
+        align-items: center
+        gap: rem(8px)
+        color: #050505
+        text-decoration: none
+        font-size: rem(14px)
+        white-space: nowrap
+        padding: rem(10px) rem(16px)
+        transition: all 0.3s ease-in-out
+
+        &:not(:last-child)
+            box-shadow: 0 rem(1px) 0 rem(1px) rgba(0, 0, 0, 0.01)
+
+        &:hover
+            background-color: rgba(0, 0, 0, 0.05)
+
+        svg
+            width: rem(20px)
+            fill: #878a90
+
+    .menu--shown &
+        opacity: 1
+        pointer-events: auto
+        transform: rotate(0deg)

@@ -1,0 +1,133 @@
+.table__container
+    width: 100%
+    padding-block: 0 rem(15px)
+    padding-inline-start: rem(22px)
+    padding-inline-end: rem(14px)
+
+table
+    position: relative
+
+    thead
+        position: sticky
+        z-index: 1
+
+    tr
+        &.side-panel--btn
+            cursor: pointer
+
+    th
+        font-size: rem(12px)
+        font-weight: normal
+        padding: 1.325rem 0.8rem !important
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
+
+    td
+        font-size: rem(14px)
+        padding: 1.147rem 0.8rem !important
+
+        a
+            text-decoration: none
+            +var(color, color-text-primary)
+            transition: color 0.3s ease-in-out
+
+            &:hover
+                +var(color, color-brand)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
+
+    &:not(.table--with-gaps)
+        width: 100%
+        border-spacing: 0
+        border-style: solid
+        border-color: #E4E6EB
+        border-width: 0
+
+        thead
+            top: rem(1px)
+            border-start-start-radius: rem(12px)
+            border-start-end-radius: rem(12px)
+            box-shadow: 0 0 0 1px #e4e6eb
+
+            th
+                background-color: #F5F5F5
+
+                &:not(:last-child)
+                    border-inline-end-width: 1px
+
+                &:first-child
+                    border-start-start-radius: rem(12px)
+
+                &:last-child
+                    border-start-end-radius: rem(12px)
+
+        tbody
+            tr
+                border-inline-start-width: 1px
+                border-inline-end-width: 1px
+                border-block-end-width: 1px
+
+                td
+                    transition: background-color 0.3s
+
+                    &:not(:last-child)
+                        border-inline-end-width: 1px
+
+                &:nth-of-type(odd)
+                    td
+                        background-color: rgba(245, 245, 245, 0.25)
+
+                    &:hover
+                        td
+                            background-color: darken(rgba(245, 245, 245, 0.25), 6%)
+
+                &:nth-of-type(even)
+                    td
+                        background-color: $color-white
+
+                    &:hover
+                        td
+                            background-color: darken($color-white, 2%)
+
+    &.table--with-gaps
+        width: 100%
+        border-radius: rem(4px)
+        border-collapse: separate
+        border-spacing: rem(4px)
+        margin-top: rem(-4px)
+
+        thead,
+        tbody
+            border-radius: rem(4px)
+
+        thead
+            top: rem(0)
+
+        tr
+            border-radius: rem(4px)
+
+        th,
+        td
+            border-radius: rem(4px)
+
+        th
+            background-color: #F5F5F5
+
+        td
+            background-color: #fff
+
+        tbody
+            tr
+                transition: all 0.3s
+
+                &.selected
+
+                    box-shadow: 0 0 0 1.5px $color-brand

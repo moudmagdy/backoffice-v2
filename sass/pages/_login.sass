@@ -1,0 +1,230 @@
+.login-page
+    display: flex
+    background-color: $color-white
+    padding: 0
+
+    .page__content
+        flex: 1 auto
+        +scrollbar
+        overflow-y: auto
+        padding: rem(70px) rem(20px) rem(30px)
+
+        @media (min-width: 992px)
+            flex: 1 0 55%
+
+    .page__aside
+        flex: 0 0 45%
+        max-width: 700px
+        background-color: #C8C9E2
+        background-image: url(../images/aside-artwork.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+
+        &.branch
+            background-image: url(../images/branch-artwork-1.svg), url(../images/branch-artwork-2.svg)
+            background-position: 50% 10%, 100% 100%
+            background-size: 40%, contain
+
+        &.passcode
+            background-image: url(../images/lock-bg.svg), url(../images/branch-artwork-2.svg)
+            background-position: 50% 10%, 100% 100%
+            background-size: 30%, contain
+
+        &.forgot-passcode
+            background-image: url(../images/key-icon.svg), url(../images/branch-artwork-2.svg)
+            background-position: 50% 10%, 100% 100%
+            background-size: 30%, contain
+
+        @media (max-width: 992px)
+            display: none
+
+    .content__wrapper
+        position: relative
+        display: flex
+        align-items: center
+        width: rem(335px)
+        min-height: 100%
+        padding-top: rem(60px)
+        margin: 0 auto
+
+        @media (max-width: 480px)
+            width: auto
+
+    .form__step
+        display: flex
+        flex-direction: column
+        align-content: center
+
+    .logo
+        position: absolute
+        top: 0
+        display: flex
+        width: max-content
+
+        svg
+            width: rem(40px)
+            height: rem(40px)
+            +var(fill, color-brand)
+
+    h2
+        font-size: rem(26px)
+        color: #4D4D4D
+        line-height: 1.5
+        margin-bottom: rem(15px)
+
+    p
+        display: inline-block
+        font-size: rem(17px)
+        color: #A3AAB2
+        margin-bottom: 0
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_SemiBold', sans-serif
+
+    a
+        +var(color, color-brand)
+        text-decoration: none
+
+    form
+        margin-top: 40px
+
+    .phone-number
+        display: inline-flex
+        direction: ltr
+
+    [type="number"]
+        [dir="rtl"] &
+            direction: rtl
+
+        [dir="ltr"] &
+            direction: ltr
+
+    [type="tel"]
+        direction: ltr
+
+    .password__field
+        position: relative
+        display: flex
+        align-items: center
+
+        .show__password
+            position: absolute
+            inset-inline-end: 0.95rem
+            +flex-center
+            cursor: pointer
+
+            svg
+                fill: #C6CFD9
+                transition: fill 0.3s
+
+                &:last-child
+                    display: none
+
+            &:hover
+                svg
+                    fill: #8E949A
+
+            .is-invalid &
+                inset-inline-end: 2rem
+
+                svg
+                    fill: #dc3545
+
+                &:hover
+                    svg
+                        fill: darken(#dc3545, 10%)
+
+        &.password--shown
+            .show__password
+                svg
+                    fill: #060505
+
+                    &:first-child
+                        display: none
+
+                    &:last-child
+                        display: block
+
+        [type="password"]
+            padding-inline-end: calc(0.95rem + 18px + 0.95rem)
+
+    form
+        .btn
+            align-self: center
+            border-radius: rem(28px)
+            padding: 0.725rem 3rem
+
+    .form-label
+        color: #242424
+
+    textarea
+        resize: none
+
+    .forgot-credentials
+        font-size: rem(12px)
+        margin-bottom: 0.5rem
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
+
+.resend__code__countdown
+    font-size: rem(14px)
+    margin-top: rem(30px)
+
+    span
+        &:last-child
+            +var(color, color-brand)
+
+.resend--btn
+    margin-top: rem(30px)
+
+.store-url__field
+    direction: ltr
+    position: relative
+    display: flex
+    align-items: center
+
+    &::before
+        content: attr(data-url)
+        position: absolute
+        right: 0.95rem
+        color: #4D4D4D
+        font-size: rem(14px)
+        pointer-events: none
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
+
+    [type="text"]
+        padding-right: 6.5rem
+
+.radio-group
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+
+    .form-check
+        flex: 1 1 100%
+        display: flex
+        align-items: center
+        gap: 10px
+        height: 54px
+        background-color: #F5F5F5
+        padding: 1rem
+        margin: 0
+
+        .form-check-input
+            margin: 0
+
+            &:checked + .form-check-label
+                +var(color, color-brand)

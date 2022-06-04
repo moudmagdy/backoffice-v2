@@ -1,0 +1,47 @@
+@import './abstracts/functions';
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+@import './base/fonts';
+@import './base/typography';
+
+@import './main';
+
+@import './layout/forms';
+@import './layout/layout';
+
+@import './components/main-menu';
+@import './components/buttons';
+@import './components/flex-table';
+@import './components/modal-reset';
+@import './components/search-bar';
+@import './components/table';
+@import './components/layout-tabs';
+@import './components/page_nav';
+@import './components/side-panel';
+@import './components/control-panel';
+@import './components/checkout';
+@import './components/collapsible';
+@import './components/filters-buttons';
+@import './components/products-list';
+@import './components/invoice-list';
+@import './components/navigation-buttons';
+@import './components/payment-methods';
+@import './components/product-view';
+@import './components/checkbox-list';
+@import './components/notifications';
+
+@import './pages/login';
+@import './pages/home';
+@import './pages/products';
+@import './pages/product';
+@import './pages/clients';
+@import './pages/add-product';
+@import './pages/purchases';
+@import './pages/new-invoice';
+@import './pages/shifts-reports';
+@import './pages/subscribe';
+@import './pages/services';
+@import './pages/settings';
+@import './pages/payments';
+@import './pages/maintenance';

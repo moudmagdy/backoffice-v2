@@ -1,0 +1,19 @@
+.navigation-buttons
+    display: flex
+    gap: rem(10px)
+    margin-bottom: rem(10px)
+
+    a
+        font-size: rem(14px)
+        +var(color, color-brand)
+        background-color: #F5F5F5
+        border: rem(1.5px) solid #C6CFD9
+        border-radius: rem(19px)
+        text-decoration: none
+        padding: 0.413rem 1.2rem
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif

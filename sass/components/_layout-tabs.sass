@@ -1,0 +1,94 @@
+.layout__tabs
+    display: flex
+    order: 1
+    height: rem(65px)
+    overflow: hidden
+    overflow-x: auto
+    +scrollbar-hidden
+    margin: rem(15px) 0 rem(-12.5px)
+
+    .has--tabs &
+        @media (min-width: 1200px)
+            order: initial
+            margin: rem(-12.5px) 0
+            margin-inline-start: rem(50px)
+
+    @media (max-width: 1200px)
+        flex: 1 1 100%
+        width: 100%
+
+.layout__tabs__nav
+    position: relative
+    display: flex
+    height: 100%
+    width: fit-content
+
+    @media (max-width: 1200px)
+        flex: 1 1 100%
+        width: 100%
+
+    a
+        position: relative
+        +flex-center
+        gap: rem(10px)
+        flex: 1 1 100%
+        font-size: rem(14px)
+        color: #A3AAB2
+        cursor: pointer
+        text-decoration: none
+        white-space: nowrap
+        transition: all 0.2s ease-in-out
+        padding: rem(20px) rem(12px)
+        -webkit-user-drag: none
+        user-drag: none
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic_Medium', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans_Medium', sans-serif
+
+        svg
+            fill: #A3AAB2
+
+        &::after
+            content: ""
+            position: absolute
+            left: 50%
+            bottom: 0
+            width: 0
+            height: rem(3px)
+            +var(background-color, color-brand)
+            transform: translateX(-50%)
+            transition: all 0.2s ease-in-out
+
+        &:hover
+            background-color: rgba(24, 119, 242, 0.05)
+
+        &.active--tab
+            background-color: rgba(24, 119, 242, 0.05)
+            +var(color, color-brand)
+
+            svg
+                +var(fill, color-brand)
+
+            &::after
+                width: 100%
+
+.layout__container
+    .layout__tab__content
+        &:not(.page__layout__col)
+            display: none
+
+        @media (max-width: 768px)
+            &.page__layout__col
+                display: none
+
+        &.active--tab
+            display: flex
+
+.single-column-layout
+    & > section
+        & + section
+            .layout__tabs
+                margin: 0

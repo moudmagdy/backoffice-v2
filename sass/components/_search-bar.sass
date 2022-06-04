@@ -1,0 +1,316 @@
+.search__bar
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: rem(15px)
+
+    &__features
+        display: flex
+        align-items: center
+
+    &__feature
+        +flex-center
+        width: 36px
+        height: 36px
+        background-color: transparent
+        border-radius: 8px
+        transition: background-color 0.3s
+
+        &::after
+            display: none
+
+        svg
+            max-width: rem(18px)
+            max-height: rem(18px)
+            fill: #A3AAB2
+            transition: fill 0.3s
+
+        &:hover
+            background-color: rgba(198, 207, 217, 0.2)
+
+            svg
+                fill: darken(#A3AAB2, 15%)
+
+        &.active
+            background-color: rgba(198, 207, 217, 0.2)
+
+            svg
+                +var(fill, color-brand)
+
+    .features__dropdown
+        .dropdown-toggle
+            &.show
+                background-color: rgba(198, 207, 217, 0.2)
+
+                svg
+                    +var(fill, color-brand)
+
+        .features__dropdown__menu
+            .dropdown-item
+                svg
+                    +var(fill, color-text-primary)
+
+                &.active
+                    svg
+                        fill: $color-white
+
+                    &:hover
+                        +var(background-color, color-brand)
+
+                    &:active
+                        color: $color-white
+
+    .search__input
+        flex: 1 1 auto
+        max-width: none
+
+.search__input
+    display: flex
+    align-items: center
+    flex: 1 1 25%
+    height: rem(40px)
+    min-height: rem(40px)
+    background-color: rgba(240, 242, 245, 0.09)
+    border: rem(2px) solid #CBD0D6
+    border-radius: rem(20px)
+    padding: 0 rem(18px)
+
+    @media (min-width: 768px)
+        max-width: rem(300px)
+
+    svg
+        pointer-events: none
+        fill: #A3AAB2
+
+    input[type="search"]
+        flex: 1 1 auto
+        height: 100%
+        font-size: rem(12px)
+        background-color: transparent
+        border: none
+        padding: 0 5px
+
+        &::placeholder
+            color: #A3AAB2
+
+        &:focus
+            outline: none
+
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-cancel-button
+            display: none !important
+
+.page-filters-container
+    flex: 1 1 100%
+    max-height: 0
+    overflow: hidden
+    opacity: 0
+    transition: all 0.3s ease-in-out
+
+    .page-filters
+        display: flex
+        flex-wrap: wrap
+        gap: rem(15px)
+        margin-top: rem(15px)
+
+        & > *
+            flex: 1 1 100%
+
+            @media (min-width: 576px)
+                flex: 1 1 calc(25% - 11.25px)
+                max-width: calc(25% - 11.25px)
+
+        .form-control,
+        .form-select
+            padding-top: 0.538rem
+            padding-bottom: 0.538rem
+
+            &:focus
+                box-shadow: none
+
+    .filters-shown &
+        // max-height: rem(100px)
+        opacity: 1
+
+.filters-open
+    display: flex
+    align-items: center
+    height: rem(40px)
+    background-color: #F5F5F5
+    color: #878A90
+    border-radius: rem(12px)
+    cursor: pointer
+    padding: 0 rem(10px)
+    transition: all 0.3s ease-in-out
+
+    & > svg
+        width: rem(18px)
+        fill: #CBD0D6
+        transition: fill 0.3s ease-in-out
+        margin-inline-end: rem(8px)
+
+    span
+        position: relative
+        font-size: rem(14px)
+        z-index: 2
+
+    &:hover
+        background-color: darken(#F5F5F5, 2%)
+        color: darken(#878A90, 10%)
+
+    .filters-close
+        position: relative
+        +flex-center
+        width: rem(34px)
+        height: rem(34px)
+        background-color: #9CB6EC
+        border-radius: 50%
+        margin-inline-start: rem(-34px)
+        opacity: 0
+        pointer-events: none
+        z-index: 1
+        transition: all 0.3s ease-in-out
+
+        svg
+            width: rem(12px)
+            fill: $color-white
+
+    .filters-shown &
+        background-color: #93AEE6
+        color: $color-white
+        cursor: default
+        pointer-events: none
+
+        & > svg
+            fill: $color-white
+
+        .filters-close
+            margin-inline-start: rem(8px)
+            opacity: 1
+            pointer-events: auto
+
+.need-help-cta
+    display: flex
+    align-items: center
+    gap: rem(5px)
+    font-size: rem(14px)
+    color: #93AEE6
+    text-decoration: none
+    transition: color 0.3s ease-in-out
+
+    svg
+        width: rem(18px)
+        fill: #93AEE6
+        transition: fill 0.3s ease-in-out
+
+    &:hover
+        color: darken(#93AEE6, 20%)
+
+        svg
+            fill: darken(#93AEE6, 20%)
+
+.back-btn,
+.cancel-btn
+    display: flex
+    align-items: center
+    gap: rem(8px)
+    text-decoration: none
+    background-color: transparent
+    border-radius: rem(12px)
+    padding: 0.6rem 0.8rem
+    transition: all 0.3s ease-in-out
+
+    span
+        font-size: rem(14px)
+        color: #65676B
+        transition: all 0.3s ease-in-out
+
+    svg
+        width: rem(16px)
+        fill: #4D4D4D
+        transition: fill 0.3s ease-in-out
+
+        [dir="ltr"] &
+            transform: scaleX(-1)
+
+    &:hover
+        background-color: #f3f2f7
+
+        span
+            color: darken(#65676B, 20%)
+
+        svg
+            fill: darken(#4D4D4D, 20%)
+
+.search__bar__dropdown
+    @media (max-width: 576px)
+        width: 100%
+
+    .dropdown-toggle
+        display: flex
+        align-items: center
+        background-color: rgba(240, 242, 245, 0.09)
+        border: 2px solid #C6CFD9
+        border-radius: rem(12px)
+        white-space: nowrap
+        text-decoration: none
+        padding: 0.575rem 0.75rem
+
+        &::after
+            content: ""
+            display: block
+            width: rem(8.8px)
+            height: rem(16.2px)
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.8' height='16.2' viewBox='0 0 8.8 16.2'%3E%3Cpath fill='%23A3AAB2' d='M0,11.8l4.4,4.4l4.4-4.4H0z M0,4.4L4.4,0l4.4,4.4L0,4.4z'/%3E%3C/svg%3E")
+            background-size: rem(8.8px) rem(16.2px)
+            background-repeat: no-repeat
+            border: none
+            margin-inline-start: auto
+
+        &.show
+            +var(border-color, color-brand)
+
+        svg
+            margin-inline-end: rem(5px)
+
+        .dropdown__label
+            font-size: rem(12px)
+            color: #A3AAB2
+            margin-inline-end: rem(5px)
+
+        .dropdown__selected-value
+            color: #4D4D4D
+            font-size: rem(12px)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_Medium', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_Medium', sans-serif
+
+        span
+            &:last-child
+                margin-inline-end: rem(28px)
+
+    .dropdown-menu
+        text-align: right
+        border: none
+        border-radius: 8px
+        box-shadow: 1px 0px 12px 0px rgba(0, 0, 0, 0.16)
+
+        .dropdown-item
+            font-size: rem(14px)
+            padding: rem(10px) rem(14px)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_Medium', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_Medium', sans-serif
+
+            &:hover
+                background-color: #EBF6FF
+
+            &:active
+                +var(background-color, color-brand)
+                color: #fff

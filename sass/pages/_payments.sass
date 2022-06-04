@@ -1,0 +1,200 @@
+.payments-page
+    @media (max-width: 768px)
+        overflow: auto
+        +scrollbar
+
+    .single-column-layout
+        @media (max-width: 768px)
+            height: auto
+
+        header
+            gap: 0 rem(30px)
+
+    .layout__tabs
+        margin-inline-start: auto
+
+    .service-info
+        display: flex
+        justify-content: space-between
+        gap: rem(30px)
+        padding: rem(15px) rem(22px)
+
+        @media (max-width: 768px)
+            flex-wrap: wrap
+            gap: rem(15px)
+
+    .service-balance
+        display: inline-flex
+        align-items: center
+        gap: rem(15px)
+        border: rem(1px) solid #E4E6EB
+        border-radius: rem(12px)
+        padding: rem(10px) rem(15px)
+
+        @media (max-width: 768px)
+            flex-basis: 100%
+
+        .service-icon
+            +flex-center
+            width: rem(60px)
+            height: rem(60px)
+            border-radius: 50%
+            background-color: #F5F5F5
+
+            svg
+                width: rem(30px)
+                height: rem(30px)
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                border-radius: 50%
+
+        .btn
+            margin-inline-start: auto
+
+    .balance-details
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        gap: rem(5px)
+
+        .balance-label
+            flex: 1 1 100%
+            color: #818B97
+            font-size: rem(12px)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_Medium', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_Medium', sans-serif
+
+        .balance-amount,
+        .balance-currency
+            color: #060505
+
+            &.profit
+                color: #2BAB5A
+
+        .balance-amount
+            font-size: rem(22px)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
+
+        .balance-currency
+            font-size: rem(20px)
+
+    .side-panel__body
+        .panel-img
+            display: flex
+            width: rem(200px)
+            height: rem(200px)
+            margin-inline: auto
+
+    .received-amount
+        max-width: none
+
+.statistics-panel
+    display: flex
+    align-items: center
+    gap: rem(150px)
+    box-shadow: inset 0 rem(-0.5px) rem(1px) #edeff4
+    padding: rem(15px) rem(22px)
+
+    @media (max-width: 992px)
+        flex-wrap: wrap
+        gap: rem(30px)
+
+    .service-icon
+        +flex-center
+        width: rem(70px)
+        height: rem(70px)
+        border-radius: 50%
+        background-color: #F5F5F5
+
+        svg
+            width: rem(35px)
+            height: rem(35px)
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 50%
+
+    .service-actions
+        display: flex
+        gap: rem(15px)
+        list-style: none
+        padding: 0
+        margin: 0
+
+        @media (max-width: 992px)
+            flex-wrap: wrap
+
+    .service-statistics
+        flex: 1 1 100%
+        display: flex
+        justify-content: space-between
+        gap: rem(15px)
+        list-style: none
+        padding: 0
+        margin: 0
+
+        li
+            display: flex
+            flex-direction: column
+            justify-content: center
+            gap: rem(15px)
+
+        .state-label
+            font-size: rem(12px)
+            color: #A3AAB2
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_Medium', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_Medium', sans-serif
+
+        .state-data
+            +var(color, color-brand)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_SemiBold', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_SemiBold', sans-serif
+
+.order-status
+    display: inline-flex
+    font-size: rem(12px)
+    color: #4D4D4D
+    white-space: nowrap
+    border: rem(1px) solid #C6CFD9
+    border-radius: rem(16px)
+    padding: rem(6px) rem(12px)
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif
+
+    &.success
+        color: #2BAB5A
+        border-color: #2BAB5A
+
+    &.failed
+        color: #FF6B73
+        border-color: #FF6B73
+
+    &.in-progress
+        +var(color, color-brand)
+        +var(border-color, color-brand)

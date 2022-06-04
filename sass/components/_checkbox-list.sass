@@ -1,0 +1,50 @@
+.select-all-btn
+    input[type="checkbox"]
+        display: none
+
+        &:checked ~ .btn
+            color: #fff
+            +var(background-color, color-brand)
+            +var(border-color, color-brand)
+
+.checkbox-list
+
+.checkbox-list__group
+    margin-bottom: rem(15px)
+
+    .collapse__container
+        overflow: hidden
+        +scrollbar-hidden
+
+.checkbox-list__group__header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: rem(15px)
+    background-color: #F5F5F5
+    border-radius: rem(12px) rem(12px) 0 0
+    padding: rem(12px) rem(20px)
+
+    .collapse__toggle
+        border-radius: rem(6px)
+        transition: background-color 0.3s ease-in-out
+
+        &:hover
+            background-color: #fff
+
+.checkbox-list__group__item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: rem(15px)
+    box-shadow: inset 0 rem(-1px) rem(1px) 0 #edeff4
+    padding: rem(12px) rem(20px)
+
+.checkbox-list__item__title
+    font-size: rem(14px)
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic_Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans_Medium', sans-serif

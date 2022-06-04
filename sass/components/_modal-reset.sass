@@ -1,0 +1,72 @@
+.modal
+    +scrollbar
+
+.modal-dialog
+    box-shadow: 0px 1px 20px rgba(0,0,0,0.15)
+    margin: 4.5rem auto
+
+    @media (min-width: 576px)
+        max-width: 522px
+
+.modal-lg, .modal-xl
+    @media (min-width: 992px)
+        max-width: 800px
+
+.modal-sm
+    @media (min-width: 576px)
+        max-width: 356px
+
+.modal-content
+    border: none
+    border-radius: 8px
+
+.modal-header
+    +flex-center
+    background-color: #F5F5F5
+    border: none
+    padding: 0.85rem 20px
+    border-top-right-radius: 8px
+    border-top-left-radius: 8px
+
+    .btn-close
+        +flex-center
+        width: 24px
+        height: 24px
+        background: none
+        background-color: #fff
+        border-radius: 50%
+        cursor: pointer
+        margin-inline-start: auto
+
+.modal-title
+    +flex-center
+    gap: rem(12px)
+    font-size: 14px
+
+.modal-body
+    padding: 1.5rem
+
+    .form-label
+        color: inherit
+        font-size: 12px
+
+.modal-footer
+    justify-content: flex-start
+    border-color: #ececec
+    gap: 8px
+    border-bottom-left-radius: 8px
+    border-bottom-right-radius: 8px
+    padding: 8px 20px
+    margin-top: 0
+
+    & > *
+        margin: 0
+
+    .btn
+        border-radius: 24px
+        padding: 0.725rem 4rem
+
+.modal-sm
+    .modal-footer
+        .btn
+            padding: 0.725rem 2.95rem

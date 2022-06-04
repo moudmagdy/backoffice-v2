@@ -1,0 +1,154 @@
+.products__list
+    position: relative
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
+    gap: rem(16px)
+    padding-inline-end: rem(10px)
+    transition: all 0.4s ease-in
+
+    &.list-view
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr))
+
+    .product
+        position: relative
+        display: flex
+        flex-direction: column
+        background-color: #fff
+        border: rem(1px) solid #E2E9F0
+        border-radius: rem(8px)
+        cursor: pointer
+        opacity: 0
+        padding: rem(3px)
+
+        &::before
+            content: ""
+            position: absolute
+            inset: 0
+            border: rem(3px) solid transparent
+            border-radius: rem(8px)
+            pointer-events: none
+            transition: border-color 0.3s ease
+
+        &__dropdown
+            position: absolute
+            top: rem(2px)
+            inset-inline-start: rem(2px)
+
+            &__btn
+                +flex-center
+                width: rem(25px)
+                height: rem(25px)
+                background-color: transparent
+                border: none
+                border-radius: 50%
+                padding: 0
+                transition: background-color 0.3s
+
+                &:hover
+                    background-color: #C6CFD9
+
+                &::after
+                    display: none
+
+                svg
+                    +var(fill, color-text-primary)
+                    width: rem(6px)
+                    height: rem(14px)
+
+            &__menu
+                font-size: rem(14px)
+                text-align: right
+
+                li
+                    a
+                        gap: rem(8px)
+
+                        svg
+                            width: rem(15px)
+                            +var(fill, color-text-primary)
+
+        .product__image
+            width: 100%
+            height: rem(90px)
+            overflow: hidden
+            border-top-left-radius: 5px
+            border-top-right-radius: 5px
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+        .product__details
+            display: flex
+            flex-direction: column
+            padding: rem(5px)
+            margin-top: auto
+
+        .product__title
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            font-size: 14px
+            line-height: 1.5
+            overflow: hidden
+            text-overflow: ellipsis
+            -webkit-line-clamp: 2
+            user-select: none
+            margin-bottom: rem(5px)
+
+            [dir="rtl"] &
+                font-family: 'NotoSansArabic_Medium', sans-serif
+
+            [dir="ltr"] &
+                font-family: 'NotoSans_Medium', sans-serif
+
+        .product__details__price
+            display: block
+            font-size: rem(14px)
+            margin-top: auto
+
+        .product__quantity
+            position: absolute
+            top: -7px
+            inset-inline-end: rem(-7px)
+            display: flex
+            justify-content: center
+            align-items: center
+            width: rem(24px)
+            height: rem(24px)
+            font-size: 11px
+            color: #fff
+            pointer-events: none
+            opacity: 0
+            +var(background-color, color-brand)
+            border-radius: 50%
+            transition: opacity 0.2s ease
+
+        &--selected
+            &::before
+                border-color: $color-brand
+
+            .product__quantity
+                opacity: 1
+
+.products__list
+    &.list-view
+        .product
+            flex-direction: row
+            gap: rem(8px)
+
+            &__image
+                width: rem(80px)
+                height: rem(80px)
+                flex-shrink: 0
+
+            &__details
+                margin-top: 0
+
+    &.grid-view--no-title
+        .product
+            &__image
+                height: rem(100px)
+
+            &__title
+                display: none
