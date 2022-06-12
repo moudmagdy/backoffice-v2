@@ -1,10 +1,16 @@
 const pageLoader = document.querySelector('.page-preloader');
+const searchControlInput = document.querySelector('.search-control__input');
+const searchControlRemoveBtn = document.querySelector('.search-control__remove-btn');
+const labelTriggerModal = document.querySelectorAll('label[data-bs-toggle="modal"]');
+
+
 function closePageLoader() {
     pageLoader.classList.add('page-loaded');
 }
-window.addEventListener('load', closePageLoader);
+
 
 const datepickerElements = document.querySelectorAll('.form-datepicker');
+
 datepickerElements.forEach(element => {
     const datepicker = new Datepicker(element, {
         // ...options
@@ -98,6 +104,7 @@ if (tableRadio) {
 const paymentBtns = document.querySelectorAll('[data-target="payment"]');
 const paymentBackBtns = document.querySelectorAll('.payment .back-btn');
 
+
 if (paymentBtns) {
     paymentBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -130,3 +137,39 @@ if (document.querySelector('.swiper')) {
         }
     });
 }
+
+
+
+function showRemoveTextBtn() {
+    if (searchControlInput) {
+        if (this.value.length == 0) {
+            this.parentNode.classList.remove('has-value');
+        } else {
+            this.parentNode.classList.add('has-value');
+        }
+    }
+}
+
+function removeInputText(e) {
+    if (searchControlInput) {
+        e.preventDefault();
+        if (this.previousElementSibling.value.length >= 1) {
+            this.previousElementSibling.value = "";
+            this.parentNode.classList.remove('has-value');
+        }
+    }
+}
+
+
+if (labelTriggerModal) {
+    labelTriggerModal.forEach(label => {
+        label.addEventListener('click', (e) => {
+            e.preventDefault();
+        });
+    });
+}
+
+
+window.addEventListener('load', closePageLoader);
+searchControlInput.addEventListener('keyup', showRemoveTextBtn);
+searchControlRemoveBtn.addEventListener('click', removeInputText);

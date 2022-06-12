@@ -7,16 +7,17 @@
     border-radius: rem(20px)
     white-space: nowrap
     padding: 0.475rem 1.25rem
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out
 
     [dir="rtl"] &
-        font-family: 'NotoSansArabic_Medium', sans-serif
+        font-family: 'NotoSansArabic-Medium', sans-serif
 
     [dir="ltr"] &
-        font-family: 'NotoSans_Medium', sans-serif
+        font-family: 'NotoSans-Medium', sans-serif
 
     svg
         fill: currentColor
-        transition: fill 0.15s ease-in-out
+        transition: fill 0.3s ease-in-out
 
     &:hover, &:active, &:focus
         svg
@@ -223,3 +224,52 @@
 
     &:hover
         color: darken($color-brand, 10%)
+
+.with-plus-icon,
+.with-return-icon
+    display: flex
+    align-items: center
+    gap: rem(8px)
+
+    &::before
+        content: ""
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        transition: background-image 0.3s ease-in-out
+
+.with-plus-icon
+    &::before
+        width: rem(10px)
+        height: rem(10px)
+
+    &.btn-outline-primary
+        &::before
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M10,5.76H5.76V10H4.25V5.76H0V4.25H4.25V0H5.76V4.25H10Z' fill='%231877f2'/%3E%3C/svg%3E")
+
+        &:hover
+            &::before
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M10,5.76H5.76V10H4.25V5.76H0V4.25H4.25V0H5.76V4.25H10Z' fill='%23fff'/%3E%3C/svg%3E")
+
+    &.btn-primary
+        &::before
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M10,5.76H5.76V10H4.25V5.76H0V4.25H4.25V0H5.76V4.25H10Z' fill='%23fff'/%3E%3C/svg%3E")
+
+.with-return-icon
+    &::before
+        width: rem(14px)
+        height: rem(14px)
+
+    &.btn-outline-primary
+        &::before
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 20'%3E%3Cpath d='M6,6v4L0,5,6,0V4h5a8,8,0,0,1,0,16H2V18h9A6,6,0,0,0,11,6Z' fill='%231877f2'/%3E%3C/svg%3E")
+
+        &:hover,
+        &:active,
+        &:focus
+            &::before
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 20'%3E%3Cpath d='M6,6v4L0,5,6,0V4h5a8,8,0,0,1,0,16H2V18h9A6,6,0,0,0,11,6Z' fill='%23fff'/%3E%3C/svg%3E")
+
+    &.btn-primary
+        &::before
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 20'%3E%3Cpath d='M6,6v4L0,5,6,0V4h5a8,8,0,0,1,0,16H2V18h9A6,6,0,0,0,11,6Z' fill='%23fff'/%3E%3C/svg%3E")

@@ -6,31 +6,57 @@
   --color-brand-aman: #3DBEC8;
   --color-bg: #EEF0F8;
   --color-text-primary: #060505;
+  --color-success: #4CC784;
+  --color-danger: #FF6B73;
 }
 
 @font-face {
-  font-family: "NotoSans_Regular";
+  font-family: "NotoSans-Regular";
   src: url("../fonts/NotoSans-Regular.woff2") format("woff2"), url("../fonts/NotoSans-Regular.woff") format("woff"), url("../fonts/NotoSans-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "NotoSans_Medium";
+  font-family: "NotoSans-Medium";
   src: url("../fonts/NotoSans-Medium.woff2") format("woff2"), url("../fonts/NotoSans-Medium.woff") format("woff"), url("../fonts/NotoSans-Medium.ttf") format("truetype");
 }
 @font-face {
-  font-family: "NotoSans_SemiBold";
+  font-family: "NotoSans-SemiBold";
   src: url("../fonts/NotoSans-SemiBold.woff2") format("woff2"), url("../fonts/NotoSans-SemiBold.woff") format("woff"), url("../fonts/NotoSans-SemiBold.ttf") format("truetype");
 }
 @font-face {
-  font-family: "NotoSansArabic_SemiBold";
+  font-family: "NotoSansArabic-SemiBold";
   src: url("../fonts/NotoSansArabic-SemiBold.woff2") format("woff2"), url("../fonts/NotoSansArabic-SemiBold.woff") format("woff"), url("../fonts/NotoSansArabic-SemiBold.ttf") format("truetype");
 }
 @font-face {
-  font-family: "NotoSansArabic_Medium";
+  font-family: "NotoSansArabic-Medium";
   src: url("../fonts/NotoSansArabic-Medium.woff2") format("woff2"), url("../fonts/NotoSansArabic-Medium.woff") format("woff"), url("../fonts/NotoSansArabic-Medium.ttf") format("truetype");
 }
 @font-face {
-  font-family: "NotoSansArabic_Regular";
+  font-family: "NotoSansArabic-Regular";
   src: url("../fonts/NotoSansArabic-Regular.woff2") format("woff2"), url("../fonts/NotoSansArabic-Regular.woff") format("woff"), url("../fonts/NotoSansArabic-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GraphikArabic-Regular";
+  src: url("../fonts/GraphikArabic-Regular.eot");
+  src: local("Graphik Arabic Regular"), local("GraphikArabic-Regular"), url("../fonts/GraphikArabic-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GraphikArabic-Regular.woff2") format("woff2"), url("../fonts/GraphikArabic-Regular.woff") format("woff"), url("../fonts/GraphikArabic-Regular.ttf") format("truetype"), url("../fonts/GraphikArabic-Regular.svg#GraphikArabic-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GraphikArabic-Medium";
+  src: url("../fonts/GraphikArabic-Medium.eot");
+  src: local("Graphik Arabic Medium"), local("GraphikArabic-Medium"), url("../fonts/GraphikArabic-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GraphikArabic-Medium.woff2") format("woff2"), url("../fonts/GraphikArabic-Medium.woff") format("woff"), url("../fonts/GraphikArabic-Medium.ttf") format("truetype"), url("../fonts/GraphikArabic-Medium.svg#GraphikArabic-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GraphikArabic-SemiBold";
+  src: url("../fonts/GraphikArabic-SemiBold.eot");
+  src: local("Graphik Arabic SemiBold"), local("GraphikArabic-SemiBold"), url("../fonts/GraphikArabic-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GraphikArabic-SemiBold.woff2") format("woff2"), url("../fonts/GraphikArabic-SemiBold.woff") format("woff"), url("../fonts/GraphikArabic-SemiBold.ttf") format("truetype"), url("../fonts/GraphikArabic-SemiBold.svg#GraphikArabic-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 html {
   font-size: 16px;
@@ -45,44 +71,54 @@ body {
   font-size: var(--default-font-size);
 }
 [dir=rtl] body {
-  font-family: "NotoSansArabic_Regular", sans-serif;
+  font-family: "NotoSansArabic-Regular", sans-serif;
 }
 [dir=ltr] body {
-  font-family: "NotoSans_Regular", sans-serif;
+  font-family: "NotoSans-Regular", sans-serif;
 }
 
 [dir=rtl] h1,
 [dir=rtl] h2,
 [dir=rtl] h3 {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] h1,
 [dir=ltr] h2,
 [dir=ltr] h3 {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
+}
+.page-title h1,
+.page-title h2,
+.page-title h3 {
+  font-size: 1.125rem;
+}
+[dir=rtl] .page-title h1,
+[dir=rtl] .page-title h2,
+[dir=rtl] .page-title h3 {
+  font-family: "GraphikArabic-Medium", sans-serif;
 }
 
 [dir=rtl] h4,
 [dir=rtl] h5 {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] h4,
 [dir=ltr] h5 {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 [dir=rtl] h6 {
-  font-family: "NotoSansArabic_Regular", sans-serif;
+  font-family: "NotoSansArabic-Regular", sans-serif;
 }
 [dir=ltr] h6 {
-  font-family: "NotoSans_Regular", sans-serif;
+  font-family: "NotoSans-Regular", sans-serif;
 }
 
 [dir=rtl] .fw-bold {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .fw-bold {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 
 header .page__title {
@@ -97,20 +133,20 @@ fieldset legend {
   font-size: 14px;
 }
 [dir=rtl] fieldset legend {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] fieldset legend {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 
 label {
   font-size: 0.875rem;
 }
 [dir=rtl] label {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] label {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 label > span:last-child {
   font-size: 0.75rem;
@@ -126,17 +162,17 @@ label > span:last-child {
   font-size: 0.875rem;
 }
 [dir=rtl] .collapse__toggle {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .collapse__toggle {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 
 [dir=rtl] .btn-link {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .btn-link {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 body {
@@ -403,17 +439,38 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.625rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  color: #1877F2;
+  color: var(--color-brand);
   padding: 0.75rem 1rem;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.dropdown-item svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  fill: #1877F2;
+  fill: var(--color-brand);
+  -webkit-transition: fill 0.3s ease-in-out;
+  -o-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
 }
 [dir=rtl] .dropdown-item {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .dropdown-item {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .dropdown-item:hover {
-  background-color: #E2F2FE;
+  color: #fff;
+  background-color: #1877F2;
+  background-color: var(--color-brand);
+}
+.dropdown-item:hover svg {
+  fill: #fff;
 }
 .dropdown-item:active, .dropdown-item:focus {
   color: inherit;
@@ -440,23 +497,28 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 40px;
-  height: 40px;
-  border: 0.0625rem solid #e7dcdc;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: 0.0625rem solid rgba(77, 77, 77, 0.08);
   border-radius: 50%;
-  -webkit-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 .header__dropdown .dropdown-toggle svg,
 .table__dropdown .dropdown-toggle svg {
   fill: #4D4D4D;
-  width: 1rem;
+  width: 0.875rem;
   height: auto;
+  -webkit-transition: fill 0.3s ease-in-out;
+  -o-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
 }
 .header__dropdown .dropdown-toggle:hover,
 .table__dropdown .dropdown-toggle:hover {
   background-color: #F5F5F5;
+  border-color: #F5F5F5;
 }
 .header__dropdown .dropdown-toggle.show,
 .table__dropdown .dropdown-toggle.show {
@@ -465,13 +527,7 @@ a:hover {
 .header__dropdown .dropdown-toggle.show svg,
 .table__dropdown .dropdown-toggle.show svg {
   fill: #1877F2;
-}
-
-.header__dropdown .dropdown-menu {
-  min-width: 225px;
-}
-.header__dropdown .dropdown-item {
-  padding: 1rem 1.25rem;
+  fill: var(--color-brand);
 }
 
 .datepicker-dropdown {
@@ -522,10 +578,10 @@ a:hover {
   line-height: 1.5;
 }
 [dir=rtl] .datepicker-view .dow {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .datepicker-view .dow {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .datepicker-cell {
@@ -669,10 +725,10 @@ a:hover {
   }
 }
 [dir=rtl] .alert span {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .alert span {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .alert .btn {
   padding: 0.475rem 2.5rem;
@@ -699,6 +755,16 @@ a:hover {
 }
 .alert-warning span {
   color: #FFAA00;
+}
+
+.positive {
+  color: #4CC784;
+  color: var(--color-success);
+}
+
+.negative {
+  color: #FF6B73;
+  color: var(--color-danger);
 }
 
 fieldset:not(.collapsible):not(:last-child) {
@@ -1096,10 +1162,10 @@ button:focus,
   font-size: 0.75rem;
 }
 [dir=rtl] .form-tags-control__tag__label {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .form-tags-control__tag__label {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .form-tags-control__tag__delete {
@@ -1180,10 +1246,10 @@ button:focus,
   transition: background-color 0.3s;
 }
 [dir=rtl] .search-result a {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .search-result a {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .search-result a:hover {
   background-color: rgba(198, 207, 217, 0.68);
@@ -1360,10 +1426,10 @@ button:focus,
   padding: 0.725rem 0.65rem;
 }
 [dir=rtl] .code__inputs .form-control {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .code__inputs .form-control {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 
 .error-msg {
@@ -1556,6 +1622,20 @@ main {
     --main-menu-width: 12.5rem;
   }
 }
+main header .page-title {
+  -ms-flex-preferred-size: 8.125rem;
+      flex-basis: 8.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+main header .page-title h1 {
+  margin-bottom: 0;
+}
 main header .main-menu__toggle {
   display: none;
 }
@@ -1706,7 +1786,7 @@ main header .main-menu__toggle:hover svg {
           flex-direction: column;
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  min-height: 100%;
+  height: 100%;
   padding: 1.25rem 3.75rem;
   -webkit-transition: padding 0.3s;
   -o-transition: padding 0.3s;
@@ -1733,29 +1813,22 @@ main header .main-menu__toggle:hover svg {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  gap: 0 0.9375rem;
+  gap: 0 0.75rem;
   background-color: #fff;
-  border-radius: 0.75rem 0.75rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
   z-index: 10;
   padding: 0.78125rem 1.375rem;
-  -webkit-transition: min-height 0.3s;
-  -o-transition: min-height 0.3s;
-  transition: min-height 0.3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.filters-shown .single-column-layout header {
+  border-radius: 0.5rem 0.5rem 0.125rem 0.125rem;
+  margin-bottom: 0.125rem;
 }
 .single-column-layout header.has--tabs {
   -webkit-box-shadow: inset 0 -0.03125rem 0.0625rem #edeff4;
           box-shadow: inset 0 -0.03125rem 0.0625rem #edeff4;
-}
-.single-column-layout header h1 {
-  line-height: 2.2223;
-  font-size: 1.125rem;
-  margin-bottom: 0;
-}
-[dir=rtl] .single-column-layout header h1 {
-  font-family: "NotoSansArabic_Medium", sans-serif;
-}
-[dir=ltr] .single-column-layout header h1 {
-  font-family: "NotoSans_Medium", sans-serif;
 }
 .single-column-layout header .page__navigation {
   -ms-flex-preferred-size: 30%;
@@ -1769,33 +1842,28 @@ main header .main-menu__toggle:hover svg {
   }
 }
 .single-column-layout header + section {
-  border-radius: 0 0 0.75rem 0.75rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.filters-shown .single-column-layout header + section {
+  border-radius: 0.125rem 0.125rem 0.5rem 0.5rem;
 }
 .single-column-layout > section {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #fff;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   overflow: hidden;
-  overflow-y: auto;
-  scrollbar-color: #61a0f2 rgba(0, 0, 0, 0.08);
-  scrollbar-width: thin;
   -webkit-box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.08);
           box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.08);
-}
-.single-column-layout > section::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-.single-column-layout > section::-webkit-scrollbar-thumb {
-  background-color: #61a0f2;
-}
-.single-column-layout > section::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.08);
-}
-.single-column-layout > section::-webkit-scrollbar-corner {
-  background-color: transparent;
+  padding-block: 0 0.625rem;
 }
 .single-column-layout > section .sub-title {
   display: -webkit-box;
@@ -1949,6 +2017,8 @@ main header .main-menu__toggle:hover svg {
   overflow-y: auto;
   scrollbar-color: #61a0f2 rgba(0, 0, 0, 0.08);
   scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable both-edges;
 }
 .scrollable-content::-webkit-scrollbar {
   width: 8px;
@@ -2087,10 +2157,10 @@ main header .main-menu__toggle:hover svg {
   padding: 0.875rem 1.5rem;
 }
 [dir=rtl] .main-menu a:not(.main-menu__toggle, .profile__menu a) {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .main-menu a:not(.main-menu__toggle, .profile__menu a) {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .main-menu a:not(.main-menu__toggle, .profile__menu a) > * {
   -webkit-box-flex: 0;
@@ -2342,10 +2412,10 @@ main header .main-menu__toggle:hover svg {
   padding: 0 0.25rem;
 }
 [dir=rtl] .main-menu__notifications .notifications-count {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .main-menu__notifications .notifications-count {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .main-menu__profile > a img {
   width: 1.375rem;
@@ -2523,18 +2593,23 @@ main header .main-menu__toggle:hover svg {
   border-radius: 1.25rem;
   white-space: nowrap;
   padding: 0.475rem 1.25rem;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 [dir=rtl] .btn {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .btn {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .btn svg {
   fill: currentColor;
-  -webkit-transition: fill 0.15s ease-in-out;
-  -o-transition: fill 0.15s ease-in-out;
-  transition: fill 0.15s ease-in-out;
+  -webkit-transition: fill 0.3s ease-in-out;
+  -o-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
 }
 .btn:hover svg, .btn:active svg, .btn:focus svg {
   fill: currentColor;
@@ -2776,6 +2851,55 @@ main header .main-menu__toggle:hover svg {
   color: #0b5fcc;
 }
 
+.with-plus-icon,
+.with-return-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+.with-plus-icon::before,
+.with-return-icon::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transition: background-image 0.3s ease-in-out;
+  -o-transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.with-plus-icon::before {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+.with-plus-icon.btn-outline-primary::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M10,5.76H5.76V10H4.25V5.76H0V4.25H4.25V0H5.76V4.25H10Z' fill='%231877f2'/%3E%3C/svg%3E");
+}
+.with-plus-icon.btn-outline-primary:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M10,5.76H5.76V10H4.25V5.76H0V4.25H4.25V0H5.76V4.25H10Z' fill='%23fff'/%3E%3C/svg%3E");
+}
+.with-plus-icon.btn-primary::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M10,5.76H5.76V10H4.25V5.76H0V4.25H4.25V0H5.76V4.25H10Z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.with-return-icon::before {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+.with-return-icon.btn-outline-primary::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 20'%3E%3Cpath d='M6,6v4L0,5,6,0V4h5a8,8,0,0,1,0,16H2V18h9A6,6,0,0,0,11,6Z' fill='%231877f2'/%3E%3C/svg%3E");
+}
+.with-return-icon.btn-outline-primary:hover::before, .with-return-icon.btn-outline-primary:active::before, .with-return-icon.btn-outline-primary:focus::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 20'%3E%3Cpath d='M6,6v4L0,5,6,0V4h5a8,8,0,0,1,0,16H2V18h9A6,6,0,0,0,11,6Z' fill='%23fff'/%3E%3C/svg%3E");
+}
+.with-return-icon.btn-primary::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 20'%3E%3Cpath d='M6,6v4L0,5,6,0V4h5a8,8,0,0,1,0,16H2V18h9A6,6,0,0,0,11,6Z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
 .flex-table {
   position: relative;
   display: -webkit-box;
@@ -2828,10 +2952,10 @@ main header .main-menu__toggle:hover svg {
   padding: 0.45rem 0;
 }
 [dir=rtl] .flex-table__head {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .flex-table__head {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .flex-table__head.sticky--head {
   position: sticky;
@@ -2899,11 +3023,6 @@ main header .main-menu__toggle:hover svg {
   background-color: transparent;
 }
 
-.modal-dialog {
-  -webkit-box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.15);
-  margin: 4.5rem auto;
-}
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 522px;
@@ -2924,7 +3043,9 @@ main header .main-menu__toggle:hover svg {
 
 .modal-content {
   border: none;
-  border-radius: 8px;
+  border-radius: 0.75rem;
+  -webkit-box-shadow: 0 0.0625rem 1.25rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.0625rem 1.25rem rgba(0, 0, 0, 0.15);
 }
 
 .modal-header {
@@ -2939,9 +3060,9 @@ main header .main-menu__toggle:hover svg {
           align-items: center;
   background-color: #F5F5F5;
   border: none;
-  padding: 0.85rem 20px;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  padding: 0.85rem 1.25rem;
+  border-top-right-radius: 0.75rem;
+  border-top-left-radius: 0.75rem;
 }
 .modal-header .btn-close {
   display: -webkit-box;
@@ -2974,7 +3095,7 @@ main header .main-menu__toggle:hover svg {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.75rem;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .modal-body {
@@ -2982,7 +3103,7 @@ main header .main-menu__toggle:hover svg {
 }
 .modal-body .form-label {
   color: inherit;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .modal-footer {
@@ -2990,114 +3111,25 @@ main header .main-menu__toggle:hover svg {
       -ms-flex-pack: start;
           justify-content: flex-start;
   border-color: #ececec;
-  gap: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  padding: 8px 20px;
+  gap: 0.625rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 0.625rem 1.25rem;
   margin-top: 0;
 }
 .modal-footer > * {
   margin: 0;
 }
-.modal-footer .btn {
-  border-radius: 24px;
-  padding: 0.725rem 4rem;
+.modal-footer .btn:not(.btn-sm) {
+  border-radius: 1.5rem;
+  padding: 0.469rem 4rem;
+}
+.modal-sm .modal-footer .btn:not(.btn-sm) {
+  padding-inline: 2.95rem;
 }
 
-.modal-sm .modal-footer .btn {
-  padding: 0.725rem 2.95rem;
-}
-
-.search__bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.9375rem;
-}
-.search__bar__features {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.search__bar__feature {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 36px;
-  height: 36px;
-  background-color: transparent;
-  border-radius: 8px;
-  -webkit-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-.search__bar__feature::after {
-  display: none;
-}
-.search__bar__feature svg {
-  max-width: 1.125rem;
-  max-height: 1.125rem;
-  fill: #A3AAB2;
-  -webkit-transition: fill 0.3s;
-  -o-transition: fill 0.3s;
-  transition: fill 0.3s;
-}
-.search__bar__feature:hover {
-  background-color: rgba(198, 207, 217, 0.2);
-}
-.search__bar__feature:hover svg {
-  fill: #79848f;
-}
-.search__bar__feature.active {
-  background-color: rgba(198, 207, 217, 0.2);
-}
-.search__bar__feature.active svg {
-  fill: #1877F2;
-  fill: var(--color-brand);
-}
-.search__bar .features__dropdown .dropdown-toggle.show {
-  background-color: rgba(198, 207, 217, 0.2);
-}
-.search__bar .features__dropdown .dropdown-toggle.show svg {
-  fill: #1877F2;
-  fill: var(--color-brand);
-}
-.search__bar .features__dropdown .features__dropdown__menu .dropdown-item svg {
-  fill: #060505;
-  fill: var(--color-text-primary);
-}
-.search__bar .features__dropdown .features__dropdown__menu .dropdown-item.active svg {
-  fill: #fff;
-}
-.search__bar .features__dropdown .features__dropdown__menu .dropdown-item.active:hover {
-  background-color: #1877F2;
-  background-color: var(--color-brand);
-}
-.search__bar .features__dropdown .features__dropdown__menu .dropdown-item.active:active {
-  color: #fff;
-}
-.search__bar .search__input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  max-width: none;
-}
-
-.search__input {
+.search-control {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3108,22 +3140,39 @@ main header .main-menu__toggle:hover svg {
       -ms-flex: 1 1 25%;
           flex: 1 1 25%;
   height: 2.5rem;
-  min-height: 2.5rem;
-  background-color: rgba(240, 242, 245, 0.09);
-  border: 0.125rem solid #CBD0D6;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17.67 16.46'%3E%3Cpath d='M15.56,2.11A7.2,7.2,0,0,0,3.27,7.2a7.11,7.11,0,0,0,1,3.6L0,15.05l1.41,1.41,4.08-4.07A7.2,7.2,0,0,0,15.56,2.11Zm-1.41,8.76A5.2,5.2,0,0,1,6.79,3.52a5.2,5.2,0,0,1,7.36,7.35Z' fill='%231877f2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 0.875rem;
+  background-position: left 1.125rem center;
+  border: 0.125rem solid #C6CFD9;
   border-radius: 1.25rem;
-  padding: 0 1.125rem;
+  padding-inline: 1.125rem 3.25rem;
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+}
+.search-control:focus-within {
+  border-color: #1877F2;
+  border-color: var(--color-brand);
+}
+.search-control::before {
+  content: "";
+  position: absolute;
+  inset-inline-end: 2.625rem;
+  width: 0.03125rem;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+[dir=ltr] .search-control {
+  background-position: right 1.125rem center;
 }
 @media (min-width: 768px) {
-  .search__input {
-    max-width: 18.75rem;
+  .search-control {
+    max-width: 19.375rem;
   }
 }
-.search__input svg {
-  pointer-events: none;
-  fill: #A3AAB2;
-}
-.search__input input[type=search] {
+.search-control__input {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -3131,28 +3180,84 @@ main header .main-menu__toggle:hover svg {
   font-size: 0.75rem;
   background-color: transparent;
   border: none;
-  padding: 0 5px;
+  padding: 0;
+  -webkit-padding-end: 0.9375rem;
+          padding-inline-end: 0.9375rem;
 }
-.search__input input[type=search]::-webkit-input-placeholder {
-  color: #A3AAB2;
+.search-control__input::-webkit-input-placeholder {
+  color: #CBD0D6;
 }
-.search__input input[type=search]::-moz-placeholder {
-  color: #A3AAB2;
+.search-control__input::-moz-placeholder {
+  color: #CBD0D6;
 }
-.search__input input[type=search]:-ms-input-placeholder {
-  color: #A3AAB2;
+.search-control__input:-ms-input-placeholder {
+  color: #CBD0D6;
 }
-.search__input input[type=search]::-ms-input-placeholder {
-  color: #A3AAB2;
+.search-control__input::-ms-input-placeholder {
+  color: #CBD0D6;
 }
-.search__input input[type=search]::placeholder {
-  color: #A3AAB2;
+.search-control__input::placeholder {
+  color: #CBD0D6;
 }
-.search__input input[type=search]:focus {
+.search-control__input:focus {
   outline: none;
 }
-.search__input input[type=search]::-webkit-search-cancel-button, .search__input input[type=search]::-webkit-search-cancel-button {
+.search-control__input::-webkit-search-cancel-button, .search-control__input::-webkit-search-cancel-button {
   display: none !important;
+}
+.search-control__remove-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0.8125rem;
+          flex: 1 1 0.8125rem;
+  width: 0.8125rem;
+  max-width: 0.8125rem;
+  height: 0.8125rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 13'%3E%3Cpath d='M7.64,6.5,13,11.84,11.89,13,6.5,7.63,1.11,13,0,11.84,5.36,6.5,0,1.16,1.11,0,6.5,5.37,11.89,0,13,1.16Z' fill='%23131313'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.search-control__remove-btn:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 13'%3E%3Cpath d='M7.64,6.5,13,11.84,11.89,13,6.5,7.63,1.11,13,0,11.84,5.36,6.5,0,1.16,1.11,0,6.5,5.37,11.89,0,13,1.16Z' fill='%231877F2'/%3E%3C/svg%3E");
+}
+.has-value .search-control__remove-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.page-filters__trigger {
+  display: block;
+  width: 3.125rem;
+  height: 2.5rem;
+  background-color: #F3F3F3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 19'%3E%3Cpath d='M8,8a4,4,0,1,1,4-4A4,4,0,0,1,8,8ZM8,2a2,2,0,1,0,2,2A2,2,0,0,0,8,2Zm8,17a4,4,0,1,1,4-4A4,4,0,0,1,16,19Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,16,13ZM3,3H0V5H3ZM24,14H21v2h3ZM24,3H13V5H24ZM11,14H0v2H11Z' fill='%231877f2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1rem;
+  border: 0;
+  border-radius: 1.25rem;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.page-filters__trigger:hover {
+  background-color: #1877F2;
+  background-color: var(--color-brand);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 19'%3E%3Cpath d='M8,8a4,4,0,1,1,4-4A4,4,0,0,1,8,8ZM8,2a2,2,0,1,0,2,2A2,2,0,0,0,8,2Zm8,17a4,4,0,1,1,4-4A4,4,0,0,1,16,19Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,16,13ZM3,3H0V5H3ZM24,14H21v2h3ZM24,3H13V5H24ZM11,14H0v2H11Z' fill='%23fff'/%3E%3C/svg%3E");
+}
+.filters-shown .page-filters__trigger {
+  background-color: #1877F2;
+  background-color: var(--color-brand);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 19'%3E%3Cpolygon points='19 1.42 17.58 0 9.5 8.08 1.41 0 0 1.41 8.08 9.5 0 17.58 1.42 19 9.5 10.91 17.58 19 19 17.58 10.91 9.5 19 1.42' fill='%23fff'/%3E%3C/svg%3E");
 }
 
 .page-filters-container {
@@ -3160,154 +3265,113 @@ main header .main-menu__toggle:hover svg {
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
   max-height: 0;
-  overflow: hidden;
   opacity: 0;
+  overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .page-filters-container .page-filters {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 0.9375rem;
-  margin-top: 0.9375rem;
+  gap: 0.75rem;
+  padding-inline: 1.375rem;
+  padding-block: 0.625rem;
 }
-.page-filters-container .page-filters > * {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-}
-@media (min-width: 576px) {
-  .page-filters-container .page-filters > * {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 calc(25% - 11.25px);
-            flex: 1 1 calc(25% - 11.25px);
-    max-width: calc(25% - 11.25px);
-  }
+.page-filters-container .page-filters__label {
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 0.4375rem;
+  line-height: 1;
+  color: #A3AAB2;
+  background-color: #fff;
+  font-size: 0.75rem;
+  pointer-events: none;
+  padding: 0.125rem 0.3125rem;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .page-filters-container .page-filters .form-control,
 .page-filters-container .page-filters .form-select {
-  padding-top: 0.538rem;
-  padding-bottom: 0.538rem;
+  color: #fff;
+  font-size: 0.75rem;
+  padding-block: 0.563rem;
 }
 .page-filters-container .page-filters .form-control:focus,
 .page-filters-container .page-filters .form-select:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+.page-filters-container .page-filters__item {
+  position: relative;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+@media (min-width: 576px) {
+  .page-filters-container .page-filters__item {
+    -ms-flex-preferred-size: calc(20% - 9.6px);
+        flex-basis: calc(20% - 9.6px);
+  }
+}
+.page-filters-container .page-filters__item:focus-within .page-filters__label {
+  top: -0.375rem;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.page-filters-container .page-filters__item:focus-within .form-control,
+.page-filters-container .page-filters__item:focus-within .form-select {
+  color: #212529;
+}
 .filters-shown .page-filters-container {
   opacity: 1;
 }
 
-.filters-open {
+.need-help-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 2.5rem;
-  background-color: #F5F5F5;
-  color: #878A90;
-  border-radius: 0.75rem;
-  cursor: pointer;
-  padding: 0 0.625rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.filters-open > svg {
-  width: 1.125rem;
-  fill: #CBD0D6;
-  -webkit-transition: fill 0.3s ease-in-out;
-  -o-transition: fill 0.3s ease-in-out;
-  transition: fill 0.3s ease-in-out;
-  -webkit-margin-end: 0.5rem;
-          margin-inline-end: 0.5rem;
-}
-.filters-open span {
-  position: relative;
-  font-size: 0.875rem;
-  z-index: 2;
-}
-.filters-open:hover {
-  background-color: #f0f0f0;
-  color: #6e7176;
-}
-.filters-open .filters-close {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 2.125rem;
-  height: 2.125rem;
-  background-color: #9CB6EC;
-  border-radius: 50%;
-  -webkit-margin-start: -2.125rem;
-          margin-inline-start: -2.125rem;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 1;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.filters-open .filters-close svg {
-  width: 0.75rem;
-  fill: #fff;
-}
-.filters-shown .filters-open {
-  background-color: #93AEE6;
-  color: #fff;
-  cursor: default;
-  pointer-events: none;
-}
-.filters-shown .filters-open > svg {
-  fill: #fff;
-}
-.filters-shown .filters-open .filters-close {
-  -webkit-margin-start: 0.5rem;
-          margin-inline-start: 0.5rem;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.need-help-cta {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.3125rem;
+  gap: 0.5rem;
   font-size: 0.875rem;
   color: #93AEE6;
-  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
-.need-help-cta svg {
-  width: 1.125rem;
-  fill: #93AEE6;
-  -webkit-transition: fill 0.3s ease-in-out;
-  -o-transition: fill 0.3s ease-in-out;
-  transition: fill 0.3s ease-in-out;
+.need-help-btn::before {
+  content: "";
+  width: 0.875rem;
+  height: 0.875rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2393AEE6' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10,20C4.5,20,0,15.5,0,10S4.5,0,10,0s10,4.5,10,10S15.5,20,10,20z M10,18c4.4,0,8-3.6,8-8s-3.6-8-8-8 s-8,3.6-8,8S5.6,18,10,18z M9,13h2v2H9V13z M11,11.4V12H9v-1.5c0-0.6,0.4-1,1-1c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5 C9.3,6.5,8.7,7,8.5,7.7l-2-0.4c0.4-1.9,2.2-3.1,4.1-2.7c1.9,0.4,3.1,2.2,2.7,4.1C13.2,10,12.2,11,11,11.4z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 0.875rem 0.875rem;
+  background-position: center;
+  -webkit-transition: background-image 0.3s ease-in-out;
+  -o-transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out;
 }
-.need-help-cta:hover {
-  color: #4070d3;
+.need-help-btn:hover {
+  color: #1877F2;
+  color: var(--color-brand);
 }
-.need-help-cta:hover svg {
-  fill: #4070d3;
+.need-help-btn:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231877F2' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10,20C4.5,20,0,15.5,0,10S4.5,0,10,0s10,4.5,10,10S15.5,20,10,20z M10,18c4.4,0,8-3.6,8-8s-3.6-8-8-8 s-8,3.6-8,8S5.6,18,10,18z M9,13h2v2H9V13z M11,11.4V12H9v-1.5c0-0.6,0.4-1,1-1c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5 C9.3,6.5,8.7,7,8.5,7.7l-2-0.4c0.4-1.9,2.2-3.1,4.1-2.7c1.9,0.4,3.1,2.2,2.7,4.1C13.2,10,12.2,11,11,11.4z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .back-btn,
@@ -3412,10 +3476,10 @@ main header .main-menu__toggle:hover svg {
   font-size: 0.75rem;
 }
 [dir=rtl] .search__bar__dropdown .dropdown-toggle .dropdown__selected-value {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .search__bar__dropdown .dropdown-toggle .dropdown__selected-value {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .search__bar__dropdown .dropdown-toggle span:last-child {
   -webkit-margin-end: 1.75rem;
@@ -3433,10 +3497,10 @@ main header .main-menu__toggle:hover svg {
   padding: 0.625rem 0.875rem;
 }
 [dir=rtl] .search__bar__dropdown .dropdown-menu .dropdown-item {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .search__bar__dropdown .dropdown-menu .dropdown-item {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .search__bar__dropdown .dropdown-menu .dropdown-item:hover {
   background-color: #EBF6FF;
@@ -3449,11 +3513,7 @@ main header .main-menu__toggle:hover svg {
 
 .table__container {
   width: 100%;
-  padding-block: 0 0.9375rem;
-  -webkit-padding-start: 1.375rem;
-          padding-inline-start: 1.375rem;
-  -webkit-padding-end: 0.875rem;
-          padding-inline-end: 0.875rem;
+  padding-inline: 0.875rem;
 }
 
 table {
@@ -3469,17 +3529,21 @@ table tr.side-panel--btn {
 table th {
   font-size: 0.75rem;
   font-weight: normal;
-  padding: 1.325rem 0.8rem !important;
+  padding: 1.375rem 0.9375rem;
 }
 [dir=rtl] table th {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] table th {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 table td {
   font-size: 0.875rem;
-  padding: 1.147rem 0.8rem !important;
+  padding: 1.125rem 0.9375rem;
+}
+table td .form-label {
+  font-size: inherit;
+  margin-bottom: 0;
 }
 table td a {
   text-decoration: none;
@@ -3494,10 +3558,10 @@ table td a:hover {
   color: var(--color-brand);
 }
 [dir=rtl] table td a {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] table td a {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 table:not(.table--with-gaps) {
   width: 100%;
@@ -3679,10 +3743,10 @@ table.table--with-gaps tbody tr.selected {
   user-drag: none;
 }
 [dir=rtl] .layout__tabs__nav a {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .layout__tabs__nav a {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .layout__tabs__nav a svg {
   fill: #A3AAB2;
@@ -3804,10 +3868,10 @@ table.table--with-gaps tbody tr.selected {
   padding: 0;
 }
 [dir=rtl] .page__navigation .navigation__datalist .navigation__input {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .page__navigation .navigation__datalist .navigation__input {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .page__navigation .navigation__datalist .navigation__input::-webkit-calendar-picker-indicator {
   width: 0;
@@ -3902,10 +3966,10 @@ table.table--with-gaps tbody tr.selected {
   margin-bottom: 0;
 }
 [dir=rtl] .side-panel__title {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .side-panel__title {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 [dir=rtl] .side-panel--shown .side-panel.move-panel {
   -webkit-transform: translateX(100%);
@@ -3988,10 +4052,10 @@ table.table--with-gaps tbody tr.selected {
   }
 }
 [dir=rtl] .side-panel__tabs a {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .side-panel__tabs a {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .side-panel__tabs a.selected--tab {
   color: #1877F2;
@@ -4070,10 +4134,10 @@ table.table--with-gaps tbody tr.selected {
   color: #A3AAB2;
 }
 [dir=rtl] .side-panel__body legend span {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .side-panel__body legend span {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .side-panel__body .form-label {
   color: #060505;
@@ -4137,10 +4201,10 @@ table.table--with-gaps tbody tr.selected {
   font-size: 0.875rem;
 }
 [dir=rtl] .side-panel__accordion .accordion__item__data {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .side-panel__accordion .accordion__item__data {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .side-panel__bottom-bar {
   display: -webkit-box;
@@ -4365,10 +4429,10 @@ table.table--with-gaps tbody tr.selected {
   margin-bottom: 0;
 }
 [dir=rtl] .control-panel__title {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .control-panel__title {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .control-panel__body {
   display: -webkit-box;
@@ -4437,10 +4501,10 @@ table.table--with-gaps tbody tr.selected {
   color: #000;
 }
 [dir=rtl] .control-panel__item .item__data {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .control-panel__item .item__data {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .control-panel__footer {
   display: -webkit-box;
@@ -4518,10 +4582,10 @@ table.table--with-gaps tbody tr.selected {
   color: #4D4D4D;
 }
 [dir=rtl] .invoice__person .invoice__person__name {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .invoice__person .invoice__person__name {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .checkout {
@@ -4529,10 +4593,10 @@ table.table--with-gaps tbody tr.selected {
   color: #4D4D4D;
 }
 [dir=rtl] .checkout {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .checkout {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .checkout__slide__toggle {
   display: -webkit-box;
@@ -4643,10 +4707,10 @@ table.table--with-gaps tbody tr.selected {
           margin-inline-end: 2.125rem;
 }
 [dir=rtl] .checkout__list__item.total .checkout__item__detail {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .checkout__list__item.total .checkout__item__detail {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .checkout__list__item.change .checkout__item__detail {
   font-size: 1.125rem;
@@ -4656,10 +4720,10 @@ table.table--with-gaps tbody tr.selected {
           margin-inline-end: 2.125rem;
 }
 [dir=rtl] .checkout__list__item.change .checkout__item__detail {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .checkout__list__item.change .checkout__item__detail {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .checkout__list__item .invoice__comment {
   display: -webkit-box;
@@ -4679,10 +4743,10 @@ table.table--with-gaps tbody tr.selected {
   font-size: 0.75rem;
 }
 [dir=rtl] .checkout__list__item .invoice__comment span {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .checkout__list__item .invoice__comment span {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .checkout__list__item .checkout__remove-item {
   width: 1.5rem;
@@ -4719,10 +4783,10 @@ table.table--with-gaps tbody tr.selected {
   font-size: 1.125rem;
 }
 [dir=rtl] .checkout.slidable .checkout__list__item.main-item .checkout__item__detail {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .checkout.slidable .checkout__list__item.main-item .checkout__item__detail {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .checkout.slidable .checkout__list__item:not(.main-item) {
   display: none;
@@ -4830,10 +4894,10 @@ table.table--with-gaps tbody tr.selected {
   transition: all 0.3s;
 }
 [dir=rtl] .filters__buttons .filter__btn {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .filters__buttons .filter__btn {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .filters__buttons .filter__btn svg {
   fill: #A3AAB2;
@@ -4982,10 +5046,10 @@ table.table--with-gaps tbody tr.selected {
   margin-bottom: 0.3125rem;
 }
 [dir=rtl] .products__list .product .product__title {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .products__list .product .product__title {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .products__list .product .product__details__price {
   display: block;
@@ -5114,10 +5178,10 @@ table.table--with-gaps tbody tr.selected {
   margin-bottom: 0;
 }
 [dir=rtl] .invoice__item__title h3 {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .invoice__item__title h3 {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .invoice__item__price {
   font-size: 0.875rem;
@@ -5137,10 +5201,10 @@ table.table--with-gaps tbody tr.selected {
      text-overflow: ellipsis;
 }
 [dir=rtl] .invoice__item__total-price {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .invoice__item__total-price {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .invoice__item__quantity {
   display: -webkit-box;
@@ -5259,10 +5323,10 @@ table.table--with-gaps tbody tr.selected {
   padding: 0.413rem 1.2rem;
 }
 [dir=rtl] .navigation-buttons a {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .navigation-buttons a {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .payment {
@@ -5507,10 +5571,10 @@ table.table--with-gaps tbody tr.selected {
   padding: 0;
 }
 [dir=rtl] .received-amount input[type=number] {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .received-amount input[type=number] {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .received-amount input[type=number]::-webkit-input-placeholder {
   color: #C6CFD9;
@@ -5537,10 +5601,10 @@ table.table--with-gaps tbody tr.selected {
   color: var(--color-brand);
 }
 [dir=rtl] .received-amount .currency {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .received-amount .currency {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .received-amount .amount {
   font-size: 0.875rem;
@@ -5550,10 +5614,10 @@ table.table--with-gaps tbody tr.selected {
   padding: 0.6rem 0.755rem;
 }
 [dir=rtl] .received-amount .amount {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .received-amount .amount {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .key__buttons {
@@ -5586,10 +5650,10 @@ table.table--with-gaps tbody tr.selected {
   transition: background-color 0.3s;
 }
 [dir=rtl] .key__buttons .key__btn {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .key__buttons .key__btn {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .key__buttons .key__btn svg {
   fill: #C6CFD9;
@@ -5660,10 +5724,10 @@ table.table--with-gaps tbody tr.selected {
   color: var(--color-brand);
 }
 [dir=rtl] .product__view .product__data .product__price {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .product__view .product__data .product__price {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .product__view .stock-details {
   -webkit-box-flex: 0;
@@ -5859,10 +5923,10 @@ table.table--with-gaps tbody tr.selected {
   font-size: 0.875rem;
 }
 [dir=rtl] .checkbox-list__item__title {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .checkbox-list__item__title {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .notifications-panel {
@@ -6010,6 +6074,34 @@ table.table--with-gaps tbody tr.selected {
   z-index: 998;
 }
 
+.callout {
+  background-color: var(--bs-gray-100);
+  -webkit-border-start: 0.25rem solid var(--bs-gray-300);
+          border-inline-start: 0.25rem solid var(--bs-gray-300);
+  border-start-end-radius: 0.125rem;
+  border-end-end-radius: 0.125rem;
+  padding: 0.9375rem 0.625rem;
+}
+.callout--info {
+  background-color: rgba(24, 119, 242, 0.05);
+  border-color: #1877F2;
+  border-color: var(--color-brand);
+}
+.callout--warning {
+  background-color: rgba(255, 193, 7, 0.075);
+  border-color: rgba(255, 193, 7, 0.5);
+}
+.callout--danger {
+  background-color: rgba(255, 107, 115, 0.05);
+  border-color: #FF6B73;
+}
+.callout p {
+  font-size: 0.875rem;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
 .login-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6135,10 +6227,10 @@ table.table--with-gaps tbody tr.selected {
   margin-bottom: 0;
 }
 [dir=rtl] .login-page p {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .login-page p {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .login-page a {
   color: #1877F2;
@@ -6237,10 +6329,10 @@ table.table--with-gaps tbody tr.selected {
   margin-bottom: 0.5rem;
 }
 [dir=rtl] .login-page .forgot-credentials {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .login-page .forgot-credentials {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .resend__code__countdown {
@@ -6275,10 +6367,10 @@ table.table--with-gaps tbody tr.selected {
   pointer-events: none;
 }
 [dir=rtl] .store-url__field::before {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .store-url__field::before {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .store-url__field [type=text] {
   padding-right: 6.5rem;
@@ -6460,10 +6552,10 @@ aside .page-card__body::-webkit-scrollbar-corner {
   margin: 0;
 }
 [dir=rtl] .page-card h3 {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .page-card h3 {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .page-card__icon {
   display: -webkit-box;
@@ -6491,7 +6583,7 @@ aside .page-card__body::-webkit-scrollbar-corner {
   fill: var(--color-brand);
 }
 .page-card__icon span {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
   font-size: 0.75rem;
   color: #1877F2;
   color: var(--color-brand);
@@ -6605,13 +6697,9 @@ section .page-card:nth-last-child(-n+2) {
     gap: 15px;
   }
 }
-.products-page .add-product--btn {
+.products-page .btn-outline-primary {
   -webkit-margin-start: auto;
           margin-inline-start: auto;
-}
-.products-page .add-product--btn svg {
-  width: 0.625rem;
-  height: 0.625rem;
 }
 
 @media (max-width: 1200px) {
@@ -6851,10 +6939,10 @@ section .page-card:nth-last-child(-n+2) {
   margin-bottom: 0.9375rem;
 }
 [dir=rtl] .client-page .client__panel .client__name {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .client-page .client__panel .client__name {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .client-page .client__panel .form-select {
   min-width: 12.5rem;
@@ -6914,11 +7002,11 @@ section .page-card:nth-last-child(-n+2) {
 }
 [dir=rtl] .clients-groups-page .group-name,
 [dir=rtl] .clients-groups-page .group-members-count {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .clients-groups-page .group-name,
 [dir=ltr] .clients-groups-page .group-members-count {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .clients-groups-page .group-name {
   color: #050505;
@@ -6966,10 +7054,10 @@ section .page-card:nth-last-child(-n+2) {
   color: inherit;
 }
 [dir=rtl] .client__data .client__name {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .client__data .client__name {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .client__data .client__name a {
   color: inherit;
@@ -7026,11 +7114,11 @@ section .page-card:nth-last-child(-n+2) {
 
 [dir=rtl] .client__phone,
 [dir=rtl] .invoices-number {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .client__phone,
 [dir=ltr] .invoices-number {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .client__phone {
@@ -7038,10 +7126,10 @@ section .page-card:nth-last-child(-n+2) {
 }
 
 [dir=rtl] .amount {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .amount {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .amount.debtor {
   color: #DB1A1A;
@@ -7075,10 +7163,10 @@ section .page-card:nth-last-child(-n+2) {
   margin-bottom: 0.9375rem;
 }
 [dir=rtl] .client__balance {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .client__balance {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .client__balance.debtor {
   color: #DB1A1A;
@@ -7129,10 +7217,10 @@ section .page-card:nth-last-child(-n+2) {
   color: var(--color-brand);
 }
 [dir=rtl] .client__actions a span {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .client__actions a span {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .client__actions a:hover {
   background-color: #e9e9e9;
@@ -7173,20 +7261,20 @@ section .page-card:nth-last-child(-n+2) {
   color: #A3AAB2;
 }
 [dir=rtl] .client__info__data h5 {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .client__info__data h5 {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .client__info__data span {
   font-size: 0.875rem;
   color: #0C0D0D;
 }
 [dir=rtl] .client__info__data span {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .client__info__data span {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .client__info__actions {
@@ -7208,10 +7296,10 @@ section .page-card:nth-last-child(-n+2) {
   transition: color 0.3s;
 }
 [dir=rtl] .client__info__actions > * {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .client__info__actions > * {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .actions--edit {
@@ -7294,20 +7382,20 @@ section .page-card:nth-last-child(-n+2) {
   margin-bottom: 0.9375rem;
 }
 [dir=rtl] .added__client .client__data {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .added__client .client__data {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .added__client .amount {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
 }
 [dir=rtl] .added__client .amount {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .added__client .amount {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .added__client .last__operation {
   display: -webkit-box;
@@ -7338,10 +7426,10 @@ section .page-card:nth-last-child(-n+2) {
   color: #A3AAB2;
 }
 [dir=rtl] .added__client .last__operation .operation__date-time {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .added__client .last__operation .operation__date-time {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .added__client .last__operation .operation__amount {
   display: -webkit-box;
@@ -7356,10 +7444,10 @@ section .page-card:nth-last-child(-n+2) {
   gap: 0.3125rem;
 }
 [dir=rtl] .added__client .last__operation .operation__amount span {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .added__client .last__operation .operation__amount span {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .added__client .last__operation .operation__amount .icon {
   display: -webkit-box;
@@ -7719,10 +7807,10 @@ section .page-card:nth-last-child(-n+2) {
   font-size: 0.875rem;
 }
 [dir=rtl] .purchases-page table td > * {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .purchases-page table td > * {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .purchases-page .supplier-name {
   color: #65676B;
@@ -7736,10 +7824,10 @@ section .page-card:nth-last-child(-n+2) {
   overflow: hidden;
 }
 [dir=rtl] .invoice-products-table td {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .invoice-products-table td {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .invoice-products-table .product__details {
   display: -webkit-box;
@@ -7827,10 +7915,10 @@ section .page-card:nth-last-child(-n+2) {
   font-size: 0.875rem;
 }
 [dir=rtl] .product-validity-details .product-total-quantity span:last-child {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .product-validity-details .product-total-quantity span:last-child {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 
 .validity__list {
@@ -7963,10 +8051,10 @@ section .page-card:nth-last-child(-n+2) {
   margin-bottom: 1.125rem;
 }
 [dir=rtl] .shifts-reports-page h4 {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .shifts-reports-page h4 {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .shifts-reports-page .shift-summary__container {
   display: -webkit-box;
@@ -8110,20 +8198,20 @@ section .page-card:nth-last-child(-n+2) {
 }
 [dir=rtl] .shifts-reports-page .shift-summary__list li .opening-balance-amount,
 [dir=rtl] .shifts-reports-page .shift-summary__list li .daily-total-amount {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .shifts-reports-page .shift-summary__list li .opening-balance-amount,
 [dir=ltr] .shifts-reports-page .shift-summary__list li .daily-total-amount {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .shifts-reports-page .shift-summary__list li .operations-amount {
   font-size: 17px;
 }
 [dir=rtl] .shifts-reports-page .shift-summary__list li .operations-amount {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .shifts-reports-page .shift-summary__list li .operations-amount {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .shifts-reports-page .shift-summary__list li .operations-amount.revenue {
   color: #3ABD76;
@@ -8136,10 +8224,10 @@ section .page-card:nth-last-child(-n+2) {
   color: #4D4D4D;
 }
 [dir=rtl] .shifts-reports-page .shift-summary__list li .receipt__count {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .shifts-reports-page .shift-summary__list li .receipt__count {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .shifts-reports-page .shift-time {
   display: -webkit-box;
@@ -8341,11 +8429,11 @@ section .page-card:nth-last-child(-n+2) {
 }
 [dir=rtl] .subscription-page .side-panel .selected-plan .plan__price__amount,
 [dir=rtl] .subscribe-page .side-panel .selected-plan .plan__price__amount {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .subscription-page .side-panel .selected-plan .plan__price__amount,
 [dir=ltr] .subscribe-page .side-panel .selected-plan .plan__price__amount {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .subscription-page .side-panel .side-panel__body,
 .subscribe-page .side-panel .side-panel__body {
@@ -8401,11 +8489,11 @@ section .page-card:nth-last-child(-n+2) {
 }
 [dir=rtl] .subscription-page .side-panel .invoice__item__quantity span,
 [dir=rtl] .subscribe-page .side-panel .invoice__item__quantity span {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .subscription-page .side-panel .invoice__item__quantity span,
 [dir=ltr] .subscribe-page .side-panel .invoice__item__quantity span {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .subscription-page .side-panel .invoice__item__total-price,
 .subscribe-page .side-panel .invoice__item__total-price {
@@ -8472,11 +8560,11 @@ section .page-card:nth-last-child(-n+2) {
 }
 [dir=rtl] .subscription-page .side-panel .package-total .package-total-amount,
 [dir=rtl] .subscribe-page .side-panel .package-total .package-total-amount {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .subscription-page .side-panel .package-total .package-total-amount,
 [dir=ltr] .subscribe-page .side-panel .package-total .package-total-amount {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 
 .subscribe-page {
@@ -8597,10 +8685,10 @@ section .page-card:nth-last-child(-n+2) {
           margin-inline-start: auto;
 }
 [dir=rtl] .subscribe-page section .plan .best-seller {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .subscribe-page section .plan .best-seller {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .subscribe-page section .plan__price {
   -webkit-box-flex: 1;
@@ -8621,10 +8709,10 @@ section .page-card:nth-last-child(-n+2) {
   font-size: 1.75rem;
 }
 [dir=rtl] .subscribe-page section .plan__price__amount, [dir=rtl] .subscribe-page section .plan__price__currency {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .subscribe-page section .plan__price__amount, [dir=ltr] .subscribe-page section .plan__price__currency {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .subscribe-page section .plan__price__period {
   font-size: 0.875rem;
@@ -8647,10 +8735,10 @@ section .page-card:nth-last-child(-n+2) {
   margin-bottom: 0.9375rem;
 }
 [dir=rtl] .subscribe-page section .plan__details li {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .subscribe-page section .plan__details li {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .subscribe-page section .plan__details li::before {
   -webkit-box-flex: 0;
@@ -8816,10 +8904,10 @@ section .page-card:nth-last-child(-n+2) {
   color: #A3AAB2;
 }
 [dir=rtl] .subscription-page .current-package .package__item__title {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .subscription-page .current-package .package__item__title {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .subscription-page .current-package .package__item__data {
   font-size: 0.875rem;
@@ -8827,10 +8915,10 @@ section .page-card:nth-last-child(-n+2) {
   color: var(--color-brand);
 }
 [dir=rtl] .subscription-page .current-package .package__item__data {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .subscription-page .current-package .package__item__data {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .subscription-page .side-panel .selected-plan {
   background-color: #F5F5F5;
@@ -9011,10 +9099,10 @@ section .page-card:nth-last-child(-n+2) {
   margin-bottom: 1.25rem;
 }
 [dir=rtl] .services-page .service__title {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .services-page .service__title {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .services-page .service__description {
   text-align: center;
@@ -9044,10 +9132,10 @@ section .page-card:nth-last-child(-n+2) {
   color: #A3AAB2;
 }
 [dir=rtl] .services-page .service__price span:first-of-type {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .services-page .service__price span:first-of-type {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .services-page .service__btn {
   font-size: 0.875rem;
@@ -9059,10 +9147,10 @@ section .page-card:nth-last-child(-n+2) {
   padding: 0.6rem 1.6rem;
 }
 [dir=rtl] .services-page .service__btn {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .services-page .service__btn {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .services-page .side-panel__bottom-bar .btn-lg:only-of-type {
   padding-inline: 2.5rem;
@@ -9125,10 +9213,10 @@ section .page-card:nth-last-child(-n+2) {
   color: var(--color-brand);
 }
 [dir=rtl] .services-page .service__info .service__price span:first-child {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .services-page .service__info .service__price span:first-child {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .services-page .service__info .service__price span:last-child {
   font-size: 1.375rem;
@@ -9255,10 +9343,10 @@ section .page-card:nth-last-child(-n+2) {
   font-size: 0.875rem;
 }
 [dir=rtl] .settings-page .user-data__item__label {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .settings-page .user-data__item__label {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .settings-page .user-data__item__details {
   font-size: 0.875rem;
@@ -9268,10 +9356,10 @@ section .page-card:nth-last-child(-n+2) {
   padding: 8px 12px;
 }
 [dir=rtl] .settings-page .user-data__item__details {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .settings-page .user-data__item__details {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .form-container {
@@ -9517,10 +9605,10 @@ section .page-card:nth-last-child(-n+2) {
   font-size: 0.75rem;
 }
 [dir=rtl] .payments-page .balance-details .balance-label {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .payments-page .balance-details .balance-label {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .payments-page .balance-details .balance-amount,
 .payments-page .balance-details .balance-currency {
@@ -9534,10 +9622,10 @@ section .page-card:nth-last-child(-n+2) {
   font-size: 1.375rem;
 }
 [dir=rtl] .payments-page .balance-details .balance-amount {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .payments-page .balance-details .balance-amount {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 .payments-page .balance-details .balance-currency {
   font-size: 1.25rem;
@@ -9647,20 +9735,20 @@ section .page-card:nth-last-child(-n+2) {
   color: #A3AAB2;
 }
 [dir=rtl] .statistics-panel .service-statistics .state-label {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .statistics-panel .service-statistics .state-label {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .statistics-panel .service-statistics .state-data {
   color: #1877F2;
   color: var(--color-brand);
 }
 [dir=rtl] .statistics-panel .service-statistics .state-data {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .statistics-panel .service-statistics .state-data {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }
 
 .order-status {
@@ -9675,10 +9763,10 @@ section .page-card:nth-last-child(-n+2) {
   padding: 0.375rem 0.75rem;
 }
 [dir=rtl] .order-status {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .order-status {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 .order-status.success {
   color: #2BAB5A;
@@ -9766,10 +9854,10 @@ section .page-card:nth-last-child(-n+2) {
   padding: 0.375rem 0.75rem;
 }
 [dir=rtl] .device-issues {
-  font-family: "NotoSansArabic_Medium", sans-serif;
+  font-family: "NotoSansArabic-Medium", sans-serif;
 }
 [dir=ltr] .device-issues {
-  font-family: "NotoSans_Medium", sans-serif;
+  font-family: "NotoSans-Medium", sans-serif;
 }
 
 .total-parts {
@@ -9806,8 +9894,8 @@ section .page-card:nth-last-child(-n+2) {
   font-size: 1.375rem;
 }
 [dir=rtl] .total-parts li .total-parts__amount {
-  font-family: "NotoSansArabic_SemiBold", sans-serif;
+  font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
 [dir=ltr] .total-parts li .total-parts__amount {
-  font-family: "NotoSans_SemiBold", sans-serif;
+  font-family: "NotoSans-SemiBold", sans-serif;
 }

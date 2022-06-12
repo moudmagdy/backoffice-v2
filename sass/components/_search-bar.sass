@@ -1,97 +1,47 @@
-.search__bar
-    display: flex
-    flex-wrap: wrap
-    align-items: center
-    gap: rem(15px)
-
-    &__features
-        display: flex
-        align-items: center
-
-    &__feature
-        +flex-center
-        width: 36px
-        height: 36px
-        background-color: transparent
-        border-radius: 8px
-        transition: background-color 0.3s
-
-        &::after
-            display: none
-
-        svg
-            max-width: rem(18px)
-            max-height: rem(18px)
-            fill: #A3AAB2
-            transition: fill 0.3s
-
-        &:hover
-            background-color: rgba(198, 207, 217, 0.2)
-
-            svg
-                fill: darken(#A3AAB2, 15%)
-
-        &.active
-            background-color: rgba(198, 207, 217, 0.2)
-
-            svg
-                +var(fill, color-brand)
-
-    .features__dropdown
-        .dropdown-toggle
-            &.show
-                background-color: rgba(198, 207, 217, 0.2)
-
-                svg
-                    +var(fill, color-brand)
-
-        .features__dropdown__menu
-            .dropdown-item
-                svg
-                    +var(fill, color-text-primary)
-
-                &.active
-                    svg
-                        fill: $color-white
-
-                    &:hover
-                        +var(background-color, color-brand)
-
-                    &:active
-                        color: $color-white
-
-    .search__input
-        flex: 1 1 auto
-        max-width: none
-
-.search__input
+.search-control
+    position: relative
     display: flex
     align-items: center
     flex: 1 1 25%
     height: rem(40px)
-    min-height: rem(40px)
-    background-color: rgba(240, 242, 245, 0.09)
-    border: rem(2px) solid #CBD0D6
+    background-color: #fff
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17.67 16.46'%3E%3Cpath d='M15.56,2.11A7.2,7.2,0,0,0,3.27,7.2a7.11,7.11,0,0,0,1,3.6L0,15.05l1.41,1.41,4.08-4.07A7.2,7.2,0,0,0,15.56,2.11Zm-1.41,8.76A5.2,5.2,0,0,1,6.79,3.52a5.2,5.2,0,0,1,7.36,7.35Z' fill='%231877f2'/%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-size: rem(14px)
+    background-position: left rem(18px) center
+    border: rem(2px) solid #C6CFD9
     border-radius: rem(20px)
-    padding: 0 rem(18px)
+    padding-inline: rem(18px) rem(52px)
+    transition: border-color 0.3s ease-in-out
+
+    &:focus-within
+        +var(border-color, color-brand)
+
+    &::before
+        content: ""
+        position: absolute
+        inset-inline-end: rem(42px)
+        width: rem(0.5px)
+        height: 60%
+        background-color: rgba(0, 0, 0, 0.15)
+
+    [dir="ltr"] &
+        background-position: right rem(18px) center
 
     @media (min-width: 768px)
-        max-width: rem(300px)
+        max-width: rem(310px)
 
-    svg
-        pointer-events: none
-        fill: #A3AAB2
-
-    input[type="search"]
+    &__input
         flex: 1 1 auto
         height: 100%
         font-size: rem(12px)
         background-color: transparent
         border: none
-        padding: 0 5px
+        padding: 0
+        padding-inline-end: rem(15px)
 
         &::placeholder
-            color: #A3AAB2
+            color: #CBD0D6
 
         &:focus
             outline: none
@@ -100,114 +50,133 @@
         &::-webkit-search-cancel-button
             display: none !important
 
+    &__remove-btn
+        flex: 1 1 rem(13px)
+        width: rem(13px)
+        max-width: rem(13px)
+        height: rem(13px)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 13'%3E%3Cpath d='M7.64,6.5,13,11.84,11.89,13,6.5,7.63,1.11,13,0,11.84,5.36,6.5,0,1.16,1.11,0,6.5,5.37,11.89,0,13,1.16Z' fill='%23131313'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        background-color: transparent
+        border: none
+        opacity: 0
+        pointer-events: none
+        padding: 0
+        transition: all 0.3s ease-in-out
+
+        &:hover
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 13'%3E%3Cpath d='M7.64,6.5,13,11.84,11.89,13,6.5,7.63,1.11,13,0,11.84,5.36,6.5,0,1.16,1.11,0,6.5,5.37,11.89,0,13,1.16Z' fill='%231877F2'/%3E%3C/svg%3E")
+
+        .has-value &
+            opacity: 1
+            pointer-events: auto
+
+.page-filters__trigger
+    display: block
+    width: rem(50px)
+    height: rem(40px)
+    background-color: #F3F3F3
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 19'%3E%3Cpath d='M8,8a4,4,0,1,1,4-4A4,4,0,0,1,8,8ZM8,2a2,2,0,1,0,2,2A2,2,0,0,0,8,2Zm8,17a4,4,0,1,1,4-4A4,4,0,0,1,16,19Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,16,13ZM3,3H0V5H3ZM24,14H21v2h3ZM24,3H13V5H24ZM11,14H0v2H11Z' fill='%231877f2'/%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: rem(16px)
+    border: 0
+    border-radius: rem(20px)
+    padding: 0
+    transition: all 0.3s ease-in-out
+
+    &:hover
+        +var(background-color, color-brand)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 19'%3E%3Cpath d='M8,8a4,4,0,1,1,4-4A4,4,0,0,1,8,8ZM8,2a2,2,0,1,0,2,2A2,2,0,0,0,8,2Zm8,17a4,4,0,1,1,4-4A4,4,0,0,1,16,19Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,16,13ZM3,3H0V5H3ZM24,14H21v2h3ZM24,3H13V5H24ZM11,14H0v2H11Z' fill='%23fff'/%3E%3C/svg%3E")
+
+    .filters-shown &
+        +var(background-color, color-brand)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 19'%3E%3Cpolygon points='19 1.42 17.58 0 9.5 8.08 1.41 0 0 1.41 8.08 9.5 0 17.58 1.42 19 9.5 10.91 17.58 19 19 17.58 10.91 9.5 19 1.42' fill='%23fff'/%3E%3C/svg%3E")
+
 .page-filters-container
     flex: 1 1 100%
     max-height: 0
-    overflow: hidden
     opacity: 0
+    overflow: hidden
     transition: all 0.3s ease-in-out
 
     .page-filters
+        flex: 1 1 auto
         display: flex
         flex-wrap: wrap
-        gap: rem(15px)
-        margin-top: rem(15px)
+        gap: rem(12px)
+        padding-inline: rem(22px)
+        padding-block: rem(10px)
 
-        & > *
-            flex: 1 1 100%
-
-            @media (min-width: 576px)
-                flex: 1 1 calc(25% - 11.25px)
-                max-width: calc(25% - 11.25px)
+        &__label
+            position: absolute
+            top: 50%
+            inset-inline-start: rem(7px)
+            line-height: 1
+            color: #A3AAB2
+            background-color: #fff
+            font-size: rem(12px)
+            pointer-events: none
+            padding: rem(2px) rem(5px)
+            transform: translateY(-50%)
+            transition: all 0.3s ease-in-out
 
         .form-control,
         .form-select
-            padding-top: 0.538rem
-            padding-bottom: 0.538rem
+            color: #fff
+            font-size: rem(12px)
+            padding-block: 0.563rem
 
             &:focus
                 box-shadow: none
 
+        &__item
+            position: relative
+            flex-basis: 100%
+
+            @media (min-width: 576px)
+                flex-basis: calc(20% - 9.6px)
+
+            &:focus-within
+                .page-filters__label
+                    top: rem(-6px)
+                    transform: translateY(0)
+
+                .form-control,
+                .form-select
+                    color: #212529
+
     .filters-shown &
-        // max-height: rem(100px)
         opacity: 1
 
-.filters-open
+.need-help-btn
     display: flex
     align-items: center
-    height: rem(40px)
-    background-color: #F5F5F5
-    color: #878A90
-    border-radius: rem(12px)
-    cursor: pointer
-    padding: 0 rem(10px)
-    transition: all 0.3s ease-in-out
-
-    & > svg
-        width: rem(18px)
-        fill: #CBD0D6
-        transition: fill 0.3s ease-in-out
-        margin-inline-end: rem(8px)
-
-    span
-        position: relative
-        font-size: rem(14px)
-        z-index: 2
-
-    &:hover
-        background-color: darken(#F5F5F5, 2%)
-        color: darken(#878A90, 10%)
-
-    .filters-close
-        position: relative
-        +flex-center
-        width: rem(34px)
-        height: rem(34px)
-        background-color: #9CB6EC
-        border-radius: 50%
-        margin-inline-start: rem(-34px)
-        opacity: 0
-        pointer-events: none
-        z-index: 1
-        transition: all 0.3s ease-in-out
-
-        svg
-            width: rem(12px)
-            fill: $color-white
-
-    .filters-shown &
-        background-color: #93AEE6
-        color: $color-white
-        cursor: default
-        pointer-events: none
-
-        & > svg
-            fill: $color-white
-
-        .filters-close
-            margin-inline-start: rem(8px)
-            opacity: 1
-            pointer-events: auto
-
-.need-help-cta
-    display: flex
-    align-items: center
-    gap: rem(5px)
+    gap: rem(8px)
     font-size: rem(14px)
     color: #93AEE6
-    text-decoration: none
+    background-color: transparent
+    border: none
+    padding: 0
     transition: color 0.3s ease-in-out
 
-    svg
-        width: rem(18px)
-        fill: #93AEE6
-        transition: fill 0.3s ease-in-out
+    &::before
+        content: ""
+        width: rem(14px)
+        height: rem(14px)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2393AEE6' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10,20C4.5,20,0,15.5,0,10S4.5,0,10,0s10,4.5,10,10S15.5,20,10,20z M10,18c4.4,0,8-3.6,8-8s-3.6-8-8-8 s-8,3.6-8,8S5.6,18,10,18z M9,13h2v2H9V13z M11,11.4V12H9v-1.5c0-0.6,0.4-1,1-1c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5 C9.3,6.5,8.7,7,8.5,7.7l-2-0.4c0.4-1.9,2.2-3.1,4.1-2.7c1.9,0.4,3.1,2.2,2.7,4.1C13.2,10,12.2,11,11,11.4z'%3E%3C/path%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-size: rem(14px) rem(14px)
+        background-position: center
+        transition: background-image 0.3s ease-in-out
 
     &:hover
-        color: darken(#93AEE6, 20%)
+        +var(color, color-brand)
 
-        svg
-            fill: darken(#93AEE6, 20%)
+        &::before
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231877F2' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10,20C4.5,20,0,15.5,0,10S4.5,0,10,0s10,4.5,10,10S15.5,20,10,20z M10,18c4.4,0,8-3.6,8-8s-3.6-8-8-8 s-8,3.6-8,8S5.6,18,10,18z M9,13h2v2H9V13z M11,11.4V12H9v-1.5c0-0.6,0.4-1,1-1c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5 C9.3,6.5,8.7,7,8.5,7.7l-2-0.4c0.4-1.9,2.2-3.1,4.1-2.7c1.9,0.4,3.1,2.2,2.7,4.1C13.2,10,12.2,11,11,11.4z'%3E%3C/path%3E%3C/svg%3E")
 
 .back-btn,
 .cancel-btn
@@ -283,10 +252,10 @@
             font-size: rem(12px)
 
             [dir="rtl"] &
-                font-family: 'NotoSansArabic_Medium', sans-serif
+                font-family: 'NotoSansArabic-Medium', sans-serif
 
             [dir="ltr"] &
-                font-family: 'NotoSans_Medium', sans-serif
+                font-family: 'NotoSans-Medium', sans-serif
 
         span
             &:last-child
@@ -303,10 +272,10 @@
             padding: rem(10px) rem(14px)
 
             [dir="rtl"] &
-                font-family: 'NotoSansArabic_Medium', sans-serif
+                font-family: 'NotoSansArabic-Medium', sans-serif
 
             [dir="ltr"] &
-                font-family: 'NotoSans_Medium', sans-serif
+                font-family: 'NotoSans-Medium', sans-serif
 
             &:hover
                 background-color: #EBF6FF

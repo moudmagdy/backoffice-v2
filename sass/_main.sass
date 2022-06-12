@@ -151,17 +151,30 @@ a
     display: flex
     align-items: center
     gap: rem(10px)
-    font-size: rem(14px)
+    font-size: rem(12px)
+    +var(color, color-brand)
     padding: rem(12px) rem(16px)
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out
+
+    svg
+        width: rem(14px)
+        height: rem(14px)
+        object-fit: contain
+        +var(fill, color-brand)
+        transition: fill 0.3s ease-in-out
 
     [dir="rtl"] &
-        font-family: 'NotoSansArabic_Medium', sans-serif
+        font-family: 'NotoSansArabic-Medium', sans-serif
 
     [dir="ltr"] &
-        font-family: 'NotoSans_Medium', sans-serif
+        font-family: 'NotoSans-Medium', sans-serif
 
     &:hover
-        background-color: #E2F2FE
+        color: #fff
+        +var(background-color, color-brand)
+
+        svg
+            fill: #fff
 
     &:active, &:focus
         color: inherit
@@ -178,32 +191,28 @@ a
 .table__dropdown
     .dropdown-toggle
         +flex-center
-        width: 40px
-        height: 40px
-        border: rem(1px) solid #e7dcdc
+        width: rem(40px)
+        height: rem(40px)
+        background-color: transparent
+        border: rem(1px) solid rgba(77, 77, 77, 0.08)
         border-radius: 50%
-        transition: background-color 0.3s
+        transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out
 
         svg
             fill: #4D4D4D
-            width: rem(16px)
+            width: rem(14px)
             height: auto
+            transition: fill 0.3s ease-in-out
 
         &:hover
             background-color: #F5F5F5
+            border-color: #F5F5F5
 
         &.show
             background-color: #F5F5F5
 
             svg
-                fill: $color-brand
-
-.header__dropdown
-    .dropdown-menu
-        min-width: 225px
-
-    .dropdown-item
-        padding: 1rem 1.25rem
+                +var(fill, color-brand)
 
 .datepicker-dropdown
     padding-top: 0
@@ -246,10 +255,10 @@ a
         line-height: 1.5
 
         [dir="rtl"] &
-            font-family: 'NotoSansArabic_Medium', sans-serif
+            font-family: 'NotoSansArabic-Medium', sans-serif
 
         [dir="ltr"] &
-            font-family: 'NotoSans_Medium', sans-serif
+            font-family: 'NotoSans-Medium', sans-serif
 
 .datepicker-cell
     font-size: rem(14px)
@@ -351,10 +360,10 @@ a
             text-align: center
 
         [dir="rtl"] &
-            font-family: 'NotoSansArabic_Medium', sans-serif
+            font-family: 'NotoSansArabic-Medium', sans-serif
 
         [dir="ltr"] &
-            font-family: 'NotoSans_Medium', sans-serif
+            font-family: 'NotoSans-Medium', sans-serif
 
     .btn
         padding: 0.475rem 2.5rem
@@ -376,3 +385,9 @@ a
 
     span
         color: #FFAA00
+
+.positive
+    +var(color, color-success)
+
+.negative
+    +var(color, color-danger)

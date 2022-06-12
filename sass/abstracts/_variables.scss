@@ -5,6 +5,8 @@ $color-brand-aman: #3DBEC8;
 $color-brand: #1877F2;
 $color-bg: #EEF0F8;
 $color-text-primary: #060505;
+$color-success: #4CC784;
+$color-danger: #FF6B73;
 
 $variables: (
     default-font-size: 1rem,
@@ -12,7 +14,10 @@ $variables: (
     color-brand: $color-brand,
     color-brand-aman: $color-brand-aman,
     color-bg: $color-bg,
-    color-text-primary: $color-text-primary // color-text-secondary: #A3AAB2
+    color-text-primary: $color-text-primary,
+    // color-text-secondary: #A3AAB2,
+    color-success: $color-success,
+    color-danger: $color-danger
 );
 
 :root {
@@ -23,6 +28,7 @@ $variables: (
     --color-brand-aman: #{map-get($variables, color-brand-aman)};
     --color-bg: #{map-get($variables, color-bg)};
     --color-text-primary: #{map-get($variables, color-text-primary)};
-
-    // --color-text-secondary: #A3AAB2;
+    // --color-text-secondary: #{map-get($variables, color-text-secondary)};
+    --color-success: #{map-get($variables, color-success)};
+    --color-danger: #{map-get($variables, color-danger)};
 }

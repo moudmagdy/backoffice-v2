@@ -1,8 +1,6 @@
 .table__container
     width: 100%
-    padding-block: 0 rem(15px)
-    padding-inline-start: rem(22px)
-    padding-inline-end: rem(14px)
+    padding-inline: rem(14px)
 
 table
     position: relative
@@ -18,17 +16,21 @@ table
     th
         font-size: rem(12px)
         font-weight: normal
-        padding: 1.325rem 0.8rem !important
+        padding: rem(22px) rem(15px)
 
         [dir="rtl"] &
-            font-family: 'NotoSansArabic_SemiBold', sans-serif
+            font-family: 'NotoSansArabic-SemiBold', sans-serif
 
         [dir="ltr"] &
-            font-family: 'NotoSans_SemiBold', sans-serif
+            font-family: 'NotoSans-SemiBold', sans-serif
 
     td
         font-size: rem(14px)
-        padding: 1.147rem 0.8rem !important
+        padding: rem(18px) rem(15px)
+
+        .form-label
+            font-size: inherit
+            margin-bottom: 0
 
         a
             text-decoration: none
@@ -39,10 +41,10 @@ table
                 +var(color, color-brand)
 
             [dir="rtl"] &
-                font-family: 'NotoSansArabic_SemiBold', sans-serif
+                font-family: 'NotoSansArabic-SemiBold', sans-serif
 
             [dir="ltr"] &
-                font-family: 'NotoSans_SemiBold', sans-serif
+                font-family: 'NotoSans-SemiBold', sans-serif
 
     &:not(.table--with-gaps)
         width: 100%

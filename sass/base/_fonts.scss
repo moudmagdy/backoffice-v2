@@ -1,36 +1,83 @@
 @font-face {
-    font-family: 'NotoSans_Regular';
+    font-family: 'NotoSans-Regular';
     src: url('../fonts/NotoSans-Regular.woff2') format('woff2'),
         url('../fonts/NotoSans-Regular.woff') format('woff'),
-        url('../fonts/NotoSans-Regular.ttf')  format('truetype');
+        url('../fonts/NotoSans-Regular.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: 'NotoSans_Medium';
+    font-family: 'NotoSans-Medium';
     src: url('../fonts/NotoSans-Medium.woff2') format('woff2'),
         url('../fonts/NotoSans-Medium.woff') format('woff'),
-        url('../fonts/NotoSans-Medium.ttf')  format('truetype');
+        url('../fonts/NotoSans-Medium.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: 'NotoSans_SemiBold';
+    font-family: 'NotoSans-SemiBold';
     src: url('../fonts/NotoSans-SemiBold.woff2') format('woff2'),
         url('../fonts/NotoSans-SemiBold.woff') format('woff'),
-        url('../fonts/NotoSans-SemiBold.ttf')  format('truetype');
+        url('../fonts/NotoSans-SemiBold.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: 'NotoSansArabic_SemiBold';
+    font-family: 'NotoSansArabic-SemiBold';
     src: url('../fonts/NotoSansArabic-SemiBold.woff2') format('woff2'),
         url('../fonts/NotoSansArabic-SemiBold.woff') format('woff'),
-        url('../fonts/NotoSansArabic-SemiBold.ttf')  format('truetype');
+        url('../fonts/NotoSansArabic-SemiBold.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: 'NotoSansArabic_Medium';
+    font-family: 'NotoSansArabic-Medium';
     src: url('../fonts/NotoSansArabic-Medium.woff2') format('woff2'),
         url('../fonts/NotoSansArabic-Medium.woff') format('woff'),
-        url('../fonts/NotoSansArabic-Medium.ttf')  format('truetype');
+        url('../fonts/NotoSansArabic-Medium.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: 'NotoSansArabic_Regular';
+    font-family: 'NotoSansArabic-Regular';
     src: url('../fonts/NotoSansArabic-Regular.woff2') format('woff2'),
         url('../fonts/NotoSansArabic-Regular.woff') format('woff'),
-        url('../fonts/NotoSansArabic-Regular.ttf')  format('truetype');
+        url('../fonts/NotoSansArabic-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GraphikArabic-Regular';
+    src: url('../fonts/GraphikArabic-Regular.eot');
+    src: local('Graphik Arabic Regular'), local('GraphikArabic-Regular'),
+        url('../fonts/GraphikArabic-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GraphikArabic-Regular.woff2') format('woff2'),
+        url('../fonts/GraphikArabic-Regular.woff') format('woff'),
+        url('../fonts/GraphikArabic-Regular.ttf') format('truetype'),
+        url('../fonts/GraphikArabic-Regular.svg#GraphikArabic-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GraphikArabic-Medium';
+    src: url('../fonts/GraphikArabic-Medium.eot');
+    src: local('Graphik Arabic Medium'), local('GraphikArabic-Medium'),
+        url('../fonts/GraphikArabic-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GraphikArabic-Medium.woff2') format('woff2'),
+        url('../fonts/GraphikArabic-Medium.woff') format('woff'),
+        url('../fonts/GraphikArabic-Medium.ttf') format('truetype'),
+        url('../fonts/GraphikArabic-Medium.svg#GraphikArabic-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GraphikArabic-SemiBold';
+    src: url('../fonts/GraphikArabic-SemiBold.eot');
+    src: local('Graphik Arabic SemiBold'), local('GraphikArabic-SemiBold'),
+        url('../fonts/GraphikArabic-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GraphikArabic-SemiBold.woff2') format('woff2'),
+        url('../fonts/GraphikArabic-SemiBold.woff') format('woff'),
+        url('../fonts/GraphikArabic-SemiBold.ttf') format('truetype'),
+        url('../fonts/GraphikArabic-SemiBold.svg#GraphikArabic-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
