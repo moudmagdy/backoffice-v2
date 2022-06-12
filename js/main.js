@@ -2,7 +2,18 @@ const pageLoader = document.querySelector('.page-preloader');
 const searchControlInput = document.querySelector('.search-control__input');
 const searchControlRemoveBtn = document.querySelector('.search-control__remove-btn');
 const labelTriggerModal = document.querySelectorAll('label[data-bs-toggle="modal"]');
+const toastTriggers = document.querySelectorAll('[data-toast-toggle="toast"]');
 
+
+function showToast(e) {
+    e.preventDefault();
+    const toast = new bootstrap.Toast(this.dataset.toastTarget)
+    toast.show();
+}
+
+if (toastTriggers) {
+    toastTriggers.forEach(trigger => trigger.addEventListener('click', showToast));
+}
 
 function closePageLoader() {
     pageLoader.classList.add('page-loaded');
