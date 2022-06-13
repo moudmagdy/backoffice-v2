@@ -1,8 +1,50 @@
 .toast
+    display: flex
+    align-items: center
+    +var(color, color-text-primary)
+    background-color: #fff
     border: none
     border-radius: rem(6px)
 
+    .btn-close
+        width: rem(21px)
+        height: rem(21px)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.41 13.41'%3E%3Cpath d='M8.12,6.71,13.41,12,12,13.41,6.71,8.12l-5.3,5.29L0,12,5.29,6.71,0,1.42,1.41,0l5.3,5.29L12,0l1.41,1.41Z' fill='%23060505'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-size: rem(10px) rem(10px)
+        background-position: center
+        opacity: 1
+        padding: 0
+
+    .btn-close-danger
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.41 13.41'%3E%3Cpath d='M8.12,6.71,13.41,12,12,13.41,6.71,8.12l-5.3,5.29L0,12,5.29,6.71,0,1.42,1.41,0l5.3,5.29L12,0l1.41,1.41Z' fill='%23F02849'/%3E%3C/svg%3E")
+
+    .btn-close-warning
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.41 13.41'%3E%3Cpath d='M8.12,6.71,13.41,12,12,13.41,6.71,8.12l-5.3,5.29L0,12,5.29,6.71,0,1.42,1.41,0l5.3,5.29L12,0l1.41,1.41Z' fill='%23ff8800'/%3E%3C/svg%3E")
+
+.primary-toast
+    color: #fff
+    +var(background-color, color-brand)
+
+.secondary-toast
+    color: #fff
+    +var(background-color, color-text-primary)
+
+.success-toast
+    color: #fff
+    background-color: #289E53
+
+.danger-toast
+    +var(color, color-text-primary)
+    background-color: #FFECED
+
+.warning-toast
+    +var(color, color-text-primary)
+    background-color: #f3c960
+
 .toast-body
+    flex: 1 1 auto
+
     .toast-details
         display: flex
         align-items: center
@@ -10,3 +52,23 @@
 
         p
             margin-bottom: 0
+
+.toast-footer
+    position: relative
+    +flex-center
+    padding: var(--bs-toast-padding-x)
+
+    &::before
+        content: ""
+        position: absolute
+        top: rem(10px)
+        bottom: rem(10px)
+        inset-inline-start: 0
+        width: rem(0.5px)
+        background-color: rgba(255, 255, 255, 0.5)
+
+        .danger-toast &
+            background-color: rgba(255, 107, 115, 0.5)
+
+        .warning-toast &
+            background-color: rgba(255, 136, 0, 0.5)

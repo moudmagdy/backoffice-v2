@@ -305,7 +305,7 @@
                                     <td>عناية بالبشرة</td>
                                     <td>
                                         <div class="form-switch">
-                                            <span>غير نشط</span>
+                                            <span class="activation-state">غير نشط</span>
                                             <input class="form-switch-input" type="checkbox" id="switch-1">
                                             <label class="form-switch-btn" for="switch-1" data-bs-toggle="modal" data-bs-target="#activateProductModal"></label>
                                         </div>
@@ -376,14 +376,14 @@
                         </div>
                     </div>
                     <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-primary" data-toast-toggle="toast" data-toast-target="#activateProductToast">تنشيط</button>
+                        <button type="button" class="btn btn-primary" data-toast-toggle="toast" data-toast-target="#activateProductToast" data-bs-dismiss="modal">تنشيط</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">تراجع</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="toast-container p-3 bottom-0 start-50 translate-middle-x">
-            <div class="toast text-bg-primary border-0" id="activateProductToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-container pb-3 bottom-0 start-50 translate-middle-x">
+            <div class="toast success-toast" id="activateProductToast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-body">
                     <div class="toast-details">
                         <svg width="18" viewBox="0 0 23.27 20.57">
@@ -392,7 +392,9 @@
                         <p>تم اظهار المنتج بنجاح</p>
                     </div>
                 </div>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                <div class="toast-footer">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
             </div>
         </div>
     </main>
@@ -414,6 +416,19 @@
     <script src="js/components/main-menu.module.js" type="module"></script>
     <script src="js/components/filters.module.js" type="module"></script>
     <script src="js/main.js" defer></script>
+    <script>
+        const activateProductToast = document.querySelector('#activateProductToast');
+        const activateProductBtn = document.querySelector('[data-toast-target="#activateProductToast"]');
+
+        activateProductToast.addEventListener('hidden.bs.toast', () => {
+            window.location.href = "products-list.html";
+        });
+
+        activateProductBtn.addEventListener('click', () => {
+            document.querySelector('#switch-1').checked = true;
+            document.querySelector('.activation-state').textContent = "نشط"
+        });
+    </script>
 </body>
 
 </html>

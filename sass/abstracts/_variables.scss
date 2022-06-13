@@ -4,12 +4,11 @@ $color-white: #fff;
 $color-brand-aman: #3DBEC8;
 $color-brand: #1877F2;
 $color-bg: #EEF0F8;
-$color-text-primary: #060505;
+$color-text-primary: #050505;
 $color-success: #4CC784;
 $color-danger: #FF6B73;
 
-$variables: (
-    default-font-size: 1rem,
+$variables: (default-font-size: 1rem,
     main-menu-width: #{rem(200px)},
     color-brand: $color-brand,
     color-brand-aman: $color-brand-aman,
@@ -17,8 +16,7 @@ $variables: (
     color-text-primary: $color-text-primary,
     // color-text-secondary: #A3AAB2,
     color-success: $color-success,
-    color-danger: $color-danger
-);
+    color-danger: $color-danger);
 
 :root {
     --animate-duration: 500ms;
