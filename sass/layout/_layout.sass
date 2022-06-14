@@ -114,6 +114,10 @@ main
         padding: rem(12.5px) rem(22px)
         transition: all 0.3s ease-in-out
 
+        &.header--separated
+            border-radius: rem(8px) rem(8px) rem(2px) rem(2px)
+            margin-bottom: rem(2px)
+
         .filters-shown &
             border-radius: rem(8px) rem(8px) rem(2px) rem(2px)
             margin-bottom: rem(2px)
@@ -135,8 +139,11 @@ main
             .filters-shown &
                 border-radius: rem(2px) rem(2px) rem(8px) rem(8px)
 
+        &.header--separated
+            & + section
+                border-radius: rem(2px) rem(2px) rem(8px) rem(8px)
+
     & > section
-        flex: 1 1 auto
         display: flex
         flex-direction: column
         background-color: $color-white
@@ -144,6 +151,12 @@ main
         overflow: hidden
         box-shadow: 0 rem(1px) rem(3px) rgba(0, 0, 0, 0.08)
         padding-block: 0 rem(10px)
+
+        &:first-of-type
+            flex-grow: 0
+
+        &:last-of-type
+            flex-grow: 1
 
         .sub-title
             display: flex

@@ -191,30 +191,30 @@
     text-decoration: none
     background-color: transparent
     border-radius: rem(12px)
-    padding: 0.6rem 0.8rem
-    transition: all 0.3s ease-in-out
 
     span
+        font-family: 'NotoSansArabic-Medium', sans-serif
         font-size: rem(14px)
         color: #65676B
-        transition: all 0.3s ease-in-out
+        transition: color 0.3s ease-in-out
+
+        [dir="ltr"] &
+            font-family: 'NotoSans-Medium', sans-serif
 
     svg
         width: rem(16px)
-        fill: #4D4D4D
+        fill: #65676B
         transition: fill 0.3s ease-in-out
 
         [dir="ltr"] &
             transform: scaleX(-1)
 
     &:hover
-        background-color: #f3f2f7
-
         span
-            color: darken(#65676B, 20%)
+            +var(color, color-brand)
 
         svg
-            fill: darken(#4D4D4D, 20%)
+            +var(fill, color-brand)
 
 .search__bar__dropdown
     @media (max-width: 576px)

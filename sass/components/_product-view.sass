@@ -1,72 +1,93 @@
-.product__view
+.product__panel
     display: flex
-    flex-wrap: wrap
-    gap: rem(20px)
-    padding: rem(24) rem(22px)
-
-    .product__image
-        width: rem(180px)
-        height: rem(180px)
-        background-color: rgba(229, 234, 241, 0.4)
-        border: 1px solid #E4E6EB
-        border-radius: rem(15px)
-        overflow: hidden
-
-        img
-            width: 100%
-            height: 100%
-            object-fit: cover
-            border-radius: rem(15px)
+    flex-direction: column
 
     .product__data
-        flex: 1 1 auto
+        flex: 0 0 auto
         display: flex
         flex-direction: column
-        justify-content: center
-        gap: rem(15px)
+        gap: rem(25px)
+        padding-block: rem(25px)
+        padding-inline: rem(30)
 
-        .product__name
-            font-size: rem(20px)
+        @media (min-width: 768px)
+            flex-direction: row
+            align-items: center
+
+        @media (min-width: 1200px)
+            padding-inline: rem(30) rem(50px)
+
+    .product__images
+
+    .product__name
+        font-size: rem(20px)
+        margin-bottom: 0
+
+    .product__details
+        flex-grow: 1
+        display: flex
+        flex-wrap: wrap
+
+        &__item
+            flex-basis: 50%
+            display: flex
+            flex-direction: column
+            gap: rem(5px)
+            padding: rem(15px)
+
+            // @media (max-width: 576px)
+            border-block-start: rem(0.5px) solid #D2DBE6
+
+            &:not(:nth-child(odd))
+                border-inline-start: rem(0.5px) solid #D2DBE6
+
+            @media (min-width: 768px)
+                flex-basis: 33.3333%
+                border-block-start: rem(0.5px) solid #D2DBE6
+
+                &:not(:nth-child(3n+3))
+                    border-inline-start: rem(0.5px) solid #D2DBE6
+
+            // @media (min-width: 1200px)
+            //     &:not(:nth-child(n+5))
+            //         justify-content: flex-end
+            //         border-bottom: rem(0.5px) solid #D2DBE6
+
+            // @media (max-width: 1200px)
+            //     flex-basis: 33.3333%
+
+            // @media (max-width: 576px)
+            //     flex: 0 1 100%
+
+        &__title
+            font-size: rem(12px)
+            white-space: nowrap
+            color: #878A90
             margin-bottom: 0
 
-        .product__price
-            display: inline-block
-            font-size: rem(18px)
-            +var(color, color-brand)
-
-            [dir="rtl"] &
-                font-family: 'NotoSansArabic-SemiBold', sans-serif
+        &__data
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            gap: rem(5px)
+            font-family: 'NotoSansArabic-SemiBold', sans-serif
+            font-size: rem(14px)
+            color: #0C0D0D
 
             [dir="ltr"] &
                 font-family: 'NotoSans-SemiBold', sans-serif
 
-    .stock-details
-        flex: 0 1 100%
-        display: flex
-        flex-wrap: wrap
-        gap: rem(15px)
-        padding-top: rem(15px)
-        border-top: rem(1px) solid #edeff4
-
-        .product__info__item
-            flex: 0 1 20%
-
-            @media (max-width: 768px)
-                flex: 0 1 calc(50% - 7.5px)
-
-            @media (max-width: 576px)
-                flex: 0 1 100%
-
-            h6,
             span
-                font-size: rem(14px)
+                &:last-child
+                    font-family: 'NotoSansArabic-Medium', sans-serif
+                    font-size: rem(12px)
+                    background-color: rgba(198, 207, 217, 0.24)
+                    border: rem(1px) solid #D2DBE6
+                    border-radius: rem(14px)
+                    padding: rem(4px) rem(6px)
 
-            h6
-                white-space: nowrap
-                color: #A3AAB2
-
-            span
-                color: #0C0D0D
+                    [dir="ltr"] &
+                        font-family: 'NotoSans-Medium', sans-serif
 
 .swiper
     position: relative
@@ -74,20 +95,20 @@
     flex-direction: column
     align-items: center
     gap: rem(15px)
-    max-width: rem(180px)
+    max-width: rem(130px)
     height: max-content
-    border-radius: rem(15px) rem(15px) 0 0
     margin: 0
 
     .swiper-wrapper
         display: flex
-        background-color: rgba(229, 234, 241, 0.4)
+        background-color: #fff
         border-radius: rem(15px)
 
         .swiper-slide
-            max-width: rem(180px)
-            max-height: rem(180px)
+            max-width: rem(130px)
+            max-height: rem(130px)
             border-radius: rem(15px)
+            border: rem(1px) solid #C6CFD9
             overflow: hidden
 
             img
@@ -105,8 +126,8 @@
 
         .swiper-pagination-bullet
             flex: 0 0 auto
-            width: rem(10px)
-            height: rem(10px)
+            width: rem(8px)
+            height: rem(8px)
             background-color: #C6CFD9
             border-radius: 50%
             cursor: pointer

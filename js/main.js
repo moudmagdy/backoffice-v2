@@ -33,6 +33,7 @@ datepickerElements.forEach(element => {
 });
 
 const fileInputs = document.querySelectorAll('.form-file');
+
 function getFileName() {
     let fullPath = this.value;
     if (fullPath) {
@@ -90,6 +91,7 @@ if (checkoutToggle) {
 
 const tableCheck = document.querySelectorAll('table tbody [type="checkbox"]');
 const tableRadio = document.querySelectorAll('table tbody [type="radio"]');
+
 function checkTableRow() {
     if (this.checked) {
         this.closest('tr').classList.add('selected');
@@ -97,6 +99,7 @@ function checkTableRow() {
         this.closest('tr').classList.remove('selected');
     }
 }
+
 function selectTableRow() {
     if (this.checked) {
         this.closest('tbody').querySelectorAll('.selected').forEach(radio => {
@@ -162,12 +165,10 @@ function showRemoveTextBtn() {
 }
 
 function removeInputText(e) {
-    if (searchControlInput) {
-        e.preventDefault();
-        if (this.previousElementSibling.value.length >= 1) {
-            this.previousElementSibling.value = "";
-            this.parentNode.classList.remove('has-value');
-        }
+    e.preventDefault();
+    if (this.previousElementSibling.value.length >= 1) {
+        this.previousElementSibling.value = "";
+        this.parentNode.classList.remove('has-value');
     }
 }
 
@@ -182,5 +183,11 @@ if (labelTriggerModal) {
 
 
 window.addEventListener('load', closePageLoader);
-searchControlInput.addEventListener('keyup', showRemoveTextBtn);
-searchControlRemoveBtn.addEventListener('click', removeInputText);
+
+if (searchControlInput) {
+    searchControlInput.addEventListener('keyup', showRemoveTextBtn);
+}
+
+if (searchControlRemoveBtn) {
+    searchControlRemoveBtn.addEventListener('click', removeInputText);
+}
