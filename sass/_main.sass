@@ -151,9 +151,10 @@ a
     display: flex
     align-items: center
     gap: rem(10px)
-    font-size: rem(12px)
+    min-width: rem(180px)
+    font-size: rem(14px)
     +var(color, color-brand)
-    padding: rem(12px) rem(16px)
+    padding: rem(12px) rem(20px)
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out
 
     svg
@@ -177,8 +178,11 @@ a
             fill: #fff
 
     &:active, &:focus
-        color: inherit
-        background-color: #E2F2FE
+        +var(color, color-brand)
+        background-color: rgba(24, 119, 242, 0.1)
+
+        svg
+            +var(fill, color-brand)
 
     &.active:active
         +var(background-color, color-brand)
