@@ -39,17 +39,20 @@
         margin-top: auto
 
     &__toggle
-        display: flex
+        .main-menu &
+            display: flex
 
         svg
             width: rem(20px)
             height: rem(20px)
-            fill: rgba(255, 255, 255, 0.4)
             transition: fill 0.3s
+
+            .main-menu &
+                fill: rgba(255, 255, 255, 0.4)
 
         &:hover
             svg
-                fill: $color-white
+                fill: #fff
 
     a:not(.main-menu__toggle, .profile__menu a)
         display: flex
@@ -115,12 +118,12 @@
 
                     &:hover,
                     &.active
-                        color: $color-white
+                        color: #fff
                         background-color: rgba(255, 255, 255, 0.08)
 
                     &.active
                         &::before
-                            background-color: $color-white
+                            background-color: #fff
 
         .menu__list
             & > li
@@ -149,14 +152,14 @@
                             opacity: 1
 
                         svg
-                            fill: $color-white
+                            fill: #fff
 
                     &.active
                         &::before
                             opacity: 1
 
                         svg
-                            fill: $color-white
+                            fill: #fff
 
                 &.has--submenu
                     position: relative
@@ -199,7 +202,7 @@
                                     background-color: rgba(255, 255, 255, 0.08)
 
                                     &::before
-                                        background-color: $color-white
+                                        background-color: #fff
 
                                 &.active
                                     background-color: rgba(255, 255, 255, 0.08)
@@ -259,14 +262,14 @@
             background-color: rgba(255, 255, 255, 0.08)
 
             svg
-                fill: $color-white
+                fill: #fff
 
             span
                 &:not(.notifications-count)
-                    color: $color-white
+                    color: #fff
 
             &::before
-                background-color: $color-white
+                background-color: #fff
                 opacity: 1
 
         .notifications-count
@@ -312,10 +315,10 @@
                 background-color: rgba(255, 255, 255, 0.08)
 
                 span
-                    color: $color-white
+                    color: #fff
 
                 &::before
-                    background-color: $color-white
+                    background-color: #fff
                     opacity: 1
 
     .main-menu--hover-opened &
@@ -436,3 +439,21 @@
         opacity: 1
         pointer-events: auto
         transform: rotate(0deg)
+
+.main-menu__toggle
+    &:not(.main-menu &)
+        display: none
+        background-color: transparent
+        border: none
+        padding: 0
+        margin-bottom: rem(15px)
+
+        svg
+            +var(fill, color-text-primary)
+
+        &:hover
+            svg
+                +var(fill, color-brand)
+
+        @media (max-width: 1024px)
+            display: inline-flex

@@ -189,7 +189,34 @@ a
 
     &.active:focus
         +var(background-color, color-brand)
-        color: $color-white
+        color: #fff
+
+    &--danger
+        color: #FF6B73
+
+        svg
+            fill: #FF6B73
+
+        &:hover
+            color: #fff
+            background-color: #F02849
+
+            svg
+                fill: #fff
+
+        &:active, &:focus
+            color: #fff
+            background-color: rgba(240, 40, 73, 0.8)
+
+            svg
+                fill: #fff
+
+        &.active:active
+            background-color: rgba(240, 40, 73, 0.8)
+
+        &.active:focus
+            background-color: rgba(240, 40, 73, 0.8)
+            color: #fff
 
 .header__dropdown,
 .table__dropdown
