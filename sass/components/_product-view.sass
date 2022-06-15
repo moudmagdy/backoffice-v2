@@ -1,6 +1,8 @@
 .product__panel
     display: flex
-    flex-direction: column
+
+    @media (max-width: 1200px)
+        flex-direction: column
 
     .product__data
         flex: 0 0 auto
@@ -27,6 +29,11 @@
         flex-grow: 1
         display: flex
         flex-wrap: wrap
+        border-block-start: rem(0.5px) solid #D2DBE6
+
+        @media (min-width: 1200px)
+            border-block-start: 0
+            border-inline-start: rem(0.5px) solid #D2DBE6
 
         &__item
             flex-basis: 50%
@@ -35,29 +42,32 @@
             gap: rem(5px)
             padding: rem(15px)
 
-            // @media (max-width: 576px)
-            border-block-start: rem(0.5px) solid #D2DBE6
+            &:not(:nth-last-of-type(-n+2))
+                border-block-end: rem(0.5px) solid #D2DBE6
 
             &:not(:nth-child(odd))
                 border-inline-start: rem(0.5px) solid #D2DBE6
 
-            @media (min-width: 768px)
+            @media (min-width: 576px)
                 flex-basis: 33.3333%
-                border-block-start: rem(0.5px) solid #D2DBE6
+
+                &:not(:nth-child(odd))
+                    border-inline-start: none
 
                 &:not(:nth-child(3n+3))
-                    border-inline-start: rem(0.5px) solid #D2DBE6
+                    border-inline-end: rem(0.5px) solid #D2DBE6
 
-            // @media (min-width: 1200px)
-            //     &:not(:nth-child(n+5))
-            //         justify-content: flex-end
-            //         border-bottom: rem(0.5px) solid #D2DBE6
+            @media (min-width: 768px)
+                flex-basis: 25%
 
-            // @media (max-width: 1200px)
-            //     flex-basis: 33.3333%
+                &:not(:nth-last-of-type(-n+2))
+                    border-block-end: none
 
-            // @media (max-width: 576px)
-            //     flex: 0 1 100%
+                &:not(:nth-last-of-type(-n+4))
+                    border-block-end: rem(0.5px) solid #D2DBE6
+
+                &:not(:nth-child(4n+4))
+                    border-inline-end: rem(0.5px) solid #D2DBE6
 
         &__title
             font-size: rem(12px)
