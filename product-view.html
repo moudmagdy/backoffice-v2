@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="side-panel--shown">
     <main class="product-page">
         <div class="main-menu">
             <div class="main-menu__header">
@@ -275,7 +275,7 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="">
                         <li>
-                            <button type="button" class="dropdown-item">
+                            <button type="button" class="dropdown-item" data-panel-target="barcode-printing">
                                 <svg viewBox="0 0 20.71 20.71">
                                     <path d="M20.71,7.76a2.59,2.59,0,0,0-2.59-2.58H16.39V0H4.31V5.18H2.59A2.59,2.59,0,0,0,0,7.76V18.12H4.31v2.59H16.39V18.12h4.32ZM6,1.73h8.63V5.18H6ZM14.67,19H6V13.8h8.63ZM19,16.39H16.39V12.08H4.31v4.31H1.73V7.76a.85.85,0,0,1,.86-.86H18.12a.87.87,0,0,1,.86.86h0Zm-5.63-8h3v2h-3Z"></path>
                                 </svg>
@@ -521,6 +521,62 @@
                 </div>
             </div>
         </div>
+        <div class="side-panel move-panel" data-panel="barcode-printing" tabindex="-1" aria-hidden="true">
+            <div class="side-panel__header">
+                <h4 class="side-panel__title">طباعة باركود</h4>
+            </div>
+            <div class="side-panel__body px-0 pt-0">
+                <div class="panel-products-list">
+                    <div class="panel-products-list__head">
+                        <div class="panel-products-list__head__col">
+                            <h3>المنتـج</h3>
+                        </div>
+                        <div class="panel-products-list__head__col">
+                            <h3>الكمية</h3>
+                        </div>
+                        <div class="panel-products-list__head__col">
+                            <h3>الباركـود</h3>
+                        </div>
+                        <div class="panel-products-list__head__col">
+                            <h3>البيـع</h3>
+                        </div>
+                    </div>
+                    <div class="panel-products-list__item">
+                        <div class="panel-products-list__data">
+                            <div class="panel-products-list__title">
+                                <h3>صابون جونسون / احمر (قطعة)</h3>
+                            </div>
+                        </div>
+                        <div class="panel-products-list__quantity">
+                            <a href="#" class="panel-products-list__quantity-increment-btn">
+                                <svg width="13" height="13" viewBox="0 0 13 13">
+                                    <path d="M13,6.5C13,6.8,12.8,7,12.5,7H7v5.5C7,12.8,6.8,13,6.5,13S6,12.8,6,12.5V7H0.5C0.2,7,0,6.8,0,6.5S0.2,6,0.5,6H6 V0.5C6,0.2,6.2,0,6.5,0S7,0.2,7,0.5V6h5.5C12.8,6,13,6.2,13,6.5z"></path>
+                                </svg>
+                            </a>
+                            <input type="number" class="form-control" id="" name="" value="" placeholder="00">
+                            <a href="#" class="panel-products-list__quantity-decrement-btn">
+                                <svg width="13" height="1" viewBox="0 0 13 1">
+                                    <path d="M12.5,1h-12C0.2,1,0,0.8,0,0.5S0.2,0,0.5,0h12C12.8,0,13,0.2,13,0.5S12.8,1,12.5,1z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <input type="number" class="form-control panel-products-list__input" id="" name="" value="" placeholder="00.00">
+                        <div class="panel-products-list__total-price">
+                            <span>348.00</span>
+                        </div>
+                        <a href="#" class="panel-products-list__remove-btn">
+                            <svg width="9.5" height="9.5" viewBox="0 0 9.5 9.5">
+                                <path d="M5.4,4.7l3.9-3.9c0.2-0.2,0.2-0.5,0-0.7S8.8,0,8.6,0.1L4.7,4L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9L4,4.7 L0.1,8.6C0,8.8,0,9.1,0.1,9.3c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l3.9-3.9l3.9,3.9C8.7,9.4,8.9,9.5,9,9.5s0.3,0,0.4-0.1 c0.2-0.2,0.2-0.5,0-0.7L5.4,4.7z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="side-panel__footer">
+                <button type="button" class="btn btn-primary btn-lg">حفظ</button>
+                <button type="button" class="btn btn-link btn-lg" data-dismiss="panel">الغاء</button>
+            </div>
+        </div>
     </main>
     <div class="page-preloader">
         <div class="loading-bar">
@@ -537,7 +593,7 @@
     <script src="js/bootstrap.min.js" defer></script>
     <script src="js/swiper-bundle.min.js" defer></script>
     <script src="js/components/main-menu.module.js" type="module"></script>
-    <script src="js/components/layout-tabs.module.js" type="module"></script>
+    <script src="js/components/side-panel.module.js" type="module" defer></script>
     <script src="js/main.js" defer></script>
 </body>
 

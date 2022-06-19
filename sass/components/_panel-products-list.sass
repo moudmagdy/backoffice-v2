@@ -1,4 +1,4 @@
-.invoice__list
+.panel-products-list
     display: flex
     flex-direction: column
     width: 100%
@@ -7,34 +7,51 @@
     padding: 0
     margin: 0
 
-.invoice__item
-    position: relative
-    display: flex
-    align-items: center
-    justify-content: space-between
-    gap: rem(10px)
-    width: 100%
-    background-color: #fff
-    border-bottom: rem(1px) solid #F0F0F0
-    padding: rem(10px) rem(20px)
-    transition: background-color 0.3s
+    &__head
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: rem(10px)
+        padding-inline: rem(20px)
+        padding-block: rem(15px)
+        border-bottom: rem(1px) solid #E4E6EB
 
-    &:hover
-        background-color: #ececec
+        &__col
+            h3
+                font-size: rem(12px)
+                margin-bottom: 0
 
-    &.item-added
-        animation: blink 0.5s linear 1 forwards
+            &:first-child
+                flex: 0 0 25%
+
+    &__item
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: rem(10px)
+        width: 100%
+        background-color: #fff
+        border-bottom: rem(1px) solid #F0F0F0
+        padding: rem(10px) rem(20px)
+        transition: background-color 0.3s
+
+        &:hover
+            background-color: #ececec
+
+        &.item-added
+            animation: blink 0.5s linear 1 forwards
 
     &__data
         display: flex
         flex-direction: column
-        flex: 0 0 25%
+        flex: 0 0 35%
 
     &__title
         h3
             display: -webkit-box
             -webkit-box-orient: vertical
-            font-size: rem(13px)
+            font-size: rem(14px)
             line-height: 1.5
             overflow: hidden
             text-overflow: ellipsis
@@ -69,14 +86,14 @@
         display: flex
         align-items: center
         gap: rem(5px)
-        // margin-inline-start: rem(15px)
-        // margin-inline-end: auto
 
         .form-control
+            flex: 0 0 auto
             max-width: rem(55px)
 
-        &--decrement,
-        &--increment
+        &-decrement-btn,
+        &-increment-btn
+            flex: 0 0 auto
             +flex-center
             cursor: pointer
             width: rem(28px)
@@ -95,7 +112,7 @@
     &__input
         max-width: rem(70px)
 
-    &__remove
+    &__remove-btn
         +flex-center
         width: rem(24px)
         height: rem(24px)
@@ -111,8 +128,6 @@
             background-color: #d2d5d9
 
     .form-control
-        border-radius: rem(4px)
-
         &:focus
             box-shadow: none
 
