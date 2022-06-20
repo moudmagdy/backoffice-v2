@@ -10,13 +10,14 @@
     &__head
         display: flex
         align-items: center
-        justify-content: space-between
         gap: rem(10px)
         padding-inline: rem(20px)
-        padding-block: rem(15px)
+        padding-block: rem(22px)
         border-bottom: rem(1px) solid #E4E6EB
 
         &__col
+            flex: 0 0 auto
+
             h3
                 font-size: rem(12px)
                 margin-bottom: 0
@@ -28,16 +29,17 @@
         position: relative
         display: flex
         align-items: center
-        justify-content: space-between
         gap: rem(10px)
         width: 100%
         background-color: #fff
-        border-bottom: rem(1px) solid #F0F0F0
         padding: rem(10px) rem(20px)
         transition: background-color 0.3s
 
+        &:not(:last-child)
+            border-bottom: rem(0.5px) solid rgba(198, 207, 217, 0.25)
+
         &:hover
-            background-color: #ececec
+            background-color: #F5F5F5
 
         &.item-added
             animation: blink 0.5s linear 1 forwards
@@ -83,6 +85,7 @@
             font-family: 'NotoSans-SemiBold', sans-serif
 
     &__quantity
+        flex: 0 0 auto
         display: flex
         align-items: center
         gap: rem(5px)
@@ -90,42 +93,68 @@
         .form-control
             flex: 0 0 auto
             max-width: rem(55px)
+            text-align: center
 
-        &-decrement-btn,
-        &-increment-btn
-            flex: 0 0 auto
-            +flex-center
-            cursor: pointer
-            width: rem(28px)
-            height: rem(28px)
-            border-radius: 50%
-            transition: background-color 0.3s
-
-            svg
-                width: rem(13px)
-                height: rem(13px)
-                fill: #878A90
-
-            &:hover
-                background-color: #d2d5d9
-
-    &__input
-        max-width: rem(70px)
-
-    &__remove-btn
+    &__quantity-btn
+        flex: 0 0 auto
         +flex-center
-        width: rem(24px)
-        height: rem(24px)
+        cursor: pointer
+        width: rem(28px)
+        height: rem(28px)
+        background-color: transparent
+        border: none
         border-radius: 50%
-        transition: background-color 0.3s
+        transition: background-color 0.3s ease-in-out
 
         svg
-            width: rem(10px)
-            height: rem(10px)
-            fill: #878A90
+            width: rem(13px)
+            height: rem(13px)
+            fill: #CBD0D6
+            transition: fill 0.3s ease-in-out
 
         &:hover
-            background-color: #d2d5d9
+            background-color: rgba(0, 0, 0, 0.05)
+
+            svg
+                fill: darken(#CBD0D6, 10%)
+
+        &.decrement--btn,
+        &.increment--btn
+
+    &__input
+        flex: 1 1 auto
+
+        .form-control
+            max-width: fit-content
+
+    &__remove-btn
+        flex: 0 0 auto
+        +flex-center
+        width: rem(32px)
+        height: rem(32px)
+        background-color: transparent
+        border: rem(1px) solid #C6CFD9
+        border-radius: 50%
+        opacity: 0
+        transition: all 0.3s ease-in-out
+
+        svg
+            width: rem(15px)
+            height: rem(15px)
+            fill: #A3AAB2
+            transition: fill 0.3s ease-in-out
+
+        &:hover
+            background-color: #FFE8E9
+            border-color: #FFE8E9
+
+            svg
+                fill: #FF6B73
+
+    .panel-products-list__item
+        &:hover
+            .panel-products-list__remove-btn
+                opacity: 1
 
     .form-control
         &:focus
@@ -137,7 +166,6 @@
             margin: 0
 
         &[type="number"]
-            text-align: center
             -moz-appearance: textfield
 
 @keyframes blink

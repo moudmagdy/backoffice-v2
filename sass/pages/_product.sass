@@ -3,13 +3,24 @@
         overflow-y: auto
         +scrollbar
 
+    @media (max-height: 600px)
+        overflow-y: auto
+        +scrollbar
+
     .single-column-layout
         @media (max-width: 1200px)
             height: auto
             min-height: 100%
 
+        @media (max-height: 600px)
+            height: auto
+            min-height: 100%
+
         & > section
             @media (max-width: 1200px)
+                overflow: hidden
+
+            @media (max-height: 600px)
                 overflow: hidden
 
     .page__navigation
@@ -60,3 +71,25 @@
             object-fit: cover
             background-color: #fff
             border-radius: rem(6px)
+
+[data-panel="barcode-printing"]
+    .panel-products-list__head__col
+        &:not(:first-child)
+            text-align: center
+
+        &:first-child
+            flex-basis: 35%
+
+        &:nth-child(2)
+            flex-basis: rem(121px)
+
+        &:nth-child(3)
+            flex-basis: rem(96px)
+
+        &:nth-child(4)
+            flex-basis: rem(75px)
+
+    .panel-products-list__item
+        .panel-products-list__input
+            &:nth-child(4)
+                flex: 0 0 rem(75px)
