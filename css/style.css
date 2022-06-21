@@ -518,6 +518,33 @@ a:hover {
   background-color: rgba(240, 40, 73, 0.8);
   color: #fff;
 }
+.dropdown-item.help--btn {
+  color: #93AEE6;
+}
+.dropdown-item.help--btn svg {
+  fill: #93AEE6;
+}
+.dropdown-item.help--btn:hover {
+  color: #fff;
+  background-color: #93AEE6;
+}
+.dropdown-item.help--btn:hover svg {
+  fill: #fff;
+}
+.dropdown-item.help--btn:active, .dropdown-item.help--btn:focus {
+  color: #fff;
+  background-color: #93AEE6;
+}
+.dropdown-item.help--btn:active svg, .dropdown-item.help--btn:focus svg {
+  fill: #fff;
+}
+.dropdown-item.help--btn.active:active {
+  background-color: #93AEE6;
+}
+.dropdown-item.help--btn.active:focus {
+  background-color: #93AEE6;
+  color: #fff;
+}
 
 .header__dropdown .dropdown-toggle,
 .table__dropdown .dropdown-toggle {
@@ -533,7 +560,7 @@ a:hover {
   width: 2.5rem;
   height: 2.5rem;
   background-color: transparent;
-  border: 0.0625rem solid rgba(77, 77, 77, 0.08);
+  border: 0.0625rem solid rgba(77, 77, 77, 0.25);
   border-radius: 50%;
   -webkit-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
@@ -2628,7 +2655,7 @@ main header .page-title h1 {
   fill: #1877F2;
   fill: var(--color-brand);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .main-menu__toggle:not(.main-menu .main-menu__toggle) {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -2907,8 +2934,8 @@ main header .page-title h1 {
   color: #0b5fcc;
 }
 
-.with-plus-icon,
-.with-return-icon {
+.with-plus-icon.btn,
+.with-return-icon.btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2917,8 +2944,8 @@ main header .page-title h1 {
           align-items: center;
   gap: 0.5rem;
 }
-.with-plus-icon::before,
-.with-return-icon::before {
+.with-plus-icon.btn::before,
+.with-return-icon.btn::before {
   content: "";
   background-repeat: no-repeat;
   background-size: contain;
@@ -3193,6 +3220,17 @@ main header .page-title h1 {
           align-items: center;
   gap: 0.75rem;
 }
+@media (max-width: 576px) {
+  .page-controls {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    border-top: 0.0625rem solid #EEF0F8;
+    padding-top: 0.78125rem;
+    margin-top: 0.78125rem;
+  }
+}
 
 .search-control {
   position: relative;
@@ -3280,7 +3318,7 @@ main header .page-title h1 {
   height: 0.8125rem;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 13'%3E%3Cpath d='M7.64,6.5,13,11.84,11.89,13,6.5,7.63,1.11,13,0,11.84,5.36,6.5,0,1.16,1.11,0,6.5,5.37,11.89,0,13,1.16Z' fill='%23131313'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 0.8125rem 0.8125rem;
   background-position: center;
   background-color: transparent;
   border: none;
@@ -3404,9 +3442,7 @@ main header .page-title h1 {
 }
 
 .need-help-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3419,6 +3455,13 @@ main header .page-title h1 {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
+}
+@media (min-width: 1200px) {
+  .need-help-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .need-help-btn::before {
   content: "";
@@ -3604,6 +3647,11 @@ table th {
   font-size: 0.75rem;
   font-weight: normal;
   padding: 1.375rem 0.9375rem;
+}
+@media (max-width: 768px) {
+  table th {
+    padding: 1.125rem 0.75rem;
+  }
 }
 [dir=rtl] table th {
   font-family: "NotoSansArabic-SemiBold", sans-serif;
@@ -3903,12 +3951,7 @@ table.table--with-gaps tbody tr.selected {
   transition: transform 0.3s cubic-bezier(0, 0.45, 0.16, 0.83), width 0.3s cubic-bezier(0, 0.45, 0.16, 0.83);
   transition: transform 0.3s cubic-bezier(0, 0.45, 0.16, 0.83), width 0.3s cubic-bezier(0, 0.45, 0.16, 0.83), -webkit-transform 0.3s cubic-bezier(0, 0.45, 0.16, 0.83);
 }
-@media (min-width: 576px) {
-  .side-panel:not(.payment .side-panel) {
-    width: 25.9375rem;
-  }
-}
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .side-panel:not(.payment .side-panel) {
     width: 37.5rem;
   }
@@ -5097,6 +5140,7 @@ table.table--with-gaps tbody tr.selected {
 }
 
 .panel-products-list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5111,16 +5155,21 @@ table.table--with-gaps tbody tr.selected {
   margin: 0;
 }
 .panel-products-list__head {
+  position: sticky;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.625rem;
-  padding-inline: 1.25rem;
-  padding-block: 1.375rem;
+  gap: 0.5rem;
+  background-color: #fff;
   border-bottom: 0.0625rem solid #E4E6EB;
+  z-index: 2;
+  padding-block: 1.375rem;
+  padding-inline: 1.125rem;
 }
 .panel-products-list__head__col {
   -webkit-box-flex: 0;
@@ -5144,10 +5193,11 @@ table.table--with-gaps tbody tr.selected {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.625rem;
+  gap: 0.5rem;
   width: 100%;
   background-color: #fff;
-  padding: 0.625rem 1.25rem;
+  z-index: 1;
+  padding: 0.625rem 1.125rem;
   -webkit-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -5224,7 +5274,7 @@ table.table--with-gaps tbody tr.selected {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.3125rem;
+  gap: 0.25rem;
 }
 .panel-products-list__quantity .form-control {
   -webkit-box-flex: 0;
@@ -5272,8 +5322,8 @@ table.table--with-gaps tbody tr.selected {
 }
 .panel-products-list__input {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+      -ms-flex: 1 0 4.6875rem;
+          flex: 1 0 4.6875rem;
 }
 .panel-products-list__input .form-control {
   max-width: -webkit-fit-content;
@@ -6909,16 +6959,6 @@ section .page-card:nth-last-child(-n+2) {
 }
 .cash-flow__list li.debtor .operation-amount {
   color: #FF4B4B;
-}
-
-@media (max-width: 920px) {
-  .products-page header {
-    gap: 15px;
-  }
-}
-.products-page .btn-outline-primary {
-  -webkit-margin-start: auto;
-          margin-inline-start: auto;
 }
 
 @media (max-width: 1200px) {

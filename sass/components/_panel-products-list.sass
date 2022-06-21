@@ -1,4 +1,5 @@
 .panel-products-list
+    position: relative
     display: flex
     flex-direction: column
     width: 100%
@@ -8,12 +9,17 @@
     margin: 0
 
     &__head
+        position: sticky
+        top: 0
+        left: 0
         display: flex
         align-items: center
-        gap: rem(10px)
-        padding-inline: rem(20px)
-        padding-block: rem(22px)
+        gap: rem(8px)
+        background-color: #fff
         border-bottom: rem(1px) solid #E4E6EB
+        z-index: 2
+        padding-block: rem(22px)
+        padding-inline: rem(18px)
 
         &__col
             flex: 0 0 auto
@@ -29,10 +35,11 @@
         position: relative
         display: flex
         align-items: center
-        gap: rem(10px)
+        gap: rem(8px)
         width: 100%
         background-color: #fff
-        padding: rem(10px) rem(20px)
+        z-index: 1
+        padding: rem(10px) rem(18px)
         transition: background-color 0.3s
 
         &:not(:last-child)
@@ -88,7 +95,7 @@
         flex: 0 0 auto
         display: flex
         align-items: center
-        gap: rem(5px)
+        gap: rem(4px)
 
         .form-control
             flex: 0 0 auto
@@ -122,7 +129,7 @@
         &.increment--btn
 
     &__input
-        flex: 1 1 auto
+        flex: 1 0 rem(75px)
 
         .form-control
             max-width: fit-content

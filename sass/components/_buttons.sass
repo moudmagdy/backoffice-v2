@@ -227,16 +227,18 @@
 
 .with-plus-icon,
 .with-return-icon
-    display: flex
-    align-items: center
-    gap: rem(8px)
 
-    &::before
-        content: ""
-        background-repeat: no-repeat
-        background-size: contain
-        background-position: center
-        transition: background-image 0.3s ease-in-out
+    &.btn
+        display: flex
+        align-items: center
+        gap: rem(8px)
+
+        &::before
+            content: ""
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            transition: background-image 0.3s ease-in-out
 
 .with-plus-icon
     &::before
