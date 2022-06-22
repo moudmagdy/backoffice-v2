@@ -74,6 +74,8 @@
 
 [data-panel="barcode-printing"]
     .panel-products-list__head__col
+        flex: 1 1
+
         &:not(:first-child)
             text-align: center
 
@@ -81,15 +83,18 @@
             flex-basis: 35%
 
         &:nth-child(2)
-            flex-basis: rem(121px)
+            flex-basis: rem(119px)
 
         &:nth-child(3)
-            flex-basis: rem(96px)
+            flex-basis: rem(95px)
 
         &:nth-child(4)
             flex-basis: rem(75px)
 
     .panel-products-list__item
         .panel-products-list__input
-            &:nth-child(4)
+            &:nth-of-type(3)
+                flex-basis: rem(95px)
+
+            &:nth-of-type(4)
                 flex: 0 0 rem(75px)
