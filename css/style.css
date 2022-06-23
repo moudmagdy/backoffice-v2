@@ -2655,7 +2655,7 @@ main header .page-title h1 {
   fill: #1877F2;
   fill: var(--color-brand);
 }
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .main-menu__toggle:not(.main-menu .main-menu__toggle) {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
