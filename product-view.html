@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="side-panel--shown">
+<body>
     <main class="product-page">
         <div class="main-menu">
             <div class="main-menu__header">
@@ -232,81 +232,90 @@
             </div>
         </div>
         <div class="single-column-layout">
+            <button type="button" class="main-menu__toggle">
+                <svg width="34" height="34" viewBox="0 0 34 34">
+                    <path d="M0,1.1h34v4H0V1.1z M0,15h34v4H0V15z M0,28.9h34v4H0V28.9z"></path>
+                </svg>
+            </button>
             <header class="header--separated">
-                <button type="button" class="main-menu__toggle">
-                    <svg width="34" height="34" viewBox="0 0 34 34">
-                        <path d="M0,1.1h34v4H0V1.1z M0,15h34v4H0V15z M0,28.9h34v4H0V28.9z"></path>
-                    </svg>
-                </button>
-                <button type="button" class="back-btn">
-                    <svg width="20" height="20" viewBox="0 0 20 20">
-                        <path d="M8.5,6c-3.3,0-6,2.7-6,6s2.7,6,6,6h9v2h-9c-4.4,0-8-3.6-8-8s3.6-8,8-8h5V0l6,5l-6,5V6H8.5z"></path>
-                    </svg>
-                    <span>رجــوع</span>
-                </button>
-                <div class="page__navigation">
-                    <button type="button" class="navigation__btn btn--previous">
-                        <svg width="6" height="12" viewBox="0 0 6 12">
-                            <path d="M6,6L0,0v12L6,6z"></path>
-                        </svg>
-                    </button>
-                    <div class="navigation__datalist">
-                        <input type="text" class="navigation__input" id="navDataList" list="navDatalistOptions" autocomplete="off" value="زبادى المراعى - سادة">
-                        <datalist id="navDatalistOptions">
-                            <option value="زبادى المراعى - سادة">
-                            <option value="زبادى المراعى - تريتس مانجو">
-                            <option value="زبادى المراعى - تريتس خوخ">
-                            <option value="زبادى المراعى - تريتس تفاح">
-                            <option value="زبادى المراعى - تريتس اناناس">
-                        </datalist>
+                <nav class="breadcrumb-nav" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <button type="button" class="back-btn">المنتجات</button>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page" title="جونسون، صابون للاستحمام، 300 مل">جونسون، صابون للاستحمام، 300 مل</li>
+                    </ol>
+                </nav>
+                <div class="page-navigation">
+                    <div class="page-navigation__item">
+                        <button type="button" class="page-navigation__btn navigation-prev--btn">
+                            <svg viewBox="0 0 13.41 8.12">
+                                <path d="M12,8.12,6.71,2.83,1.41,8.12,0,6.71,6.71,0l6.7,6.71Z"></path>
+                            </svg>
+                        </button>
+                        <div class="page-navigation__tooltip">
+                            <h5 class="page-navigation__tooltip__title">الـمنتج السابق</h5>
+                            <span class="page-navigation__tooltip__details">شيبسي طماطم (كرتونة)</span>
+                        </div>
                     </div>
-                    <button type="button" class="navigation__btn btn--next">
-                        <svg width="6" height="12" viewBox="0 0 6 12">
-                            <path d="M6,12V0L0,6L6,12z"></path>
-                        </svg>
-                    </button>
+                    <div class="page-navigation__item">
+                        <button type="button" class="page-navigation__btn navigation-next--btn">
+                            <svg viewBox="0 0 13.41 8.12">
+                                <path d="M1.41,0l5.3,5.29L12,0l1.41,1.41L6.71,8.12,0,1.41Z"></path>
+                            </svg>
+                        </button>
+                        <div class="page-navigation__tooltip">
+                            <h5 class="page-navigation__tooltip__title">الـمنتج التالـى</h5>
+                            <span class="page-navigation__tooltip__details">شيبسي خل وملح (كرتونة)</span>
+                        </div>
+                    </div>
                 </div>
-                <button type="button" class="btn btn-outline-primary edit-product--btn">تعديل</button>
-                <div class="dropdown header__dropdown">
-                    <button type="button" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg width="10" height="2" viewBox="0 0 10 2">
-                            <path d="M10,1c0,0.6-0.4,1-1,1S8,1.6,8,1s0.4-1,1-1S10,0.4,10,1z M6,1c0,0.6-0.4,1-1,1S4,1.6,4,1s0.4-1,1-1 S6,0.4,6,1z M2,1c0,0.6-0.4,1-1,1S0,1.6,0,1s0.4-1,1-1S2,0.4,2,1z"></path>
-                        </svg>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="">
-                        <li>
-                            <button type="button" class="dropdown-item" data-panel-target="barcode-printing">
-                                <svg viewBox="0 0 20.71 20.71">
-                                    <path d="M20.71,7.76a2.59,2.59,0,0,0-2.59-2.58H16.39V0H4.31V5.18H2.59A2.59,2.59,0,0,0,0,7.76V18.12H4.31v2.59H16.39V18.12h4.32ZM6,1.73h8.63V5.18H6ZM14.67,19H6V13.8h8.63ZM19,16.39H16.39V12.08H4.31v4.31H1.73V7.76a.85.85,0,0,1,.86-.86H18.12a.87.87,0,0,1,.86.86h0Zm-5.63-8h3v2h-3Z"></path>
-                                </svg>
-                                <span>طباعة باركود</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="dropdown-item">
-                                <svg viewBox="0 0 16.35 19.62">
-                                    <path d="M16.35,3.39,13.07,0H6.54A2.45,2.45,0,0,0,4.09,2.45v.82H2.45A2.45,2.45,0,0,0,0,5.72H0v13.9H13.08V15.53h3.27ZM11.45,18H1.63V5.72a.82.82,0,0,1,.82-.82H4.09V15.53h7.35ZM5.72,13.9V2.45a.82.82,0,0,1,.82-.82h4.9V4.9h3.27v9Z"></path>
-                                </svg>
-                                <span>نسخ المنتج</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="dropdown-item">
-                                <svg viewBox="0 0 20.67 18.45">
-                                    <path d="M20.52,8.52h0A13.47,13.47,0,0,0,17,3.83l2.61-2.61L18.34,0,15.51,2.83a10.2,10.2,0,0,0-5.17-1.36C3.88,1.47.91,6.86.15,8.52a1.73,1.73,0,0,0,0,1.41,13.72,13.72,0,0,0,3.57,4.69L1.11,17.23l1.22,1.22,2.84-2.84A10.18,10.18,0,0,0,10.34,17c6.46,0,9.42-5.4,10.18-7A1.66,1.66,0,0,0,20.52,8.52Zm-18.8.71c.65-1.41,3.18-6,8.62-6a8.63,8.63,0,0,1,3.89.92L12.71,5.63a4.3,4.3,0,0,0-6,6L5,13.39A11.85,11.85,0,0,1,1.72,9.23Zm11.2,0a2.59,2.59,0,0,1-2.58,2.59,2.48,2.48,0,0,1-1.11-.26l3.43-3.43a2.47,2.47,0,0,1,.26,1.1Zm-5.17,0a2.59,2.59,0,0,1,2.59-2.58,2.47,2.47,0,0,1,1.1.26L8,10.33a2.62,2.62,0,0,1-.26-1.11Zm2.59,6a8.39,8.39,0,0,1-3.9-.92L8,12.81a4.3,4.3,0,0,0,6-6l1.79-1.79A11.74,11.74,0,0,1,19,9.22c-.66,1.43-3.19,6-8.61,6Z"></path>
-                                </svg>
-                                <span>إخفاء المنتج</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="dropdown-item dropdown-item--danger">
-                                <svg viewBox="0 0 17.39 17.39">
-                                    <path d="M1.74,5.22H15.65v11.3a.87.87,0,0,1-.87.87H2.61a.87.87,0,0,1-.87-.87h0ZM3.48,7v8.7H13.91V7ZM6.09,8.7H7.83v5.22H6.09Zm3.47,0H11.3v5.22H9.56ZM4.35,2.61V.87A.87.87,0,0,1,5.22,0h7A.87.87,0,0,1,13,.87V2.61h4.35V4.35H0V2.61Zm1.74-.87v.87H11.3V1.74Z"></path>
-                                </svg>
-                                <span>حذف</span>
-                            </button>
-                        </li>
-                    </ul>
+                <div class="d-flex gap-2 ms-auto">
+                    <button type="button" class="btn btn-outline-primary d-none d-xl-flex">تعديل</button>
+                    <div class="dropdown header__dropdown">
+                        <button type="button" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg width="10" height="2" viewBox="0 0 10 2">
+                                <path d="M10,1c0,0.6-0.4,1-1,1S8,1.6,8,1s0.4-1,1-1S10,0.4,10,1z M6,1c0,0.6-0.4,1-1,1S4,1.6,4,1s0.4-1,1-1 S6,0.4,6,1z M2,1c0,0.6-0.4,1-1,1S0,1.6,0,1s0.4-1,1-1S2,0.4,2,1z"></path>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="">
+                            <li class="d-xl-none">
+                                <button type="button" class="dropdown-item">تعديل</button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item" data-panel-target="barcode-printing">
+                                    <svg viewBox="0 0 20.71 20.71">
+                                        <path d="M20.71,7.76a2.59,2.59,0,0,0-2.59-2.58H16.39V0H4.31V5.18H2.59A2.59,2.59,0,0,0,0,7.76V18.12H4.31v2.59H16.39V18.12h4.32ZM6,1.73h8.63V5.18H6ZM14.67,19H6V13.8h8.63ZM19,16.39H16.39V12.08H4.31v4.31H1.73V7.76a.85.85,0,0,1,.86-.86H18.12a.87.87,0,0,1,.86.86h0Zm-5.63-8h3v2h-3Z"></path>
+                                    </svg>
+                                    <span>طباعة باركود</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item">
+                                    <svg viewBox="0 0 16.35 19.62">
+                                        <path d="M16.35,3.39,13.07,0H6.54A2.45,2.45,0,0,0,4.09,2.45v.82H2.45A2.45,2.45,0,0,0,0,5.72H0v13.9H13.08V15.53h3.27ZM11.45,18H1.63V5.72a.82.82,0,0,1,.82-.82H4.09V15.53h7.35ZM5.72,13.9V2.45a.82.82,0,0,1,.82-.82h4.9V4.9h3.27v9Z"></path>
+                                    </svg>
+                                    <span>نسخ المنتج</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item">
+                                    <svg viewBox="0 0 20.67 18.45">
+                                        <path d="M20.52,8.52h0A13.47,13.47,0,0,0,17,3.83l2.61-2.61L18.34,0,15.51,2.83a10.2,10.2,0,0,0-5.17-1.36C3.88,1.47.91,6.86.15,8.52a1.73,1.73,0,0,0,0,1.41,13.72,13.72,0,0,0,3.57,4.69L1.11,17.23l1.22,1.22,2.84-2.84A10.18,10.18,0,0,0,10.34,17c6.46,0,9.42-5.4,10.18-7A1.66,1.66,0,0,0,20.52,8.52Zm-18.8.71c.65-1.41,3.18-6,8.62-6a8.63,8.63,0,0,1,3.89.92L12.71,5.63a4.3,4.3,0,0,0-6,6L5,13.39A11.85,11.85,0,0,1,1.72,9.23Zm11.2,0a2.59,2.59,0,0,1-2.58,2.59,2.48,2.48,0,0,1-1.11-.26l3.43-3.43a2.47,2.47,0,0,1,.26,1.1Zm-5.17,0a2.59,2.59,0,0,1,2.59-2.58,2.47,2.47,0,0,1,1.1.26L8,10.33a2.62,2.62,0,0,1-.26-1.11Zm2.59,6a8.39,8.39,0,0,1-3.9-.92L8,12.81a4.3,4.3,0,0,0,6-6l1.79-1.79A11.74,11.74,0,0,1,19,9.22c-.66,1.43-3.19,6-8.61,6Z"></path>
+                                    </svg>
+                                    <span>إخفاء المنتج</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item dropdown-item--danger">
+                                    <svg viewBox="0 0 17.39 17.39">
+                                        <path d="M1.74,5.22H15.65v11.3a.87.87,0,0,1-.87.87H2.61a.87.87,0,0,1-.87-.87h0ZM3.48,7v8.7H13.91V7ZM6.09,8.7H7.83v5.22H6.09Zm3.47,0H11.3v5.22H9.56ZM4.35,2.61V.87A.87.87,0,0,1,5.22,0h7A.87.87,0,0,1,13,.87V2.61h4.35V4.35H0V2.61Zm1.74-.87v.87H11.3V1.74Z"></path>
+                                    </svg>
+                                    <span>حذف</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </header>
             <section class="p-0">
@@ -521,9 +530,14 @@
                 </div>
             </div>
         </div>
-        <div class="side-panel move-panel" data-panel="barcode-printing" tabindex="-1" aria-hidden="true">
+        <div class="side-panel" data-panel="barcode-printing" data-panel-hidden="true" tabindex="-1" aria-hidden="true">
             <div class="side-panel__header">
                 <h4 class="side-panel__title">طباعة باركود</h4>
+                <button type="button" class="side-panel__close-btn" data-dismiss="panel">
+                    <svg viewBox="0 0 20 20">
+                        <path d="M18.64,20,10,11.36,1.36,20,0,18.64,8.64,10,0,1.36,1.36,0,10,8.64,18.64,0,20,1.36,11.36,10,20,18.64Z"></path>
+                    </svg>
+                </button>
             </div>
             <div class="side-panel__body px-0 pt-0">
                 <div class="panel-products-list">
@@ -606,8 +620,71 @@
                 </div>
             </div>
             <div class="side-panel__footer">
-                <button type="button" class="btn btn-primary btn-lg">حفظ</button>
-                <button type="button" class="btn btn-link btn-lg" data-dismiss="panel">الغاء</button>
+                <button type="button" class="btn btn-primary btn-lg flex-grow-1">حفظ</button>
+                <button type="button" class="btn btn-outline-primary btn-lg with-gear-icon" data-panel-target="printing-settings">اعدادات الطباعة</button>
+                <!-- <button type="button" class="btn btn-link btn-lg" data-dismiss="panel">الغاء</button> -->
+            </div>
+        </div>
+        <div class="side-panel" data-panel="printing-settings" data-panel-hidden="true" tabindex="-1" aria-hidden="true">
+            <div class="side-panel__header">
+                <h4 class="side-panel__title">إعدادت الطباعــة</h4>
+                <button type="button" class="side-panel__close-btn" data-dismiss="panel">
+                    <svg viewBox="0 0 20 20">
+                        <path d="M18.64,20,10,11.36,1.36,20,0,18.64,8.64,10,0,1.36,1.36,0,10,8.64,18.64,0,20,1.36,11.36,10,20,18.64Z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="side-panel__body">
+                <div class="row gx-3">
+                    <div class="col-12 mb-4">
+                        <label class="form-label" for="storeName">اسم المتجر</label>
+                        <input class="form-control" type="text" id="storeName" placeholder="أدخل اسم المتجر">
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 col-sm-6 mb-4">
+                        <label class="form-label" for="storeNameFontSize">حجم خط اسم المتجر</label>
+                        <select class="form-select" name="" id="storeNameFontSize">
+                            <option value="">أدخل حجم الخط</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-6 mb-4">
+                        <label class="form-label" for="productNameFontSize">حجم خط اسم المنتج</label>
+                        <select class="form-select" name="" id="productNameFontSize">
+                            <option value="">أدخل حجم الخط</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-4">
+                        <label class="form-label" for="printerSize">
+                            <span>مقاس الطابعة</span>
+                            <span class="required-field">*</span>
+                        </label>
+                        <select class="form-select" name="" id="printerSize">
+                            <option value="">2x1 بوصة</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="printPrice">
+                            <label class="form-check-label" for="printPrice">طباعة السعر</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="printBarcode">
+                            <label class="form-check-label" for="printBarcode">طباعة رقم الباركود</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side-panel__footer">
+                <button type="button" class="btn btn-primary btn-lg flex-grow-1" data-dismiss="panel">حفظ</button>
             </div>
         </div>
     </main>

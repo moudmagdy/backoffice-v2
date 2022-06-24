@@ -17,7 +17,7 @@
 @import './components/search-bar';
 @import './components/table';
 @import './components/layout-tabs';
-@import './components/page_nav';
+@import './components/page-navigation';
 @import './components/side-panel';
 @import './components/control-panel';
 @import './components/checkout';
@@ -32,6 +32,8 @@
 @import './components/notifications';
 @import './components/callout';
 @import './components/toast';
+@import './components/breadcrumb';
+@import './components/help-btn';
 
 @import './pages/login';
 @import './pages/home';

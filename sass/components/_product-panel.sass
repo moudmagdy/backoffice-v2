@@ -26,9 +26,20 @@
             flex-direction: column
             align-items: center
             gap: rem(15px)
-            max-width: rem(130px)
+            width: rem(130px)
             height: max-content
             margin: 0
+
+            &::after
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: rem(130px)
+                height: rem(130px)
+                border: rem(1px) solid #C6CFD9
+                border-radius: rem(15px)
+                z-index: 1
 
             .swiper-wrapper
                 display: flex
@@ -36,10 +47,9 @@
                 border-radius: rem(15px)
 
                 .swiper-slide
-                    max-width: rem(130px)
-                    max-height: rem(130px)
+                    width: rem(130px)
+                    height: rem(130px)
                     border-radius: rem(15px)
-                    border: rem(1px) solid #C6CFD9
                     overflow: hidden
 
                     img

@@ -1,0 +1,83 @@
+.page-navigation
+    display: flex
+    align-items: center
+    gap: rem(6px)
+
+    &__item
+        position: relative
+
+    &__tooltip
+        position: absolute
+        top: calc(100% + 5px)
+        display: flex
+        flex-direction: column
+        gap: rem(5px)
+        min-width: rem(150px)
+        background-color: #050505
+        border-radius: rem(4px)
+        opacity: 0
+        pointer-events: none
+        padding: rem(8px) rem(10px)
+        transition: opacity 0.2s ease-in-out
+
+        &::before
+            content: ""
+            position: absolute
+            bottom: 100%
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 0 rem(6px) rem(5px) rem(6px)
+            border-color: transparent transparent #050505 transparent
+
+        &__title
+            font-family: 'GraphikArabic-Medium', sans-serif !important
+            font-size: rem(12px)
+            color: #fff
+            margin-bottom: 0
+
+        &__details
+            font-size: rem(10)
+            color: #C5C5C5
+    &__btn
+        flex: 0 0 auto
+        +flex-center
+        width: rem(30px)
+        height: rem(30px)
+        background-color: #F7F7F7
+        border: none
+        border-radius: rem(7px)
+        text-decoration: none
+        transition: background-color 0.3s ease-in-out
+
+        svg
+            width: rem(10px)
+            fill: #060505
+
+        &:hover
+            background-color: #E8E8E8
+
+            & + .page-navigation__tooltip
+                opacity: 1
+
+        &.navigation-prev--btn
+            & + .page-navigation__tooltip
+                inset-inline-end: 0
+
+                @media (max-width: 576px)
+                    inset-inline-end: auto
+                    inset-inline-start: 0
+
+                &::before
+                    inset-inline-end: rem(9px)
+
+                    @media (max-width: 576px)
+                        inset-inline-end: auto
+                        inset-inline-start: rem(9px)
+
+        &.navigation-next--btn
+            & + .page-navigation__tooltip
+                inset-inline-start: 0
+
+                &::before
+                    inset-inline-start: rem(9px)

@@ -1,0 +1,65 @@
+.breadcrumb-nav
+    @media (max-width: 576px)
+        flex-basis: 100%
+        order: 1
+
+.breadcrumb
+    display: flex
+    align-items: center
+    padding-inline-end: rem(30px)
+    margin-bottom: 0
+
+    &-item
+        font-size: rem(14px)
+        color: #060505
+
+        [dir="rtl"] &
+            font-family: 'NotoSansArabic-SemiBold', sans-serif
+
+        [dir="ltr"] &
+            font-family: 'NotoSans-SemiBold', sans-serif
+
+        &.active
+            color: #060505
+
+        & + .breadcrumb-item
+            max-width: rem(195px)
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+
+            &::before
+                float: none
+                color: #060505
+
+.back-btn
+    display: flex
+    align-items: center
+    gap: rem(8px)
+    background-color: #F7F7F7
+    border: none
+    border-radius: rem(20px)
+    padding: 0.594rem 0.8rem
+    transition: all 0.3s ease-in-out
+
+    [dir="rtl"] &
+        font-family: 'NotoSansArabic-Medium', sans-serif
+
+    [dir="ltr"] &
+        font-family: 'NotoSans-Medium', sans-serif
+
+    &::before
+        content: ""
+        width: rem(12px)
+        height: rem(8px)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12.9 9.56'%3E%3Cpath d='M12.9,4.78,8.12,9.56,6.7,8.14,9.07,5.78H5.65A3.66,3.66,0,0,0,2,9.43H0A5.65,5.65,0,0,1,5.65,3.78H9.07L6.7,1.41,8.12,0Z' fill='%23060505'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+        transition: all 0.3s ease-in-out
+
+        [dir="ltr"] &
+            transform: scaleX(-1)
+
+    &:hover
+        background-color: #E8E8E8

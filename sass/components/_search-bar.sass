@@ -3,12 +3,19 @@
     align-items: center
     gap: rem(12px)
 
-    @media (max-width: 576px)
+    @media (max-width: 768px)
+        position: relative
         order: 1
-        width: 100%
-        border-top: rem(1px) solid #EEF0F8
-        padding-top: rem(12.5px)
-        margin-top: rem(12.5px)
+        flex-basis: 100%
+        padding-top: rem(12px)
+
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            inset-inline: rem(-22px)
+            height: rem(1px)
+            background-color: #EEF0F8
 
 .search-control
     position: relative
@@ -149,6 +156,9 @@
             flex-basis: 100%
 
             @media (min-width: 576px)
+                flex-basis: calc(50% - 6px)
+
+            @media (min-width: 768px)
                 flex-basis: calc(20% - 9.6px)
 
             &:focus-within
@@ -162,74 +172,6 @@
 
     .filters-shown &
         opacity: 1
-
-.need-help-btn
-    display: none
-    align-items: center
-    gap: rem(8px)
-    font-size: rem(14px)
-    color: #93AEE6
-    background-color: transparent
-    border: none
-    padding: 0
-    transition: color 0.3s ease-in-out
-
-    @media (min-width: 1200px)
-        display: flex
-
-    &::before
-        content: ""
-        width: rem(14px)
-        height: rem(14px)
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2393AEE6' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10,20C4.5,20,0,15.5,0,10S4.5,0,10,0s10,4.5,10,10S15.5,20,10,20z M10,18c4.4,0,8-3.6,8-8s-3.6-8-8-8 s-8,3.6-8,8S5.6,18,10,18z M9,13h2v2H9V13z M11,11.4V12H9v-1.5c0-0.6,0.4-1,1-1c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5 C9.3,6.5,8.7,7,8.5,7.7l-2-0.4c0.4-1.9,2.2-3.1,4.1-2.7c1.9,0.4,3.1,2.2,2.7,4.1C13.2,10,12.2,11,11,11.4z'%3E%3C/path%3E%3C/svg%3E")
-        background-repeat: no-repeat
-        background-size: rem(14px) rem(14px)
-        background-position: center
-        transition: background-image 0.3s ease-in-out
-
-    &:hover
-        +var(color, color-brand)
-
-        &::before
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231877F2' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10,20C4.5,20,0,15.5,0,10S4.5,0,10,0s10,4.5,10,10S15.5,20,10,20z M10,18c4.4,0,8-3.6,8-8s-3.6-8-8-8 s-8,3.6-8,8S5.6,18,10,18z M9,13h2v2H9V13z M11,11.4V12H9v-1.5c0-0.6,0.4-1,1-1c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5 C9.3,6.5,8.7,7,8.5,7.7l-2-0.4c0.4-1.9,2.2-3.1,4.1-2.7c1.9,0.4,3.1,2.2,2.7,4.1C13.2,10,12.2,11,11,11.4z'%3E%3C/path%3E%3C/svg%3E")
-
-.back-btn,
-.cancel-btn
-    display: flex
-    align-items: center
-    gap: rem(8px)
-    text-decoration: none
-    background-color: transparent
-    border: none
-    border-radius: rem(18px)
-    padding: 0.594rem 0.8rem
-    transition: background-color 0.3s ease-in-out
-
-    span
-        font-family: 'NotoSansArabic-Medium', sans-serif
-        font-size: rem(14px)
-        color: #65676B
-        transition: color 0.3s ease-in-out
-
-        [dir="ltr"] &
-            font-family: 'NotoSans-Medium', sans-serif
-
-    svg
-        width: rem(16px)
-        fill: #65676B
-        transition: fill 0.3s ease-in-out
-
-        [dir="ltr"] &
-            transform: scaleX(-1)
-
-    &:hover
-        background-color: #F5F5F5
-
-        span
-            +var(color, color-brand)
-
-        svg
-            +var(fill, color-brand)
 
 .search__bar__dropdown
     @media (max-width: 576px)
