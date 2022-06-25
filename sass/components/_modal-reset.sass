@@ -1,5 +1,10 @@
 .modal
+    --bs-modal-bg: transparent
     +scrollbar
+
+.modal-backdrop
+    --bs-backdrop-bg: #222222
+    --bs-backdrop-opacity: 0.4
 
 .modal-dialog
     @media (min-width: 576px)
@@ -14,26 +19,40 @@
         max-width: 356px
 
 .modal-content
+    gap: rem(1px)
     border: none
-    border-radius: rem(12px)
+    border-radius: rem(10px)
     box-shadow: 0 rem(1px) rem(20px) rgba(0, 0, 0, 0.15)
+
+.modal-header,
+.modal-footer
+    padding-inline: rem(25px)
+
+.modal-header,
+.modal-body,
+.modal-footer
+    background-color: #fff
 
 .modal-header
     +flex-center
-    background-color: #F5F5F5
     border: none
-    padding: 0.85rem rem(20px)
-    border-top-right-radius: rem(12px)
-    border-top-left-radius: rem(12px)
+    padding-block: rem(16px)
+    border-start-start-radius: rem(10px)
+    border-start-end-radius: rem(10px)
+    border-end-start-radius: rem(3px)
+    border-end-end-radius: rem(3px)
 
     .btn-close
         +flex-center
-        width: 24px
-        height: 24px
-        background: none
-        background-color: #fff
+        width: rem(15px)
+        height: rem(15px)
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23131313' d='M18.64,20,10,11.36,1.36,20,0,18.64,8.64,10,0,1.36,1.36,0,10,8.64,18.64,0,20,1.36,11.36,10,20,18.64Z'/%3E%3C/svg%3E")
+        background-size: contain
+        background-color: transparent
         border-radius: 50%
         cursor: pointer
+        padding: 0
+        margin: 0
         margin-inline-start: auto
 
 .modal-title
@@ -41,20 +60,35 @@
     gap: rem(12px)
     font-size: rem(14px)
 
+.modal-subtitle
+    font-family: 'GraphikArabic-Medium', sans-serif !important
+    font-size: rem(18px)
+    color: #050505
+    margin-bottom: rem(30px)
+
 .modal-body
-    padding: 1.5rem
+    border-start-start-radius: rem(10px)
+    border-start-end-radius: rem(10px)
+    border-end-start-radius: rem(3px)
+    border-end-end-radius: rem(3px)
+    padding: rem(25px)
+
+    .modal-header + &
+        border-start-start-radius: rem(3px)
+        border-start-end-radius: rem(3px)
 
     .form-label
         color: inherit
         font-size: rem(12px)
 
 .modal-footer
-    justify-content: flex-start
-    border-color: #ececec
     gap: rem(10px)
-    border-bottom-left-radius: rem(8px)
-    border-bottom-right-radius: rem(8px)
-    padding: rem(10px) rem(20px)
+    border: none
+    border-start-start-radius: rem(3px)
+    border-start-end-radius: rem(3px)
+    border-end-start-radius: rem(10px)
+    border-end-end-radius: rem(10px)
+    padding-block: rem(7px)
     margin-top: 0
 
     & > *
