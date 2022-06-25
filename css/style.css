@@ -5807,6 +5807,7 @@ table.table--with-gaps tbody tr.selected {
   border: 0.0625rem solid #C6CFD9;
   border-radius: 0.9375rem;
   z-index: 1;
+  pointer-events: none;
 }
 .product__panel .product__images .swiper .swiper-wrapper {
   display: -webkit-box;
