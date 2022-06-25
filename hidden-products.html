@@ -424,9 +424,9 @@
         const activateProductToast = document.querySelector('#activateProductToast');
         const activateProductBtn = document.querySelector('[data-toast-target="#activateProductToast"]');
 
-        activateProductToast.addEventListener('hidden.bs.toast', () => {
-            window.location.href = "products-list.html";
-        });
+        // activateProductToast.addEventListener('hidden.bs.toast', () => {
+        //     window.location.href = "products-list.html";
+        // });
 
         activateProductBtn.addEventListener('click', () => {
             document.querySelector('#switch-1').checked = true;
