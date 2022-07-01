@@ -1,17 +1,32 @@
 .breadcrumb-nav
+    flex: 0 0
+    font-size: 0
+
     @media (max-width: 576px)
         flex-basis: 100%
         order: 1
+        max-width: 100%
+        overflow: hidden
 
 .breadcrumb
     display: flex
+    flex-wrap: nowrap
+    gap: rem(5px)
     align-items: center
     padding-inline-end: rem(30px)
     margin-bottom: 0
 
+    @media (max-width: 576px)
+        padding-inline-end: 0
+        max-width: 100%
+        overflow: hidden
+
     &-item
+        flex-shrink: 0
+        vertical-align: middle
         font-size: rem(14px)
         color: #060505
+        overflow: hidden
 
         [dir="rtl"] &
             font-family: 'NotoSansArabic-SemiBold', sans-serif
@@ -23,19 +38,24 @@
             color: #060505
 
         & + .breadcrumb-item
-            max-width: rem(195px)
+            flex-shrink: 1
+            line-height: 1.429
+            max-width: rem(190px)
             white-space: nowrap
-            overflow: hidden
             text-overflow: ellipsis
+            padding-inline-start: 0
 
             &::before
+                display: inline-flex
+                align-items: center
                 float: none
                 color: #060505
+                padding-inline-end: rem(5px)
 
 .back-btn
     display: flex
     align-items: center
-    gap: rem(8px)
+    gap: rem(5px)
     background-color: #F7F7F7
     border: none
     border-radius: rem(20px)
