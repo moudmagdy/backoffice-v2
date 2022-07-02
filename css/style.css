@@ -657,6 +657,7 @@ a:hover {
 .tooltip-inner {
   font-size: 0.75rem;
   color: #C5C5C5;
+  padding: 0.5rem 0.625rem;
 }
 [dir=rtl] .tooltip-inner {
   font-family: "NotoSansArabic-Regular", sans-serif;
@@ -966,6 +967,12 @@ button:focus,
   font-size: 0.75rem;
 }
 
+.form-switch .form-check-input {
+  float: none;
+  margin-right: 0;
+  margin-top: 0;
+}
+
 .form-file {
   display: none;
 }
@@ -1103,9 +1110,9 @@ button:focus,
 }
 
 .form-switch {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1801,6 +1808,17 @@ button:focus,
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
+}
+
+.info-btn {
+  width: 0.875rem;
+  height: 0.875rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2393AEE6' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10,20C4.5,20,0,15.5,0,10S4.5,0,10,0s10,4.5,10,10S15.5,20,10,20z M10,18c4.4,0,8-3.6,8-8s-3.6-8-8-8 s-8,3.6-8,8S5.6,18,10,18z M9,13h2v2H9V13z M11,11.4V12H9v-1.5c0-0.6,0.4-1,1-1c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5 C9.3,6.5,8.7,7,8.5,7.7l-2-0.4c0.4-1.9,2.2-3.1,4.1-2.7c1.9,0.4,3.1,2.2,2.7,4.1C13.2,10,12.2,11,11,11.4z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 0.875rem 0.875rem;
+  background-position: center;
+  background-color: transparent;
+  border: none;
 }
 
 main {
@@ -8221,7 +8239,7 @@ section .page-card:nth-last-child(-n+2) {
 .add-product-page .product-data__item {
   background-color: #fff;
   border-radius: 0.1875rem;
-  padding: 1rem 1.25rem;
+  padding: 1.25rem 1.25rem;
 }
 .add-product-page .product-types__container {
   display: -webkit-box;

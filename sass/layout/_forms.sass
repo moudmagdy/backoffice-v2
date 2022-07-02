@@ -124,6 +124,12 @@ button,
 .form-check-label
     font-size: rem(12px)
 
+.form-switch
+    .form-check-input
+        float: none
+        margin-right: 0
+        margin-top: 0
+
 .form-file
     display: none
 
@@ -227,7 +233,7 @@ button,
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.8' height='16.2' viewBox='0 0 8.8 16.2'%3E%3Cpath fill='%233892FF' d='M0,11.8l4.4,4.4l4.4-4.4H0z M0,4.4L4.4,0l4.4,4.4L0,4.4z'/%3E%3C/svg%3E")
 
 .form-switch
-    display: flex
+    display: inline-flex
     align-items: center
     gap: rem(10px)
     padding-right: 0
@@ -682,3 +688,13 @@ button,
                 font-size: rem(10px)
                 +var(color, color-brand)
                 transform: translateY(0)
+
+.info-btn
+    width: rem(14px)
+    height: rem(14px)
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2393AEE6' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10,20C4.5,20,0,15.5,0,10S4.5,0,10,0s10,4.5,10,10S15.5,20,10,20z M10,18c4.4,0,8-3.6,8-8s-3.6-8-8-8 s-8,3.6-8,8S5.6,18,10,18z M9,13h2v2H9V13z M11,11.4V12H9v-1.5c0-0.6,0.4-1,1-1c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5 C9.3,6.5,8.7,7,8.5,7.7l-2-0.4c0.4-1.9,2.2-3.1,4.1-2.7c1.9,0.4,3.1,2.2,2.7,4.1C13.2,10,12.2,11,11,11.4z'%3E%3C/path%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-size: rem(14px) rem(14px)
+    background-position: center
+    background-color: transparent
+    border: none
