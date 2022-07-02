@@ -101,6 +101,7 @@ button,
         display: inline-flex
 
 .form-check-input
+    cursor: pointer
     transition: all 0.3s ease-in-out
 
     &:focus
@@ -123,6 +124,9 @@ button,
 
 .form-check-label
     font-size: rem(12px)
+
+    &[for]
+        cursor: pointer
 
 .form-switch
     .form-check-input

@@ -242,8 +242,8 @@
                     <button class="page-filters__trigger" type="button"></button>
                 </div>
                 <button type="button" class="help-btn">تريـد مساعدة؟</button>
-                <div class="d-flex gap-2 ms-auto">
-                    <button class="btn btn-outline-primary with-return-icon" type="button" onclick="window.location.href='products-list.html'">عودة للمنتجات النشطة</button>
+                <div class="d-flex gap-2 ms-auto flex-grow-1 flex-sm-grow-0">
+                    <button class="btn btn-outline-primary with-return-icon flex-grow-1 flex-sm-grow-0" type="button" onclick="window.location.href='products-list.html'">عودة للمنتجات النشطة</button>
                 </div>
             </header>
             <section>
@@ -303,9 +303,9 @@
                                     <td>عناية بالبشرة</td>
                                     <td>
                                         <div class="form-switch">
-                                            <span class="activation-state">غير نشط</span>
-                                            <input class="form-switch-input" type="checkbox" id="switch-1">
-                                            <label class="form-switch-btn" for="switch-1" data-bs-toggle="modal" data-bs-target="#activateProductModal"></label>
+                                            <label class="activation-state" for="productSwitch1">غير نشط</label>
+                                            <input class="form-switch-input" type="checkbox" id="productSwitch1">
+                                            <label class="form-switch-btn" for="productSwitch1"></label>
                                         </div>
                                     </td>
                                 </tr>
@@ -409,22 +409,34 @@
     </div>
     <script src="js/popper.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
-    <script src="js/datepicker.min.js" defer></script>
-    <script src="js/ar.js" defer></script>
     <script src="js/components/main-menu.module.js" type="module"></script>
     <script src="js/components/filters.module.js" type="module"></script>
     <script src="js/main.js" defer></script>
     <script>
-        const activateProductToast = document.querySelector('#activateProductToast');
-        const activateProductBtn = document.querySelector('[data-toast-target="#activateProductToast"]');
+        document.addEventListener('DOMContentLoaded', () => {
+            const activateProductSwitchBtn = document.querySelector('.form-switch-btn');
+            const activateProductModal = new bootstrap.Modal('#activateProductModal');
+            const activateProductBtn = document.querySelector('[data-toast-target="#activateProductToast"]');
+            const activateProductToast = document.querySelector('#activateProductToast');
 
-        // activateProductToast.addEventListener('hidden.bs.toast', () => {
-        //     window.location.href = "products-list.html";
-        // });
+            activateProductSwitchBtn.addEventListener('click', (e) => {
+                e.preventDefault();
 
-        activateProductBtn.addEventListener('click', () => {
-            document.querySelector('#switch-1').checked = true;
-            document.querySelector('.activation-state').textContent = "نشط"
+                let switchBtnId = activateProductSwitchBtn.getAttribute('for');
+
+                if (!document.querySelector('#' + switchBtnId + '').checked) {
+                    activateProductModal.show();
+                }
+            });
+
+            activateProductBtn.addEventListener('click', () => {
+                document.querySelector('#productSwitch1').checked = true;
+                document.querySelector('[for="productSwitch1"].activation-state').textContent = "نشط"
+            });
+
+            // activateProductToast.addEventListener('hidden.bs.toast', () => {
+            //     window.location.href = "products-list.html";
+            // });
         });
     </script>
 </body>

@@ -139,13 +139,13 @@ fieldset legend {
   font-family: "NotoSans-SemiBold", sans-serif;
 }
 
-label {
+.form-label {
   font-size: 0.875rem;
 }
-[dir=rtl] label {
+[dir=rtl] .form-label {
   font-family: "NotoSansArabic-Medium", sans-serif;
 }
-[dir=ltr] label {
+[dir=ltr] .form-label {
   font-family: "NotoSans-Medium", sans-serif;
 }
 
@@ -937,6 +937,7 @@ button:focus,
 }
 
 .form-check-input {
+  cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -965,6 +966,9 @@ button:focus,
 
 .form-check-label {
   font-size: 0.75rem;
+}
+.form-check-label[for] {
+  cursor: pointer;
 }
 
 .form-switch .form-check-input {
