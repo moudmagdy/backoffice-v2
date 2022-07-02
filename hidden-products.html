@@ -420,11 +420,10 @@
             const activateProductToast = document.querySelector('#activateProductToast');
 
             activateProductSwitchBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-
                 let switchBtnId = activateProductSwitchBtn.getAttribute('for');
 
                 if (!document.querySelector('#' + switchBtnId + '').checked) {
+                    e.preventDefault();
                     activateProductModal.show();
                 }
             });
