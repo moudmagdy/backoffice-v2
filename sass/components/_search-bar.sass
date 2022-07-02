@@ -74,7 +74,7 @@
             display: none !important
 
     &__remove-btn
-        flex: 1 1 rem(13px)
+        flex: 0 0 auto
         width: rem(13px)
         max-width: rem(13px)
         height: rem(13px)
@@ -168,6 +168,8 @@
             &:focus-within
                 .page-filters__label
                     top: rem(-6px)
+                    font-size: rem(10px)
+                    +var(color, color-brand)
                     transform: translateY(0)
 
                 .form-control,

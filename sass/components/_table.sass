@@ -55,18 +55,37 @@ table
         border-style: solid
         border-color: #E4E6EB
         border-width: 0
+        border: none
+
+        tr
+            box-shadow: 0 0 0 0.5px #e4e6eb
+
+        & > :not(caption)
+            & > *
+                // border-width: rem(1px) 0
+                // box-shadow: inset 0 0 0 0.5px #e4e6eb
+
+                & > *
+                    // border-width: 0 rem(1px)
+                    // box-shadow: inset 0 0 0 0.5px #e4e6eb
 
         thead
             top: rem(1px)
             border-start-start-radius: rem(12px)
             border-start-end-radius: rem(12px)
-            box-shadow: 0 0 0 1px #e4e6eb
+            // box-shadow: inset 0 0 0 rem(0.5px) #e4e6eb
+
+            tr
+                border-width: 0
+                border-start-start-radius: rem(12px)
+                border-start-end-radius: rem(12px)
 
             th
                 background-color: #F5F5F5
+                box-shadow: inset 0 0 0 0.5px #e4e6eb
 
-                &:not(:last-child)
-                    border-inline-end-width: 1px
+                // &:not(:last-child)
+                //     border-inline-end-width: 1px
 
                 &:first-child
                     border-start-start-radius: rem(12px)
@@ -76,15 +95,16 @@ table
 
         tbody
             tr
-                border-inline-start-width: 1px
-                border-inline-end-width: 1px
-                border-block-end-width: 1px
+                // border-inline-start-width: 1px
+                // border-inline-end-width: 1px
+                // border-block-end-width: 1px
 
                 td
                     transition: background-color 0.3s
+                    box-shadow: inset 0 0 0 0.5px #e4e6eb
 
-                    &:not(:last-child)
-                        border-inline-end-width: 1px
+                    // &:not(:last-child)
+                    //     border-inline-end-width: 1px
 
                 &:nth-of-type(odd)
                     td
