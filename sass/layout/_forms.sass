@@ -94,6 +94,7 @@ button,
     display: flex
     align-items: center
     gap: rem(8px)
+    min-height: unset
     padding-right: 0
     margin-bottom: 0
 
@@ -640,7 +641,7 @@ button,
 
     .form-label
         position: absolute
-        top: 50%
+        bottom: 50%
         inset-inline-start: rem(7px)
         gap: rem(2px)
         line-height: 1
@@ -648,9 +649,9 @@ button,
         background-color: #fff
         font-size: rem(12px)
         pointer-events: none
-        padding: rem(2px) rem(5px)
+        padding: rem(2px) rem(4px)
         margin: 0
-        transform: translateY(-50%)
+        transform: translateY(50%)
         transition: all 0.3s ease-in-out
 
         .required-field
@@ -667,7 +668,7 @@ button,
 
     &:focus-within
         .form-label
-            top: rem(-6px)
+            bottom: calc(100% - 10px)
             font-size: rem(10px)
             +var(color, color-brand)
             transform: translateY(0)
@@ -680,17 +681,18 @@ button,
             &::placeholder
                 color: #C6CFD9
 
-    .form-control
-        &:not(:placeholder-shown)
-            color: #212529
-
+    &.has-value
+        .form-control:not(:placeholder-shown)
             &::placeholder
                 color: #C6CFD9
 
-            & + .form-label
-                top: rem(-6px)
+        .form-control:not(:placeholder-shown),
+        .form-select
+            color: #212529
+
+            & ~ .form-label
+                bottom: calc(100% - 10px)
                 font-size: rem(10px)
-                +var(color, color-brand)
                 transform: translateY(0)
 
 .info-btn
@@ -702,3 +704,26 @@ button,
     background-position: center
     background-color: transparent
     border: none
+
+.date-input-group
+    display: flex
+    align-items: center
+    line-height: 1.5
+    border: rem(2px) solid #C6CFD9
+    border-radius: rem(10px)
+
+    .form-control,
+    .form-select
+        border: none
+
+    .form-select
+        max-width: rem(70px)
+        color: #212529 !important
+
+    &::after
+        content: ""
+        position: absolute
+        inset-inline-end: rem(70px)
+        width: rem(1px)
+        height: rem(15px)
+        background-color: #D6D6D6

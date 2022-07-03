@@ -5,15 +5,31 @@ const labelTriggerModal = document.querySelectorAll('label[data-bs-toggle="modal
 const toastTriggers = document.querySelectorAll('[data-toast-toggle="toast"]');
 
 
+const floatingLabelControls = document.querySelectorAll('.floating-label-control .form-control');
+
+function floatLabels() {
+    if (this && this.value) {
+        this.closest('.floating-label-control').classList.add('has-value');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    floatingLabelControls.forEach(control => {
+        if (control && control.value) {
+            control.closest('.floating-label-control').classList.add('has-value');
+        }
+    });
+});
+
+floatingLabelControls ? floatingLabelControls.forEach(control => control.addEventListener('keyup', floatLabels)) : '';
+
 function showToast(e) {
     e.preventDefault();
     const toast = new bootstrap.Toast(this.dataset.toastTarget)
     toast.show();
 }
 
-if (toastTriggers) {
-    toastTriggers.forEach(trigger => trigger.addEventListener('click', showToast));
-}
+toastTriggers ? toastTriggers.forEach(trigger => trigger.addEventListener('click', showToast)) : '';
 
 function closePageLoader() {
     pageLoader.classList.add('page-loaded');

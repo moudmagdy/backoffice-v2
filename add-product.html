@@ -278,30 +278,35 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-12">
-                                                    <div class="form-check form-check-inline">
+                                                <div class="col-12 d-flex gap-4">
+                                                    <div class="form-check form-check-inline m-0">
                                                         <input class="form-check-input" type="checkbox" id="hasExpirationDate" value="hasExpirationDate">
                                                         <label class="form-check-label" for="hasExpirationDate">له مدة صلاحية</label>
                                                     </div>
-                                                    <div class="form-check form-check-inline">
+                                                    <div class="form-check form-check-inline m-0">
                                                         <input class="form-check-input" type="checkbox" id="hasSerialNumber" value="hasSerialNumber">
                                                         <label class="form-check-label" for="hasSerialNumber">له رقم تسلسلي</label>
                                                     </div>
-                                                    <div class="form-check form-check-inline">
+                                                    <div class="form-check form-check-inline m-0">
                                                         <input class="form-check-input" type="checkbox" id="notForSale" value="notForSale">
                                                         <label class="form-check-label" for="notForSale">غير متاح للبيع</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row d-none" data-check="hasExpirationDate">
-                                                <div class="input-group">
-                                                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                                                        <option selected>Choose...</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
-                                                    </select>
-                                                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                                                <div class="col-12 col-sm-6 pt-3">
+                                                    <div class="date-input-group floating-label-control">
+                                                        <input type="text" class="form-control" id="">
+                                                        <select class="form-select" id="">
+                                                            <option value="year" selected>سنة</option>
+                                                            <option value="month">شهر</option>
+                                                            <option value="day">يوم</option>
+                                                        </select>
+                                                        <label class="form-label" for="productName">
+                                                            <span>مدة الصلاحية</span>
+                                                            <span class="required-field">*</span>
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </li>
@@ -357,22 +362,6 @@
                             <a href="#" class="collapse__toggle" aria-expanded="true">معلومات اساسية</a>
                         </div>
                         <div class="collapse__container">
-                            <div class="row">
-                                <div class="col-12 mb-3">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1">له رقم تسلسلى</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                        <label class="form-check-label" for="inlineCheckbox2">له مدة صلاحيه</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                                        <label class="form-check-label" for="inlineCheckbox3">غير متاح للبيع</label>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <label class="form-label" for="product_image">صورة المنتج</label>
@@ -885,6 +874,18 @@
     <script src="js/components/main-menu.module.js" type="module"></script>
     <script src="js/components/collapsible.module.js" type="module"></script>
     <script src="js/components/tags-input.module.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hasExpirationDateCheck = document.querySelector('#hasExpirationDate');
+            hasExpirationDateCheck.addEventListener('change', () => {
+                if (hasExpirationDateCheck.checked) {
+                    document.querySelector('[data-check="hasExpirationDate"]').classList.remove('d-none');
+                } else {
+                    document.querySelector('[data-check="hasExpirationDate"]').classList.add('d-none');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
