@@ -2214,6 +2214,10 @@ main header .page-title h1 {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.single-column-layout header.header--floated {
+  border-radius: 0.5rem;
+  margin-bottom: 0.9375rem;
+}
 .single-column-layout header.header--separated {
   border-radius: 0.5rem 0.5rem 0.125rem 0.125rem;
   margin-bottom: 0.0625rem;
@@ -7045,7 +7049,7 @@ table.table--with-gaps tbody tr.selected {
 
 .accordion-body {
   background-color: #fff;
-  border-radius: 0.1875rem;
+  border-radius: 0.1875rem 0.1875rem 0.5rem 0.5rem;
 }
 
 .login-page {
@@ -8434,6 +8438,10 @@ section .page-card:nth-last-child(-n+2) {
   background-color: #fff;
   border-radius: 0.1875rem;
   padding: 1.25rem 1.25rem;
+}
+.add-product-page .product-data__item:last-child {
+  border-end-start-radius: 0.5rem;
+  border-end-end-radius: 0.5rem;
 }
 .add-product-page .flex-table {
   -webkit-box-orient: horizontal;
