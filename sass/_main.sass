@@ -33,6 +33,12 @@ a
     +var(background-color, color-brand)
     color: #fff
 
+.fs-7
+    font-size: rem(14px)
+
+.fs-8
+    font-size: rem(12px)
+
 .page-preloader
     position: fixed
     inset: 0
@@ -104,6 +110,15 @@ a
 .list-unstyled
     padding-inline-start: 0
     margin: 0
+
+.items-divided
+    overflow-x: clip
+
+    & > *
+        &:not(:last-child)
+            border-bottom: rem(0.5px) solid #D6D6D6
+            padding-bottom: rem(15px)
+            margin-bottom: rem(15px)
 
 .loading
     +flex-center
@@ -461,3 +476,10 @@ a
 
 .no-bg
     background-color: transparent !important
+
+.mathematical-sign-icon
+    flex: 0 0 auto
+    width: rem(12px)
+    height: rem(12px)
+    object-fit: contain
+    margin-inline-end: rem(8px)

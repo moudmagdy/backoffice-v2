@@ -12,12 +12,6 @@
             border-radius: rem(3px)
             padding: rem(20px) rem(20px)
 
-    .product-types__container
-        display: flex
-        justify-content: center
-        background-color: transparent
-        padding: rem(30px) rem(15px)
-
     .flex-table
         flex-direction: row
         flex-wrap: wrap
@@ -31,36 +25,58 @@
 
         &__head
             height: rem(56px)
-            font-size: rem(14px)
+            font-size: rem(12px)
             color: #060505
-            background-color: rgba(198, 207, 217, 0.5)
+            background-color: #F7F7F7
             border-radius: rem(8px) rem(8px) 0 0
+            padding: 0
+
+            .flex-table__row
+                height: 100%
 
         &__body
             .flex-table__row
                 flex-wrap: wrap
                 min-height: 0
-                background-color: #fff
+                background-color: transparent
                 border-radius: 0
-                padding: rem(12px) rem(10px)
-
-                .flex-table__col
-                    padding: 0 rem(3px)
 
             & > .flex-table__row
-                border-bottom: 1px solid #f4f3fa
+                &:nth-child(odd)
+                    background-color: #fff
+
+                    // .floating-label-control
+                    //     &:focus-within
+                    //         .form-label
+                    //             background-color: #fff
+
+                &:nth-child(even)
+                    background-color: #FDFDFD
+
+                    // .floating-label-control
+                    //     &:focus-within
+                    //         .form-label
+                    //             background-color: #FDFDFD
+
+        &__row
+            box-shadow: 0 0 0 rem(0.5px) #D6D6D6
 
         &__col
             flex-grow: 1
             flex-shrink: 1
-
-            &:first-child
-                gap: rem(15px)
-                flex-basis: 30%
-                max-width: 30%
+            justify-content: flex-start
+            padding: 0.8rem 0.8rem
 
             &:not(:first-child)
                 flex-basis: 17.5%
+
+            &:not(:nth-child(5))
+                border-inline-end: rem(1px) solid #D6D6D6
+
+        .flex-table__body
+            .flex-table__col
+                &:first-child
+                    gap: rem(5px)
 
         &__row__data
             flex-basis: 100%
@@ -69,16 +85,6 @@
             pointer-events: none
             transition: max-height 0.3s
 
-            .flex-table__row
-                &:first-child
-                    font-size: rem(12px)
-                    background-color: #C6CFD9
-                    padding: rem(6px) 0
-                    margin-top: rem(10px)
-
-                &:last-child
-                    padding: rem(12px) 0 0
-
         .product__name
             display: -webkit-box
             -webkit-box-orient: vertical
@@ -86,14 +92,15 @@
             overflow: hidden
             text-overflow: ellipsis
             -webkit-line-clamp: 2
-            font-size: rem(14px)
+            font-size: rem(12px)
             max-width: 100%
             margin-bottom: 0
 
+        .form-label
+            font-size: rem(10px)
+
         .form-control
             max-width: fit-content
-            line-height: 2
-            padding: rem(6px) rem(8px)
 
         .currency-symbol
             flex: 1 1 100%
@@ -104,124 +111,34 @@
             .form-control
                 padding-inline-end: rem(22px)
 
-    .variable__inputs
-        .form-select,
-        .form-control
-            position: relative
-            margin-top: rem(-2px)
-
-            &:focus
-                z-index: 1
-
-            &:not(:last-child, :first-child)
-                border-radius: 0
-
-            &:first-child
-                border-bottom-right-radius: 0
-                border-bottom-left-radius: 0
-
-            &:last-child
-                border-top-right-radius: 0
-                border-top-left-radius: 0
-
-    .variables-count
-        color: #4D4D4D
-        font-size: rem(14px)
-
-.add-variable--btn
-    text-decoration: none
-
-    svg
-        width: rem(10px)
-        +var(fill, color-brand)
-
-.row__toggle
+.row-toggle-btn
     flex: 0 0 auto
     +flex-center
     width: rem(25px)
     height: rem(25px)
     background-color: #F5F5F5
+    border: none
     border-radius: 50%
-    transition: background-color 0.3s
-
-    &:hover
-        background-color: darken(#F5F5F5, 10%)
+    transition: background-color 0.3s ease-in-out
 
     svg
-        fill: #060505
-        transition: transform 0.3s
+        width: rem(8px)
+        fill: #202223
+        transition: all 0.3s ease-in-out
+
+    &:hover
+        background-color: #EDF6FF
+
+        svg
+            +var(fill, color-brand)
 
     .row__data--shown &
+        background-color: #EDF6FF
+
         svg
+            +var(fill, color-brand)
             transform: rotate(180deg)
 
 .row__data--shown
     .flex-table__row__data
         pointer-events: auto
-
-.product-types
-    +flex-center
-    flex-wrap: wrap
-    gap: rem(20px)
-    width: max-content
-    height: max-content
-    margin: auto 0
-
-    &__item
-        position: relative
-        display: flex
-        flex-direction: column
-        min-width: rem(280px)
-        min-height: rem(230px)
-        text-align: center
-        background-color: #F5F5F5
-        border-radius: rem(8px)
-        cursor: pointer
-        padding: rem(20px)
-
-        @media (max-width: 576px)
-            width: 100%
-            min-width: auto
-
-        &::after
-            content: ""
-            position: absolute
-            inset: 0
-            border: rem(3px) solid #1877F2
-            border-radius: rem(8px)
-            pointer-events: none
-            opacity: 0
-            transition: opacity 0.3s
-
-        h3
-            font-size: rem(20px)
-            color: #4D4D4D
-            border-bottom: 1px solid #d4dde8
-            padding: rem(24px) 0
-            margin-bottom: rem(30px)
-
-        p
-            color: #4D4D4D
-            margin-bottom: 0
-
-        &:hover,
-        &.selected
-            &::after
-                opacity: 1
-
-.product__data
-    &.collapsible
-        display: flex
-        flex-direction: column
-        background-color: #fff
-        border-radius: rem(8px)
-        padding: rem(20px)
-
-    &__header
-        display: flex
-
-        .collapse__toggle
-            border-radius: rem(6px)
-
-    textarea
-        resize: none

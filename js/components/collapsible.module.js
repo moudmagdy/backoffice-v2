@@ -107,7 +107,7 @@ multiCollapse.forEach(servicesCollapseToggle => {
     });
 });
 
-const rowToggles = document.querySelectorAll('.row__toggle');
+const rowToggles = document.querySelectorAll('.row-toggle-btn');
 
 rowToggles.forEach(rowToggle => {
     rowToggle.addEventListener('click', (e) => {

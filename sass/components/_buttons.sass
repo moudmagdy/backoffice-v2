@@ -261,6 +261,10 @@
         &::before
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M10,5.76H5.76V10H4.25V5.76H0V4.25H4.25V0H5.76V4.25H10Z' fill='%23fff'/%3E%3C/svg%3E")
 
+    &.btn-link
+        &::before
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M10,5.76H5.76V10H4.25V5.76H0V4.25H4.25V0H5.76V4.25H10Z' fill='%231877f2'/%3E%3C/svg%3E")
+
 .with-return-icon
     &::before
         width: rem(12px)
@@ -299,20 +303,20 @@
         &::before
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M10,16H6V13.66a6.07,6.07,0,0,1-1.91-1.1L2,13.73,0,10.27,2.05,9.1a5.76,5.76,0,0,1,0-2.19L0,5.73,2,2.27,4.07,3.44A6.07,6.07,0,0,1,6,2.34V0h4V2.34a6.07,6.07,0,0,1,1.91,1.1L14,2.27l2,3.47L14,6.9a5.76,5.76,0,0,1,0,2.19L16,10.26l-2,3.47-2.05-1.17A6.07,6.07,0,0,1,10,13.66ZM7.33,14.67H8.67v-2l.51-.13a4.73,4.73,0,0,0,2.18-1.25l.36-.37,1.77,1,.67-1.16-1.76-1,.14-.5a4.62,4.62,0,0,0,0-2.5l-.14-.5,1.76-1-.67-1.15-1.77,1-.36-.37A4.82,4.82,0,0,0,9.18,3.48l-.51-.13v-2H7.33v2l-.51.13A4.73,4.73,0,0,0,4.64,4.73l-.37.37-1.76-1L1.84,5.24l1.76,1-.14.5a4.62,4.62,0,0,0,0,2.5l.14.5-1.76,1,.67,1.15,1.76-1,.37.37a4.65,4.65,0,0,0,2.18,1.25l.51.13Zm.67-4A2.67,2.67,0,1,1,10.69,8,2.67,2.67,0,0,1,8,10.67Zm0-4A1.33,1.33,0,1,0,9.34,8,1.32,1.32,0,0,0,8,6.67Z' fill='%23fff'/%3E%3C/svg%3E")
 
-.product-remove-btn
+.remove-btn
     flex: 0 0 auto
     +flex-center
     width: rem(40px)
     height: rem(40px)
     background-color: transparent
-    border: rem(2px) solid #A3AAB2
+    border: rem(2px) solid #D6D6D6
     border-radius: 50%
     transition: all 0.3s ease-in-out
 
     svg
         width: rem(15px)
         height: rem(15px)
-        fill: #A3AAB2
+        fill: #D6D6D6
         transition: fill 0.3s ease-in-out
 
     &:hover

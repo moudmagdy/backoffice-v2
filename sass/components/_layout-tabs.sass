@@ -9,7 +9,7 @@
         gap: rem(10px)
         flex: 1 1 100%
         font-size: rem(14px)
-        color: #A3AAB2
+        color: #202223
         background-color: transparent
         border: none
         border-radius: 0
@@ -23,7 +23,10 @@
             font-family: 'NotoSans-Medium', sans-serif
 
         svg
-            fill: #A3AAB2
+            width: rem(16px)
+            height: rem(16px)
+            fill: #202223
+            object-fit: contain
 
         &::after
             content: ""
@@ -37,10 +40,10 @@
             transition: all 0.2s ease-in-out
 
         &:hover
-            background-color: rgba(24, 119, 242, 0.05)
+            background-color: #EDF6FF
 
         &.active
-            background-color: rgba(24, 119, 242, 0.05)
+            background-color: #EDF6FF
             +var(color, color-brand)
 
             svg
