@@ -1,0 +1,112 @@
+.table-pagination
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    padding-inline: rem(22px)
+    padding-block: rem(20px) rem(10px)
+
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        inset-inline: rem(22px)
+        height: rem(1px)
+        background-color: #D6D6D6
+
+    &__navigation
+        display: flex
+        align-items: center
+        gap: rem(6px)
+
+    &__pager,
+    &__rows
+        display: flex
+        align-items: center
+        gap: rem(5px)
+
+    &__pager
+        margin-inline-start: rem(15px)
+
+    &__rows
+        position: relative
+        padding-inline-start: rem(15px)
+        margin-inline-start: rem(40px)
+
+        @media (max-width: 576px)
+            margin-inline-start: rem(15px)
+
+        @media (max-width: 480px)
+            flex: 1 1 100%
+            padding-inline-start: 0
+            margin-top: rem(15px)
+
+        &::before
+            content: ""
+            position: absolute
+            top: 50%
+            inset-inline-start: 0
+            height: rem(15px)
+            width: rem(0.5px)
+            background-color: rgba(32, 34, 35, 0.25)
+            transform: translateY(-50%)
+
+            @media (max-width: 480px)
+                display: none
+
+    &__btn
+        width: 30px
+        height: 30px
+        background-repeat: no-repeat
+        background-position: center
+        background-size: rem(6px)
+        background-color: #F7F7F7
+        border: none
+        border-radius: rem(6px)
+        padding: rem(5px)
+        transition: background-color 0.3s ease-in-out
+
+        &:hover
+            background-color: #E8E8E8
+
+        [dir='ltr'] &
+            transform: scaleX(-1)
+
+        &.previous--btn
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.12 13.41'%3E%3Cpath d='M1.41,13.41,0,12,5.29,6.71,0,1.41,1.41,0,8.12,6.71Z' fill='%23202223'/%3E%3C/svg%3E")
+
+        &.next--btn
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.12 13.41'%3E%3Cpath d='M6.71,0,8.12,1.41,2.83,6.71,8.12,12,6.71,13.41,0,6.71Z' fill='%23202223'/%3E%3C/svg%3E")
+
+    &__detail
+        display: inline-block
+        font-family: 'NotoSansArabic-SemiBold', sans-serif
+        font-size: rem(12px)
+
+    &__input,
+    &__select
+        font-family: 'NotoSansArabic-SemiBold', sans-serif
+        font-size: rem(12px)
+        border: rem(1px) solid #DADADA
+        border-radius: rem(6px)
+        transition: all 0.3s ease-in-out
+
+        &:focus
+            +var(border-color, color-brand)
+            box-shadow: 0 0 0 rem(1px) rgba(24, 119, 242, 0.25)
+
+    &__input
+        line-height: 1
+        width: rem(30px)
+        max-width: fit-content
+        text-align: center
+        padding: 0.075rem 0.25rem
+
+    &__select
+        appearance: none
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.8' height='16.2' viewBox='0 0 8.8 16.2'%3E%3Cpath fill='%23E4E6EB' d='M0,11.8l4.4,4.4l4.4-4.4H0z M0,4.4L4.4,0l4.4,4.4L0,4.4z'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-size: rem(8px)
+        background-position: left 0.5rem center
+        padding: 0.313rem 0.75rem
+        padding-inline-end: 1.3rem
