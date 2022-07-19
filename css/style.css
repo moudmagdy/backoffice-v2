@@ -2008,6 +2008,124 @@ button:focus,
   border-radius: 0.375rem;
 }
 
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+.custom-select__text-input .form-control {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.8' height='16.2' viewBox='0 0 8.8 16.2'%3E%3Cpath fill='%23E4E6EB' d='M0,11.8l4.4,4.4l4.4-4.4H0z M0,4.4L4.4,0l4.4,4.4L0,4.4z'/%3E%3C/svg%3E");
+  background-size: 0.55rem 1.0125rem;
+  background-position: left 0.75rem center;
+  background-repeat: no-repeat;
+  -webkit-padding-end: 2rem;
+          padding-inline-end: 2rem;
+}
+[dir=ltr] .custom-select__text-input .form-control {
+  background-position: right 0.75rem center;
+}
+.custom-select__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.625rem;
+  -webkit-box-shadow: 0 0.1875rem 1.25rem rgba(0, 0, 0, 0.06);
+          box-shadow: 0 0.1875rem 1.25rem rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.custom-select__dropdown:focus-within {
+  opacity: 1;
+  pointer-events: auto;
+}
+.custom-select__dropdown .btn {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  border-end-start-radius: 0.625rem;
+  border-end-end-radius: 0.625rem;
+  padding-block: 0.65rem;
+}
+.custom-select__dropdown .btn:hover {
+  color: #fff;
+  background-color: #1877F2;
+  background-color: var(--color-brand);
+}
+.custom-select__dropdown .btn:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M10,5.76H5.76V10H4.25V5.76H0V4.25H4.25V0H5.76V4.25H10Z' fill='%23fff'/%3E%3C/svg%3E");
+}
+.custom-select__search-input {
+  border-bottom: 0.0625rem solid rgba(214, 214, 214, 0.15);
+  padding: 0.375rem 0.75rem;
+}
+.custom-select__search-input .form-control {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.4 15.53'%3E%3Cpath d='M13.45,2A6.7,6.7,0,0,0,3.34,10.69L0,14.13l1.43,1.4L4.76,12.1A6.7,6.7,0,0,0,13.45,2ZM12,10a4.7,4.7,0,1,1,0-6.65A4.71,4.71,0,0,1,12,10Z' fill='%23d6d6d6'/%3E%3C/svg%3E");
+  background-size: 0.9625rem 0.970625rem;
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  border-radius: 1.25rem;
+  -webkit-padding-start: 2rem;
+          padding-inline-start: 2rem;
+}
+.custom-select__search-input .form-control::-webkit-search-cancel-button, .custom-select__search-input .form-control::-webkit-search-cancel-button {
+  display: none !important;
+}
+[dir=ltr] .custom-select__search-input .form-control {
+  background-position: left 0.75rem center;
+}
+.custom-select__list {
+  max-height: 9.25rem;
+  list-style: none;
+  border-bottom: 0.0625rem solid rgba(214, 214, 214, 0.15);
+  overflow: auto;
+  scrollbar-color: #61a0f2 rgba(0, 0, 0, 0.08);
+  scrollbar-width: thin;
+  padding: 0;
+  margin: 0;
+}
+.custom-select__list::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.custom-select__list::-webkit-scrollbar-thumb {
+  background-color: #61a0f2;
+}
+.custom-select__list::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.custom-select__list::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+.custom-select__list__item button {
+  width: 100%;
+  font-size: 0.875rem;
+  text-align: start;
+  color: #202223;
+  background-color: #fff;
+  border: none;
+  padding: 0.46875rem 0.75rem;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+.custom-select__list__item button:hover {
+  background-color: #F7F7F7;
+}
+.custom-select__list__item:not(:last-child) {
+  border-bottom: 0.0625rem solid rgba(214, 214, 214, 0.15);
+}
+.custom-select:focus-within .custom-select__dropdown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 main {
   position: relative;
   height: 100vh;
@@ -7070,7 +7188,7 @@ table.table--with-gaps tbody tr.selected {
   position: absolute;
   top: 0;
   inset-inline: 1.375rem;
-  height: 0.0625rem;
+  height: 0.03125rem;
   background-color: #D6D6D6;
 }
 .table-pagination__navigation {

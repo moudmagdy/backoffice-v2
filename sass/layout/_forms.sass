@@ -770,8 +770,6 @@ button,
     flex-wrap: wrap
     gap: rem(5px)
     min-width: rem(270px)
-    // padding-inline-start: rem(5px)
-    // border-inline-start: rem(1px) solid #D6D6D6
 
     &__input
         display: none
@@ -836,3 +834,102 @@ button,
             background-color: rgba(32, 34, 35, 0.75)
             border: none
             border-radius: rem(6px)
+
+.custom-select
+    position: relative
+    width: 100%
+
+    &__text-input
+        .form-control
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.8' height='16.2' viewBox='0 0 8.8 16.2'%3E%3Cpath fill='%23E4E6EB' d='M0,11.8l4.4,4.4l4.4-4.4H0z M0,4.4L4.4,0l4.4,4.4L0,4.4z'/%3E%3C/svg%3E")
+            background-size: rem(8.8px) rem(16.2px)
+            background-position: left 0.75rem center
+            background-repeat: no-repeat
+            padding-inline-end: 2rem
+
+            [dir="ltr"] &
+                background-position: right 0.75rem center
+
+    &__dropdown
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        background-color: #fff
+        border-radius: rem(10px)
+        box-shadow: 0 rem(3px) rem(20px) rgba(0, 0, 0, 0.06)
+        overflow: hidden
+        z-index: 10
+        opacity: 0
+        pointer-events: none
+        transition: opacity 0.3s ease-in-out
+
+        &:focus-within
+            opacity: 1
+            pointer-events: auto
+
+        .btn
+            width: 100%
+            background-color: #fff
+            border: none
+            border-radius: 0
+            border-end-start-radius: rem(10px)
+            border-end-end-radius: rem(10px)
+            padding-block: 0.65rem
+
+            &:hover
+                color: #fff
+                +var(background-color, color-brand)
+
+                &::before
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M10,5.76H5.76V10H4.25V5.76H0V4.25H4.25V0H5.76V4.25H10Z' fill='%23fff'/%3E%3C/svg%3E")
+
+    &__search-input
+        border-bottom: rem(1px) solid rgba(214, 214, 214, 0.15)
+        padding: rem(6px) rem(12px)
+
+        .form-control
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.4 15.53'%3E%3Cpath d='M13.45,2A6.7,6.7,0,0,0,3.34,10.69L0,14.13l1.43,1.4L4.76,12.1A6.7,6.7,0,0,0,13.45,2ZM12,10a4.7,4.7,0,1,1,0-6.65A4.71,4.71,0,0,1,12,10Z' fill='%23d6d6d6'/%3E%3C/svg%3E")
+            background-size: rem(15.4px) rem(15.53px)
+            background-position: right 0.75rem center
+            background-repeat: no-repeat
+            border-radius: rem(20px)
+            padding-inline-start: 2rem
+
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-cancel-button
+                display: none !important
+
+            [dir="ltr"] &
+                background-position: left 0.75rem center
+
+    &__list
+        max-height: rem(148px)
+        list-style: none
+        border-bottom: rem(1px) solid rgba(214, 214, 214, 0.15)
+        overflow: auto
+        +scrollbar
+        padding: 0
+        margin: 0
+
+        &__item
+            button
+                width: 100%
+                font-size: rem(14px)
+                text-align: start
+                color: #202223
+                background-color: #fff
+                border: none
+                padding: rem(7.5px) rem(12px)
+                transition: background-color 0.3s ease-in-out
+
+                &:hover
+                    background-color: #F7F7F7
+
+            &:not(:last-child)
+                border-bottom: rem(1px) solid rgba(214, 214, 214, 0.15)
+
+    &:focus-within
+        .custom-select__dropdown
+            opacity: 1
+            pointer-events: auto
