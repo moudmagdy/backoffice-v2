@@ -2121,6 +2121,38 @@ button:focus,
 .custom-select__list__item:not(:last-child) {
   border-bottom: 0.0625rem solid rgba(214, 214, 214, 0.15);
 }
+.custom-select:focus-within .custom-select__text-input .form-label {
+  top: -0.25rem;
+  font-size: 0.625rem;
+  color: #1877F2;
+  color: var(--color-brand);
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.custom-select:focus-within .custom-select__text-input .form-label::before {
+  opacity: 1;
+}
+.custom-select:focus-within .custom-select__text-input .form-control {
+  color: #212529;
+  border-color: #1877F2;
+  border-color: var(--color-brand);
+}
+.custom-select:focus-within .custom-select__text-input .form-control::-webkit-input-placeholder {
+  color: #C6CFD9;
+}
+.custom-select:focus-within .custom-select__text-input .form-control::-moz-placeholder {
+  color: #C6CFD9;
+}
+.custom-select:focus-within .custom-select__text-input .form-control:-ms-input-placeholder {
+  color: #C6CFD9;
+}
+.custom-select:focus-within .custom-select__text-input .form-control::-ms-input-placeholder {
+  color: #C6CFD9;
+}
+.custom-select:focus-within .custom-select__text-input .form-control::placeholder {
+  color: #C6CFD9;
+}
 .custom-select:focus-within .custom-select__dropdown {
   opacity: 1;
   pointer-events: auto;

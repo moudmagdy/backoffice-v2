@@ -930,6 +930,23 @@ button,
                 border-bottom: rem(1px) solid rgba(214, 214, 214, 0.15)
 
     &:focus-within
+        .custom-select__text-input
+            .form-label
+                top: rem(-4px)
+                font-size: rem(10px)
+                +var(color, color-brand)
+                transform: translateY(0)
+
+                &::before
+                    opacity: 1
+
+            .form-control
+                color: #212529
+                +var(border-color, color-brand)
+
+                &::placeholder
+                    color: #C6CFD9
+
         .custom-select__dropdown
             opacity: 1
             pointer-events: auto
