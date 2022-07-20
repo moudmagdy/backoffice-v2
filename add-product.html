@@ -284,7 +284,7 @@
                                                                     <button type="button">كرتونة</button>
                                                                 </li>
                                                             </ul>
-                                                            <button class="btn btn-link with-plus-icon" type="button">إضافة وحدة</button>
+                                                            <button class="btn btn-link with-plus-icon" type="button" data-panel-target="add-unit">إضافة وحدة</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -720,6 +720,57 @@
                 </div>
             </div>
         </div>
+        <div class="side-panel" data-panel="add-unit" data-panel-hidden="true" tabindex="-1" aria-hidden="true">
+            <div class="side-panel__header">
+                <h4 class="side-panel__title">إضافة وحدة</h4>
+                <button type="button" class="side-panel__close-btn" data-dismiss="panel">
+                    <svg viewBox="0 0 20 20">
+                        <path d="M18.64,20,10,11.36,1.36,20,0,18.64,8.64,10,0,1.36,1.36,0,10,8.64,18.64,0,20,1.36,11.36,10,20,18.64Z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="side-panel__body">
+                <div class="row gx-3">
+                    <div class="col-12 col-md-8 mb-4">
+                        <label class="form-label" for="">اسم الوحدة (ع)</label>
+                        <input class="form-control" type="text" id="" placeholder="أدخل اسم الوحدة">
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label" for="">الرمز المختصر (ع)</label>
+                        <input class="form-control" type="text" id="" placeholder="أدخل الرمز المختصر">
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 col-md-8 mb-4">
+                        <label class="form-label" for="">اسم الوحدة (EN)</label>
+                        <input class="form-control" type="text" id="" placeholder="Enter unit name">
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label" for="">الرمز المختصر (EN)</label>
+                        <input class="form-control" type="text" id="" placeholder="Enter Abbreviation">
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                            <label class="form-check-label" for="">تتيح كسور</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                            <label class="form-check-label" for="">مرتبطة بوحدات أخرى</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side-panel__footer">
+                <button type="button" class="btn btn-primary btn-lg flex-grow-1" data-dismiss="panel">حفظ</button>
+            </div>
+        </div>
     </main>
     <div class="page-preloader">
         <div class="loading-bar">
@@ -737,6 +788,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/components/main-menu.module.js" type="module"></script>
     <script src="js/components/collapsible.module.js" type="module"></script>
+    <script src="js/components/side-panel.module.js" type="module" defer></script>
     <script src="js/components/tags-input.module.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

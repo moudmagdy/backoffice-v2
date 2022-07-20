@@ -75,7 +75,7 @@ button,
 .form-control:not(textarea),
 .form-select,
 .form-tags-control
-    max-height: rem(48px)
+    max-height: rem(40px)
 
 .form-control,
 .form-select,
@@ -720,6 +720,7 @@ button,
 
     .form-control,
     .form-select
+        max-height: rem(36px)
         border: none
 
     .form-select
@@ -870,12 +871,13 @@ button,
 
         .btn
             width: 100%
+            font-size: rem(12px)
             background-color: #fff
             border: none
             border-radius: 0
             border-end-start-radius: rem(10px)
             border-end-end-radius: rem(10px)
-            padding-block: 0.65rem
+            padding-block: 0.75rem
 
             &:hover
                 color: #fff
@@ -886,14 +888,16 @@ button,
 
     &__search-input
         border-bottom: rem(1px) solid rgba(214, 214, 214, 0.15)
-        padding: rem(6px) rem(12px)
+        padding: rem(5px) rem(12px)
 
         .form-control
+            font-size: rem(12px)
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.4 15.53'%3E%3Cpath d='M13.45,2A6.7,6.7,0,0,0,3.34,10.69L0,14.13l1.43,1.4L4.76,12.1A6.7,6.7,0,0,0,13.45,2ZM12,10a4.7,4.7,0,1,1,0-6.65A4.71,4.71,0,0,1,12,10Z' fill='%23d6d6d6'/%3E%3C/svg%3E")
             background-size: rem(15.4px) rem(15.53px)
             background-position: right 0.75rem center
             background-repeat: no-repeat
             border-radius: rem(20px)
+            padding: 0.438rem 0.75rem
             padding-inline-start: 2rem
 
             &::-webkit-search-cancel-button,
@@ -915,12 +919,12 @@ button,
         &__item
             button
                 width: 100%
-                font-size: rem(14px)
+                font-size: rem(12px)
                 text-align: start
                 color: #202223
                 background-color: #fff
                 border: none
-                padding: rem(7.5px) rem(12px)
+                padding: rem(8px) rem(12px)
                 transition: background-color 0.3s ease-in-out
 
                 &:hover
