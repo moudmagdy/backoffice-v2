@@ -15,7 +15,7 @@ function closePanel(e) {
     e.preventDefault();
     this.closest('.side-panel').dataset.panelHidden = 'true';
     this.closest('.side-panel').setAttribute('aria-hidden', 'true');
-    if (document.querySelectorAll('[data-panel-hidden="true"]').length > 1) {
+    if (document.querySelectorAll('[data-panel-hidden="false"]').length == 0) {
         document.querySelector('body').classList.remove('side-panel--shown');
     }
 }

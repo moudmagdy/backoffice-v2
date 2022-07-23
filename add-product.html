@@ -269,7 +269,7 @@
                                                 <div class="col-12 col-sm-6 mb-3">
                                                     <div class="custom-select">
                                                         <div class="custom-select__text-input floating-label-control">
-                                                            <input class="form-control" type="text" name="" id="productUnit">
+                                                            <input class="form-control" type="text" name="" id="productUnit" placeholder="اختر وحدة">
                                                             <label class="form-label" for="productUnit">الوحـدة</label>
                                                         </div>
                                                         <div class="custom-select__dropdown">
@@ -367,55 +367,79 @@
                                         <li class="product-data__item">
                                             <div class="d-flex align-items-center gap-1">
                                                 <div class="form-switch">
-                                                    <input class="form-switch-input" type="checkbox" id="hasVariablesSwitch">
-                                                    <label class="form-switch-btn" for="hasVariablesSwitch"></label>
+                                                    <input class="form-switch-input" type="checkbox" id="hasVariantsSwitch">
+                                                    <label class="form-switch-btn" for="hasVariantsSwitch"></label>
                                                 </div>
-                                                <label class="form-check-label" for="hasVariablesSwitch">لـه متغيرات</label>
+                                                <label class="form-check-label" for="hasVariantsSwitch">لـه متغيرات</label>
                                                 <button type="button" class="info-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="إضافة المتغيرات تتيح إضافة منتجات اخرى تحمل نفس المعلومات الأساسية لكنها تختلف في خصائص اخرى مثل اللون والحجم وغيره"></button>
                                             </div>
-                                            <div class="d-none" data-check="hasVariablesSwitch">
-                                                <ul class="d-flex flex-column list-unstyled items-divided mt-3">
+                                            <div class="d-none" data-check="hasVariantsSwitch">
+                                                <ul class="d-flex flex-column list-unstyled items-divided mt-3 mb-3">
                                                     <li class="row flex-column flex-sm-row g-3">
                                                         <div class="col-12 col-sm-4">
-                                                            <div class="floating-label-control">
-                                                                <select class="form-select" id="variableName">
-                                                                    <option value="" selected>اختر متغير</option>
-                                                                    <option value="">1</option>
-                                                                    <option value="">2</option>
-                                                                </select>
-                                                                <label class="form-label" for="variableName">اسم المتغير</label>
+                                                            <div class="custom-select">
+                                                                <div class="custom-select__text-input floating-label-control">
+                                                                    <input class="form-control" type="text" name="" id="VariantName" placeholder="اختر متغير">
+                                                                    <label class="form-label" for="VariantName">اسم المتغير</label>
+                                                                </div>
+                                                                <div class="custom-select__dropdown">
+                                                                    <div class="custom-select__search-input">
+                                                                        <input class="form-control" type="search" name="" id="" placeholder="ابحث باسم متغير">
+                                                                    </div>
+                                                                    <ul class="custom-select__list">
+                                                                        <li class="custom-select__list__item">
+                                                                            <button type="button">أحمر</button>
+                                                                        </li>
+                                                                        <li class="custom-select__list__item">
+                                                                            <button type="button">أسود</button>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <button class="btn btn-link with-plus-icon" type="button" data-panel-target="add-variant">إضافة متغير</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-8">
                                                             <div class="floating-label-control">
-                                                                <select class="form-select" id="variableName">
+                                                                <select class="form-select" id="variantName">
                                                                     <option value="" selected>اختر قيم المتغير</option>
                                                                     <option value="">1</option>
                                                                     <option value="">2</option>
                                                                 </select>
-                                                                <label class="form-label" for="variableName">قيم المتغير</label>
+                                                                <label class="form-label" for="variantName">قيم المتغير</label>
                                                             </div>
                                                         </div>
                                                     </li>
                                                     <li class="row flex-column flex-sm-row g-3">
                                                         <div class="col-12 col-sm-4">
-                                                            <div class="floating-label-control">
-                                                                <select class="form-select" id="variableName">
-                                                                    <option value="" selected>اختر متغير</option>
-                                                                    <option value="">1</option>
-                                                                    <option value="">2</option>
-                                                                </select>
-                                                                <label class="form-label" for="variableName">اسم المتغير</label>
+                                                            <div class="custom-select">
+                                                                <div class="custom-select__text-input floating-label-control">
+                                                                    <input class="form-control" type="text" name="" id="VariantName" placeholder="اختر متغير">
+                                                                    <label class="form-label" for="VariantName">اسم المتغير</label>
+                                                                </div>
+                                                                <div class="custom-select__dropdown">
+                                                                    <div class="custom-select__search-input">
+                                                                        <input class="form-control" type="search" name="" id="" placeholder="ابحث باسم متغير">
+                                                                    </div>
+                                                                    <ul class="custom-select__list">
+                                                                        <li class="custom-select__list__item">
+                                                                            <button type="button">أحمر</button>
+                                                                        </li>
+                                                                        <li class="custom-select__list__item">
+                                                                            <button type="button">أسود</button>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <button class="btn btn-link with-plus-icon" type="button" data-panel-target="add-variant">إضافة متغير</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex gap-2 col-12 col-sm-8">
                                                             <div class="floating-label-control flex-grow-1">
-                                                                <select class="form-select" id="variableName">
+                                                                <select class="form-select" id="variantName">
                                                                     <option value="" selected>اختر قيم المتغير</option>
                                                                     <option value="">1</option>
                                                                     <option value="">2</option>
                                                                 </select>
-                                                                <label class="form-label" for="variableName">قيم المتغير</label>
+                                                                <label class="form-label" for="variantName">قيم المتغير</label>
                                                             </div>
                                                             <button type="button" class="remove-btn">
                                                                 <svg viewBox="0 0 20 20">
@@ -500,45 +524,114 @@
                                 <div class="accordion-body">
                                     <div class="row g-3">
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <div class="floating-label-control">
-                                                <select class="form-select" id="">
-                                                    <option value="" selected>1</option>
-                                                    <option value="">2</option>
-                                                    <option value="">3</option>
-                                                </select>
-                                                <label class="form-label" for="">الفئة</label>
+                                            <div class="custom-select">
+                                                <div class="custom-select__text-input floating-label-control">
+                                                    <input class="form-control" type="text" name="" id="category" placeholder="اختر فئة">
+                                                    <label class="form-label" for="category">الفئة</label>
+                                                </div>
+                                                <div class="custom-select__dropdown">
+                                                    <div class="custom-select__search-input">
+                                                        <input class="form-control" type="search" name="" id="" placeholder="ابحث باسم فئة">
+                                                    </div>
+                                                    <ul class="custom-select__list">
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">ألبان</button>
+                                                        </li>
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">عصائر</button>
+                                                        </li>
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">جبن</button>
+                                                        </li>
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">سناكس</button>
+                                                        </li>
+                                                    </ul>
+                                                    <button class="btn btn-link with-plus-icon" type="button" data-panel-target="add-category">إضافة فئة</button>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <div class="floating-label-control">
-                                                <select class="form-select" id="">
-                                                    <option value="" selected>1</option>
-                                                    <option value="">2</option>
-                                                    <option value="">3</option>
-                                                </select>
-                                                <label class="form-label" for="">الفئة الفرعية</label>
+                                            <div class="custom-select">
+                                                <div class="custom-select__text-input floating-label-control">
+                                                    <input class="form-control" type="text" name="" id="subCategory" placeholder="اختر فئة فرعية">
+                                                    <label class="form-label" for="subCategory">الفئة الفرعية</label>
+                                                </div>
+                                                <div class="custom-select__dropdown">
+                                                    <div class="custom-select__search-input">
+                                                        <input class="form-control" type="search" name="" id="" placeholder="ابحث باسم فئة">
+                                                    </div>
+                                                    <ul class="custom-select__list">
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">ألبان</button>
+                                                        </li>
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">عصائر</button>
+                                                        </li>
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">جبن</button>
+                                                        </li>
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">سناكس</button>
+                                                        </li>
+                                                    </ul>
+                                                    <button class="btn btn-link with-plus-icon" type="button" data-panel-target="add-category">إضافة فئة</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row g-3">
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <div class="floating-label-control">
-                                                <select class="form-select" id="">
-                                                    <option value="" selected>1</option>
-                                                    <option value="">2</option>
-                                                    <option value="">3</option>
-                                                </select>
-                                                <label class="form-label" for="">البراند</label>
+                                            <div class="custom-select">
+                                                <div class="custom-select__text-input floating-label-control">
+                                                    <input class="form-control" type="text" name="" id="brand" placeholder="اختر براند">
+                                                    <label class="form-label" for="brand">البراند</label>
+                                                </div>
+                                                <div class="custom-select__dropdown">
+                                                    <div class="custom-select__search-input">
+                                                        <input class="form-control" type="search" name="" id="" placeholder="ابحث باسم براند">
+                                                    </div>
+                                                    <ul class="custom-select__list">
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">نسلة</button>
+                                                        </li>
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">مولتو</button>
+                                                        </li>
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">جهينة</button>
+                                                        </li>
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">المراعى</button>
+                                                        </li>
+                                                    </ul>
+                                                    <button class="btn btn-link with-plus-icon" type="button" data-panel-target="add-brand">إضافة براند</button>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <div class="floating-label-control">
-                                                <select class="form-select" id="">
-                                                    <option value="" selected>1</option>
-                                                    <option value="">2</option>
-                                                    <option value="">3</option>
-                                                </select>
-                                                <label class="form-label" for="">العلامات</label>
+                                            <div class="custom-select">
+                                                <div class="custom-select__text-input floating-label-control">
+                                                    <input class="form-control" type="text" name="" id="tags" placeholder="اختر علامة">
+                                                    <label class="form-label" for="tags">العلامات</label>
+                                                </div>
+                                                <div class="custom-select__dropdown">
+                                                    <div class="custom-select__search-input">
+                                                        <input class="form-control" type="search" name="" id="" placeholder="ابحث باسم علامة">
+                                                    </div>
+                                                    <ul class="custom-select__list">
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">خالى الدسم</button>
+                                                        </li>
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">كامل الدسم</button>
+                                                        </li>
+                                                        <li class="custom-select__list__item">
+                                                            <button type="button">رايب</button>
+                                                        </li>
+                                                    </ul>
+                                                    <button class="btn btn-link with-plus-icon" type="button" data-panel-target="add-tag">إضافة علامة</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -731,39 +824,249 @@
             </div>
             <div class="side-panel__body">
                 <div class="row gx-3">
-                    <div class="col-12 col-md-8 mb-4">
-                        <label class="form-label" for="">اسم الوحدة (ع)</label>
-                        <input class="form-control" type="text" id="" placeholder="أدخل اسم الوحدة">
+                    <div class="col-12 col-md-8 mb-3">
+                        <label class="form-label" for="unitNameAr">اسم الوحدة (ع)</label>
+                        <input class="form-control" type="text" id="unitNameAr" placeholder="أدخل اسم الوحدة">
                     </div>
-                    <div class="col-12 col-md-4 mb-4">
-                        <label class="form-label" for="">الرمز المختصر (ع)</label>
-                        <input class="form-control" type="text" id="" placeholder="أدخل الرمز المختصر">
-                    </div>
-                </div>
-                <div class="row gx-3">
-                    <div class="col-12 col-md-8 mb-4">
-                        <label class="form-label" for="">اسم الوحدة (EN)</label>
-                        <input class="form-control" type="text" id="" placeholder="Enter unit name">
-                    </div>
-                    <div class="col-12 col-md-4 mb-4">
-                        <label class="form-label" for="">الرمز المختصر (EN)</label>
-                        <input class="form-control" type="text" id="" placeholder="Enter Abbreviation">
+                    <div class="col-12 col-md-4 mb-3">
+                        <label class="form-label" for="shortCodeAr">الرمز المختصر (ع)</label>
+                        <input class="form-control" type="text" id="shortCodeAr" placeholder="أدخل الرمز المختصر">
                     </div>
                 </div>
                 <div class="row gx-3">
-                    <div class="col-12 mb-4">
+                    <div class="col-12 col-md-8 mb-3">
+                        <label class="form-label" for="unitNameEn">اسم الوحدة (EN)</label>
+                        <input class="form-control" type="text" id="unitNameEn" placeholder="Enter unit name">
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <label class="form-label" for="shortCodeEn">الرمز المختصر (EN)</label>
+                        <input class="form-control" type="text" id="shortCodeEn" placeholder="Enter Abbreviation">
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="">
-                            <label class="form-check-label" for="">تتيح كسور</label>
+                            <input class="form-check-input" type="checkbox" value="" id="allowFractions">
+                            <label class="form-check-label" for="allowFractions">تتيح كسور</label>
                         </div>
                     </div>
                 </div>
                 <div class="row gx-3">
-                    <div class="col-12 mb-4">
+                    <div class="col-12 mb-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="">
-                            <label class="form-check-label" for="">مرتبطة بوحدات أخرى</label>
+                            <input class="form-check-input" type="checkbox" value="" id="linkedToOtherUnitsCheck">
+                            <label class="form-check-label" for="linkedToOtherUnitsCheck">مرتبطة بوحدات أخرى</label>
                         </div>
+                    </div>
+                </div>
+                <div class="d-none" data-check="linkedToOtherUnitsCheck">
+                    <div class="row gx-3">
+                        <div class="col-12 col-md-5 d-flex align-items-center mb-3">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="linkedToOtherUnitsOptions" id="" value="containing" checked>
+                                <label class="form-check-label" for="">تحتوي على</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="linkedToOtherUnitsOptions" id="" value="part-of">
+                                <label class="form-check-label" for="">جــزء من</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-7 mb-3">
+                            <select class="form-select" aria-label="">
+                                <option selected>اختر الوحدة</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side-panel__footer">
+                <button type="button" class="btn btn-primary btn-lg flex-grow-1" data-dismiss="panel">حفظ</button>
+            </div>
+        </div>
+        <div class="side-panel" data-panel="add-variant" data-panel-hidden="true" tabindex="-1" aria-hidden="true">
+            <div class="side-panel__header">
+                <h4 class="side-panel__title">إضافة متغير</h4>
+                <button type="button" class="side-panel__close-btn" data-dismiss="panel">
+                    <svg viewBox="0 0 20 20">
+                        <path d="M18.64,20,10,11.36,1.36,20,0,18.64,8.64,10,0,1.36,1.36,0,10,8.64,18.64,0,20,1.36,11.36,10,20,18.64Z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="side-panel__body">
+                <div class="row gx-3">
+                    <div class="col-12 mb-3">
+                        <label class="form-label" for="variantNameAr">اسم المتغير (ع)</label>
+                        <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم المتغير">
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-3">
+                        <label class="form-label" for="variantNameEn">اسم المتغير (EN)</label>
+                        <input class="form-control" type="text" id="variantNameEn" placeholder="Enter variant name">
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 col-sm-5 mb-3">
+                        <label class="form-label" for="variantValueAr">قيمة المتغير (ع)</label>
+                        <select class="form-select" id="variantValueAr">
+                            <option value="" selected>اختر قيمة المتغير</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-7 d-flex gap-2 mb-3">
+                        <div class="flex-grow-1">
+                            <label class="form-label" for="variantValueEn">قيمة المتغير (EN)</label>
+                            <select class="form-select" id="variantValueEn">
+                                <option value="" selected>Choose the value of the variant</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <button type="button" class="remove-btn mt-auto">
+                            <svg viewBox="0 0 20 20">
+                                <path d="M2,6H18V19a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1ZM4,8V18H16V8Zm3,2H9v6H7Zm4,0h2v6H11ZM5,3V1A1,1,0,0,1,6,0h8a1,1,0,0,1,1,1V3h5V5H0V3ZM7,2V3h6V2Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-link with-plus-icon">إضافة متغير</button>
+                    </div>
+                </div>
+            </div>
+            <div class="side-panel__footer">
+                <button type="button" class="btn btn-primary btn-lg flex-grow-1" data-dismiss="panel">حفظ</button>
+            </div>
+        </div>
+        <div class="side-panel" data-panel="add-category" data-panel-hidden="true" tabindex="-1" aria-hidden="true">
+            <div class="side-panel__header">
+                <h4 class="side-panel__title">إضافة فئــة</h4>
+                <button type="button" class="side-panel__close-btn" data-dismiss="panel">
+                    <svg viewBox="0 0 20 20">
+                        <path d="M18.64,20,10,11.36,1.36,20,0,18.64,8.64,10,0,1.36,1.36,0,10,8.64,18.64,0,20,1.36,11.36,10,20,18.64Z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="side-panel__body">
+                <div class="row gx-3">
+                    <div class="col-12 mb-3">
+                        <label class="form-label" for="variantNameAr">اسم الفئة (ع)</label>
+                        <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم الفئة">
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-3">
+                        <label class="form-label" for="variantNameEn">اسم الفئة (EN)</label>
+                        <input class="form-control" type="text" id="variantNameEn" placeholder="Enter category name">
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 col-sm-5 mb-3">
+                        <label class="form-label" for="variantValueAr">فئة فرعية (ع)</label>
+                        <select class="form-select" id="variantValueAr">
+                            <option value="" selected>أدخل فئة فرعية</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-7 d-flex gap-2 mb-3">
+                        <div class="flex-grow-1">
+                            <label class="form-label" for="variantValueEn">فئة فرعية (EN)</label>
+                            <select class="form-select" id="variantValueEn">
+                                <option value="" selected>Enter subcategory</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 col-sm-5 mb-3">
+                        <label class="form-label" for="variantValueAr">فئة فرعية (ع)</label>
+                        <select class="form-select" id="variantValueAr">
+                            <option value="" selected>أدخل فئة فرعية</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-7 d-flex gap-2 mb-3">
+                        <div class="flex-grow-1">
+                            <label class="form-label" for="variantValueEn">فئة فرعية (EN)</label>
+                            <select class="form-select" id="variantValueEn">
+                                <option value="" selected>Enter subcategory</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <button type="button" class="remove-btn mt-auto" title="حذف">
+                            <svg viewBox="0 0 20 20">
+                                <path d="M2,6H18V19a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1ZM4,8V18H16V8Zm3,2H9v6H7Zm4,0h2v6H11ZM5,3V1A1,1,0,0,1,6,0h8a1,1,0,0,1,1,1V3h5V5H0V3ZM7,2V3h6V2Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-link with-plus-icon">إضافة فئة فرعية</button>
+                    </div>
+                </div>
+            </div>
+            <div class="side-panel__footer">
+                <button type="button" class="btn btn-primary btn-lg flex-grow-1" data-dismiss="panel">حفظ</button>
+            </div>
+        </div>
+        <div class="side-panel" data-panel="add-brand" data-panel-hidden="true" tabindex="-1" aria-hidden="true">
+            <div class="side-panel__header">
+                <h4 class="side-panel__title">إضافة براند</h4>
+                <button type="button" class="side-panel__close-btn" data-dismiss="panel">
+                    <svg viewBox="0 0 20 20">
+                        <path d="M18.64,20,10,11.36,1.36,20,0,18.64,8.64,10,0,1.36,1.36,0,10,8.64,18.64,0,20,1.36,11.36,10,20,18.64Z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="side-panel__body">
+                <div class="row gx-3">
+                    <div class="col-12 mb-3">
+                        <label class="form-label" for="variantNameAr">اسم البراند (ع)</label>
+                        <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم البراند">
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-3">
+                        <label class="form-label" for="variantNameEn">اسم البراند (EN)</label>
+                        <input class="form-control" type="text" id="variantNameEn" placeholder="Enter brand name">
+                    </div>
+                </div>
+            </div>
+            <div class="side-panel__footer">
+                <button type="button" class="btn btn-primary btn-lg flex-grow-1" data-dismiss="panel">حفظ</button>
+            </div>
+        </div>
+        <div class="side-panel" data-panel="add-tag" data-panel-hidden="true" tabindex="-1" aria-hidden="true">
+            <div class="side-panel__header">
+                <h4 class="side-panel__title">إضافة علامة</h4>
+                <button type="button" class="side-panel__close-btn" data-dismiss="panel">
+                    <svg viewBox="0 0 20 20">
+                        <path d="M18.64,20,10,11.36,1.36,20,0,18.64,8.64,10,0,1.36,1.36,0,10,8.64,18.64,0,20,1.36,11.36,10,20,18.64Z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="side-panel__body">
+                <div class="row gx-3">
+                    <div class="col-12 mb-3">
+                        <label class="form-label" for="variantNameAr">اسم العلامة (ع)</label>
+                        <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم العلامة">
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-3">
+                        <label class="form-label" for="variantNameEn">اسم العلامة (EN)</label>
+                        <input class="form-control" type="text" id="variantNameEn" placeholder="Enter tag name">
                     </div>
                 </div>
             </div>
@@ -794,7 +1097,9 @@
         document.addEventListener('DOMContentLoaded', () => {
             const hasExpirationDateCheck = document.querySelector('#hasExpirationDate');
             const hasUnitsSwitchCheck = document.querySelector('#hasUnitsSwitch');
-            const hasVariablesSwitchCheck = document.querySelector('#hasVariablesSwitch');
+            const hasVariantsSwitchCheck = document.querySelector('#hasVariantsSwitch');
+            const linkedToOtherUnitsCheck = document.querySelector('#linkedToOtherUnitsCheck');
+
             hasExpirationDateCheck.addEventListener('change', () => {
                 if (hasExpirationDateCheck.checked) {
                     document.querySelector('[data-check="hasExpirationDate"]').classList.remove('d-none');
@@ -809,11 +1114,18 @@
                     document.querySelector('[data-check="hasUnitsSwitch"]').classList.add('d-none');
                 }
             });
-            hasVariablesSwitchCheck.addEventListener('change', () => {
-                if (hasVariablesSwitchCheck.checked) {
-                    document.querySelector('[data-check="hasVariablesSwitch"]').classList.remove('d-none');
+            hasVariantsSwitchCheck.addEventListener('change', () => {
+                if (hasVariantsSwitchCheck.checked) {
+                    document.querySelector('[data-check="hasVariantsSwitch"]').classList.remove('d-none');
                 } else {
-                    document.querySelector('[data-check="hasVariablesSwitch"]').classList.add('d-none');
+                    document.querySelector('[data-check="hasVariantsSwitch"]').classList.add('d-none');
+                }
+            });
+            linkedToOtherUnitsCheck.addEventListener('change', () => {
+                if (linkedToOtherUnitsCheck.checked) {
+                    document.querySelector('[data-check="linkedToOtherUnitsCheck"]').classList.remove('d-none');
+                } else {
+                    document.querySelector('[data-check="linkedToOtherUnitsCheck"]').classList.add('d-none');
                 }
             });
         });

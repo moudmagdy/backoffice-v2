@@ -112,13 +112,20 @@ a
     margin: 0
 
 .items-divided
-    overflow-x: clip
 
     & > *
         &:not(:last-child)
-            border-bottom: rem(0.5px) solid #D6D6D6
+            position: relative
             padding-bottom: rem(15px)
             margin-bottom: rem(15px)
+
+            &::after
+                content: ""
+                position: absolute
+                bottom: 0
+                inset-inline: calc(var(--bs-gutter-x) * 0.5)
+                height: rem(0.5px)
+                background-color: #D6D6D6
 
 .loading
     +flex-center
@@ -468,11 +475,50 @@ a
     span
         color: #FFAA00
 
+.chip
+    display: inline-flex
+    font-size: rem(11px)
+    background-color: #F7F7F7
+    border-radius: rem(14px)
+    padding: 0.36rem 0.625rem
+
+    [dir='rtl'] &
+        font-family: 'NotoSansArabic-Regular', sans-serif
+
+    [dir='ltr'] &
+        font-family: 'NotoSans-Regular', sans-serif
+
 .positive
     +var(color, color-success)
 
 .negative
     +var(color, color-danger)
+
+.available,
+.not-available
+    display: flex
+    align-items: center
+    gap: rem(4px)
+
+    &::before
+        content: ""
+        width: rem(10px)
+        height: rem(10px)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+
+.available
+    +var(color, color-text-primary)
+
+    &::before
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.13 9.3'%3E%3Cpath d='M5,9.3l-5-5L1.13,3.2,5,7l7-7,1.13,1.13Z' transform='translate(0 0)' fill='%23202223'/%3E%3C/svg%3E")
+
+.not-available
+    +var(color, color-danger)
+
+    &::before
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.12 11.12'%3E%3Cpath d='M6.69,5.56,11.12,10,10,11.12,5.56,6.69,1.13,11.12,0,10,4.43,5.56,0,1.13,1.13,0,5.56,4.43,10,0l1.14,1.13Z' transform='translate(0 0)' fill='%23f55f5f'/%3E%3C/svg%3E")
 
 .no-bg
     background-color: transparent !important

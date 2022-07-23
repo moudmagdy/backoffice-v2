@@ -118,11 +118,20 @@ button,
         margin-right: 0
 
         &:checked
-            +var(background-color, color-brand)
             +var(border-color, color-brand)
+
+        &:not([type="radio"])
+            &:checked
+                +var(background-color, color-brand)
 
     &:not(.form-switch &, &[type="radio"])
         border-radius: rem(3px)
+
+    &[type="radio"]
+        &:checked
+            background-color: #fff
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%231877F2'/%3e%3c/svg%3e")
+            background-size: rem(22px)
 
 .form-check-label
     font-size: rem(12px)
@@ -858,7 +867,7 @@ button,
         width: 100%
         background-color: #fff
         border-radius: rem(10px)
-        box-shadow: 0 rem(3px) rem(20px) rgba(0, 0, 0, 0.06)
+        box-shadow: 0 0 rem(20px) rgba(0, 0, 0, 0.08)
         overflow: hidden
         z-index: 10
         opacity: 0
