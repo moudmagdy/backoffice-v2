@@ -815,8 +815,11 @@ a:hover {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-item-align: center;
+      align-self: center;
   font-size: 0.6875rem;
   background-color: #F7F7F7;
+  white-space: nowrap;
   border-radius: 0.875rem;
   padding: 0.36rem 0.625rem;
 }
