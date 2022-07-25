@@ -114,10 +114,12 @@ body {
   font-family: "NotoSans-Regular", sans-serif;
 }
 
-[dir=rtl] .fw-bold {
+[dir=rtl] .fw-bold,
+[dir=rtl] strong {
   font-family: "NotoSansArabic-SemiBold", sans-serif;
 }
-[dir=ltr] .fw-bold {
+[dir=ltr] .fw-bold,
+[dir=ltr] strong {
   font-family: "NotoSans-SemiBold", sans-serif;
 }
 
@@ -3615,6 +3617,28 @@ main header .page-title h1 {
   fill: #FF6B73;
 }
 
+.drag-handle {
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.drag-handle svg {
+  fill: #8C9196;
+  width: 0.625rem;
+  height: 0.8125rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: fill 0.3s ease-in-out;
+  -o-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
+}
+.drag-handle:hover svg {
+  fill: #1877F2;
+  fill: var(--color-brand);
+}
+
 .flex-table {
   position: relative;
   display: -webkit-box;
@@ -4623,6 +4647,11 @@ table.table--with-gaps tbody tr.selected {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 0;
+}
+.side-panel__subtitle {
+  font-family: "GraphikArabic-Medium", sans-serif !important;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
 }
 .side-panel__close-btn {
   display: -webkit-box;

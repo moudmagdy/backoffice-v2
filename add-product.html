@@ -842,27 +842,35 @@
             </div>
             <div class="side-panel__body">
                 <div class="row gx-3">
-                    <div class="col-12 col-md-8 mb-3">
-                        <label class="form-label" for="unitNameAr">اسم الوحدة (ع)</label>
-                        <input class="form-control" type="text" id="unitNameAr" placeholder="أدخل اسم الوحدة">
+                    <div class="col-12 col-md-8 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="unitNameAr" placeholder="أدخل اسم الوحدة">
+                            <label class="form-label" for="unitNameAr">اسم الوحدة (ع)</label>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-4 mb-3">
-                        <label class="form-label" for="shortCodeAr">الرمز المختصر (ع)</label>
-                        <input class="form-control" type="text" id="shortCodeAr" placeholder="أدخل الرمز المختصر">
-                    </div>
-                </div>
-                <div class="row gx-3">
-                    <div class="col-12 col-md-8 mb-3">
-                        <label class="form-label" for="unitNameEn">اسم الوحدة (EN)</label>
-                        <input class="form-control" type="text" id="unitNameEn" placeholder="Enter unit name">
-                    </div>
-                    <div class="col-12 col-md-4 mb-3">
-                        <label class="form-label" for="shortCodeEn">الرمز المختصر (EN)</label>
-                        <input class="form-control" type="text" id="shortCodeEn" placeholder="Enter Abbreviation">
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="shortCodeAr" placeholder="أدخل الرمز المختصر">
+                            <label class="form-label" for="shortCodeAr">الرمز المختصر (ع)</label>
+                        </div>
                     </div>
                 </div>
                 <div class="row gx-3">
-                    <div class="col-12 mb-3">
+                    <div class="col-12 col-md-8 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="unitNameEn" placeholder="Enter unit name">
+                            <label class="form-label" for="unitNameEn">اسم الوحدة (EN)</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="shortCodeEn" placeholder="Enter Abbreviation">
+                            <label class="form-label" for="shortCodeEn">الرمز المختصر (EN)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-4">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="allowFractions">
                             <label class="form-check-label" for="allowFractions">تتيح كسور</label>
@@ -870,7 +878,7 @@
                     </div>
                 </div>
                 <div class="row gx-3">
-                    <div class="col-12 mb-3">
+                    <div class="col-12 mb-4">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="linkedToOtherUnitsCheck">
                             <label class="form-check-label" for="linkedToOtherUnitsCheck">مرتبطة بوحدات أخرى</label>
@@ -879,23 +887,27 @@
                 </div>
                 <div class="d-none" data-check="linkedToOtherUnitsCheck">
                     <div class="row gx-3">
-                        <div class="col-12 col-md-5 d-flex align-items-center mb-3">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="linkedToOtherUnitsOptions" id="" value="containing" checked>
-                                <label class="form-check-label" for="">تحتوي على</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="linkedToOtherUnitsOptions" id="" value="part-of">
-                                <label class="form-check-label" for="">جــزء من</label>
+                        <div class="col-12 col-md-6 mb-4">
+                            <div class="floating-label-control">
+                                <select class="form-select">
+                                    <option selected>اختر الوحدة</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <label class="form-label" for="">الوحدة الأكبـر</label>
                             </div>
                         </div>
-                        <div class="col-12 col-md-7 mb-3">
-                            <select class="form-select" aria-label="">
-                                <option selected>اختر الوحدة</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                        <div class="col-12 col-md-6 mb-4">
+                            <div class="floating-label-control">
+                                <select class="form-select">
+                                    <option selected>اختر الوحدة</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <label class="form-label" for="">الوحدة الأصغر</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -915,45 +927,125 @@
             </div>
             <div class="side-panel__body">
                 <div class="row gx-3">
-                    <div class="col-12 mb-3">
-                        <label class="form-label" for="variantNameAr">اسم المتغير (ع)</label>
-                        <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم المتغير">
-                    </div>
-                </div>
-                <div class="row gx-3">
-                    <div class="col-12 mb-3">
-                        <label class="form-label" for="variantNameEn">اسم المتغير (EN)</label>
-                        <input class="form-control" type="text" id="variantNameEn" placeholder="Enter variant name">
-                    </div>
-                </div>
-                <div class="row gx-3">
-                    <div class="col-12 col-sm-5 mb-3">
-                        <label class="form-label" for="variantValueAr">قيمة المتغير (ع)</label>
-                        <select class="form-select" id="variantValueAr">
-                            <option value="" selected>اختر قيمة المتغير</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                        </select>
-                    </div>
-                    <div class="col-12 col-sm-7 d-flex gap-2 mb-3">
-                        <div class="flex-grow-1">
-                            <label class="form-label" for="variantValueEn">قيمة المتغير (EN)</label>
-                            <select class="form-select" id="variantValueEn">
-                                <option value="" selected>Choose the value of the variant</option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                            </select>
+                    <div class="col-12 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم المتغير">
+                            <label class="form-label" for="variantNameAr">اسم المتغير (ع)</label>
                         </div>
-                        <button type="button" class="remove-btn mt-auto">
-                            <svg viewBox="0 0 20 20">
-                                <path d="M2,6H18V19a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1ZM4,8V18H16V8Zm3,2H9v6H7Zm4,0h2v6H11ZM5,3V1A1,1,0,0,1,6,0h8a1,1,0,0,1,1,1V3h5V5H0V3ZM7,2V3h6V2Z"></path>
-                            </svg>
-                        </button>
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="variantNameEn" placeholder="Enter variant name">
+                            <label class="form-label" for="variantNameEn">اسم المتغير (EN)</label>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <button type="button" class="btn btn-link with-plus-icon">إضافة متغير</button>
+                        <h5 class="side-panel__subtitle">قيم الـمتغيـر</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="list-unstyled draggable-list">
+                            <li class="d-flex gap-2 draggable mb-3" draggable="true">
+                                <button type="button" class="drag-handle">
+                                    <svg viewBox="0 0 12 16">
+                                        <path d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0ZM2,6A2,2,0,1,1,0,8,2,2,0,0,1,2,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,2,12ZM10,0A2,2,0,1,1,8,2,2,2,0,0,1,10,0Zm0,6A2,2,0,1,1,8,8,2,2,0,0,1,10,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,10,12Z"></path>
+                                    </svg>
+                                </button>
+                                <div class="floating-label-control">
+                                    <select class="form-select" id="variantValueAr">
+                                        <option value="" selected>اختر قيمة المتغير</option>
+                                        <option value="">كبير</option>
+                                        <option value="">متوسط</option>
+                                        <option value="">صغير</option>
+                                    </select>
+                                    <label class="form-label" for="variantValueAr">قيمة المتغير (ع)</label>
+                                </div>
+                                <div class="floating-label-control">
+                                    <select class="form-select" id="variantValueEn">
+                                        <option value="" selected>Choose the value of the variant</option>
+                                        <option value="">Large</option>
+                                        <option value="">Medium</option>
+                                        <option value="">Small</option>
+                                    </select>
+                                    <label class="form-label" for="variantValueEn">قيمة المتغير (EN)</label>
+                                </div>
+                                <button type="button" class="remove-btn mt-auto">
+                                    <svg viewBox="0 0 20 20">
+                                        <path d="M2,6H18V19a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1ZM4,8V18H16V8Zm3,2H9v6H7Zm4,0h2v6H11ZM5,3V1A1,1,0,0,1,6,0h8a1,1,0,0,1,1,1V3h5V5H0V3ZM7,2V3h6V2Z"></path>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="d-flex gap-2 draggable mb-3" draggable="true">
+                                <button type="button" class="drag-handle">
+                                    <svg viewBox="0 0 12 16">
+                                        <path d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0ZM2,6A2,2,0,1,1,0,8,2,2,0,0,1,2,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,2,12ZM10,0A2,2,0,1,1,8,2,2,2,0,0,1,10,0Zm0,6A2,2,0,1,1,8,8,2,2,0,0,1,10,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,10,12Z"></path>
+                                    </svg>
+                                </button>
+                                <div class="floating-label-control">
+                                    <select class="form-select" id="variantValueAr">
+                                        <option value="" selected>اختر قيمة المتغير</option>
+                                        <option value="">كبير</option>
+                                        <option value="">متوسط</option>
+                                        <option value="">صغير</option>
+                                    </select>
+                                    <label class="form-label" for="variantValueAr">قيمة المتغير (ع)</label>
+                                </div>
+                                <div class="floating-label-control">
+                                    <select class="form-select" id="variantValueEn">
+                                        <option value="" selected>Choose the value of the variant</option>
+                                        <option value="">Large</option>
+                                        <option value="">Medium</option>
+                                        <option value="">Small</option>
+                                    </select>
+                                    <label class="form-label" for="variantValueEn">قيمة المتغير (EN)</label>
+                                </div>
+                                <button type="button" class="remove-btn mt-auto">
+                                    <svg viewBox="0 0 20 20">
+                                        <path d="M2,6H18V19a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1ZM4,8V18H16V8Zm3,2H9v6H7Zm4,0h2v6H11ZM5,3V1A1,1,0,0,1,6,0h8a1,1,0,0,1,1,1V3h5V5H0V3ZM7,2V3h6V2Z"></path>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="d-flex gap-2 draggable mb-3" draggable="true">
+                                <button type="button" class="drag-handle">
+                                    <svg viewBox="0 0 12 16">
+                                        <path d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0ZM2,6A2,2,0,1,1,0,8,2,2,0,0,1,2,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,2,12ZM10,0A2,2,0,1,1,8,2,2,2,0,0,1,10,0Zm0,6A2,2,0,1,1,8,8,2,2,0,0,1,10,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,10,12Z"></path>
+                                    </svg>
+                                </button>
+                                <div class="floating-label-control">
+                                    <select class="form-select" id="variantValueAr">
+                                        <option value="" selected>اختر قيمة المتغير</option>
+                                        <option value="">كبير</option>
+                                        <option value="">متوسط</option>
+                                        <option value="">صغير</option>
+                                    </select>
+                                    <label class="form-label" for="variantValueAr">قيمة المتغير (ع)</label>
+                                </div>
+                                <div class="floating-label-control">
+                                    <select class="form-select" id="variantValueEn">
+                                        <option value="" selected>Choose the value of the variant</option>
+                                        <option value="">Large</option>
+                                        <option value="">Medium</option>
+                                        <option value="">Small</option>
+                                    </select>
+                                    <label class="form-label" for="variantValueEn">قيمة المتغير (EN)</label>
+                                </div>
+                                <button type="button" class="remove-btn mt-auto">
+                                    <svg viewBox="0 0 20 20">
+                                        <path d="M2,6H18V19a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1ZM4,8V18H16V8Zm3,2H9v6H7Zm4,0h2v6H11ZM5,3V1A1,1,0,0,1,6,0h8a1,1,0,0,1,1,1V3h5V5H0V3ZM7,2V3h6V2Z"></path>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-link with-plus-icon">إضافة قيمة</button>
                     </div>
                 </div>
             </div>
@@ -972,65 +1064,87 @@
             </div>
             <div class="side-panel__body">
                 <div class="row gx-3">
-                    <div class="col-12 mb-3">
-                        <label class="form-label" for="variantNameAr">اسم الفئة (ع)</label>
-                        <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم الفئة">
-                    </div>
-                </div>
-                <div class="row gx-3">
-                    <div class="col-12 mb-3">
-                        <label class="form-label" for="variantNameEn">اسم الفئة (EN)</label>
-                        <input class="form-control" type="text" id="variantNameEn" placeholder="Enter category name">
-                    </div>
-                </div>
-                <div class="row gx-3">
-                    <div class="col-12 col-sm-5 mb-3">
-                        <label class="form-label" for="variantValueAr">فئة فرعية (ع)</label>
-                        <select class="form-select" id="variantValueAr">
-                            <option value="" selected>أدخل فئة فرعية</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                        </select>
-                    </div>
-                    <div class="col-12 col-sm-7 d-flex gap-2 mb-3">
-                        <div class="flex-grow-1">
-                            <label class="form-label" for="variantValueEn">فئة فرعية (EN)</label>
-                            <select class="form-select" id="variantValueEn">
-                                <option value="" selected>Enter subcategory</option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                            </select>
+                    <div class="col-12 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم الفئة">
+                            <label class="form-label" for="variantNameAr">اسم الفئة (ع)</label>
                         </div>
                     </div>
                 </div>
                 <div class="row gx-3">
-                    <div class="col-12 col-sm-5 mb-3">
-                        <label class="form-label" for="variantValueAr">فئة فرعية (ع)</label>
-                        <select class="form-select" id="variantValueAr">
-                            <option value="" selected>أدخل فئة فرعية</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                        </select>
-                    </div>
-                    <div class="col-12 col-sm-7 d-flex gap-2 mb-3">
-                        <div class="flex-grow-1">
-                            <label class="form-label" for="variantValueEn">فئة فرعية (EN)</label>
-                            <select class="form-select" id="variantValueEn">
-                                <option value="" selected>Enter subcategory</option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                            </select>
+                    <div class="col-12 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="variantNameEn" placeholder="Enter category name">
+                            <label class="form-label" for="variantNameEn">اسم الفئة (EN)</label>
                         </div>
-                        <button type="button" class="remove-btn mt-auto" title="حذف">
-                            <svg viewBox="0 0 20 20">
-                                <path d="M2,6H18V19a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1ZM4,8V18H16V8Zm3,2H9v6H7Zm4,0h2v6H11ZM5,3V1A1,1,0,0,1,6,0h8a1,1,0,0,1,1,1V3h5V5H0V3ZM7,2V3h6V2Z"></path>
-                            </svg>
-                        </button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <button type="button" class="btn btn-link with-plus-icon">إضافة فئة فرعية</button>
+                        <h5 class="side-panel__subtitle">الفـئــــات الفرعيــة</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="list-unstyled draggable-list">
+                            <li class="d-flex gap-2 draggable mb-3" draggable="true">
+                                <button type="button" class="drag-handle">
+                                    <svg viewBox="0 0 12 16">
+                                        <path d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0ZM2,6A2,2,0,1,1,0,8,2,2,0,0,1,2,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,2,12ZM10,0A2,2,0,1,1,8,2,2,2,0,0,1,10,0Zm0,6A2,2,0,1,1,8,8,2,2,0,0,1,10,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,10,12Z"></path>
+                                    </svg>
+                                </button>
+                                <div class="floating-label-control">
+                                    <select class="form-select" id="variantValueAr">
+                                        <option value="" selected>اختر فئة فرعية</option>
+                                        <option value="">1</option>
+                                    </select>
+                                    <label class="form-label" for="variantValueAr">فئة فرعية (ع)</label>
+                                </div>
+                                <div class="floating-label-control">
+                                    <select class="form-select" id="variantValueEn">
+                                        <option value="" selected>Choose the value of the variant</option>
+                                        <option value="">1</option>
+                                    </select>
+                                    <label class="form-label" for="variantValueEn">فئة فرعية (EN)</label>
+                                </div>
+                                <button type="button" class="remove-btn mt-auto">
+                                    <svg viewBox="0 0 20 20">
+                                        <path d="M2,6H18V19a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1ZM4,8V18H16V8Zm3,2H9v6H7Zm4,0h2v6H11ZM5,3V1A1,1,0,0,1,6,0h8a1,1,0,0,1,1,1V3h5V5H0V3ZM7,2V3h6V2Z"></path>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="d-flex gap-2 draggable mb-3" draggable="true">
+                                <button type="button" class="drag-handle">
+                                    <svg viewBox="0 0 12 16">
+                                        <path d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0ZM2,6A2,2,0,1,1,0,8,2,2,0,0,1,2,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,2,12ZM10,0A2,2,0,1,1,8,2,2,2,0,0,1,10,0Zm0,6A2,2,0,1,1,8,8,2,2,0,0,1,10,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,10,12Z"></path>
+                                    </svg>
+                                </button>
+                                <div class="floating-label-control">
+                                    <select class="form-select" id="variantValueAr">
+                                        <option value="" selected>اختر فئة فرعية</option>
+                                        <option value="">1</option>
+                                    </select>
+                                    <label class="form-label" for="variantValueAr">فئة فرعية (ع)</label>
+                                </div>
+                                <div class="floating-label-control">
+                                    <select class="form-select" id="variantValueEn">
+                                        <option value="" selected>Choose the value of the variant</option>
+                                        <option value="">1</option>
+                                    </select>
+                                    <label class="form-label" for="variantValueEn">فئة فرعية (EN)</label>
+                                </div>
+                                <button type="button" class="remove-btn mt-auto">
+                                    <svg viewBox="0 0 20 20">
+                                        <path d="M2,6H18V19a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1ZM4,8V18H16V8Zm3,2H9v6H7Zm4,0h2v6H11ZM5,3V1A1,1,0,0,1,6,0h8a1,1,0,0,1,1,1V3h5V5H0V3ZM7,2V3h6V2Z"></path>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-link with-plus-icon">إضافة فئــة فرعية</button>
                     </div>
                 </div>
             </div>
@@ -1049,15 +1163,19 @@
             </div>
             <div class="side-panel__body">
                 <div class="row gx-3">
-                    <div class="col-12 mb-3">
-                        <label class="form-label" for="variantNameAr">اسم البراند (ع)</label>
-                        <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم البراند">
+                    <div class="col-12 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم البراند">
+                            <label class="form-label" for="variantNameAr">اسم البراند (ع)</label>
+                        </div>
                     </div>
                 </div>
                 <div class="row gx-3">
-                    <div class="col-12 mb-3">
-                        <label class="form-label" for="variantNameEn">اسم البراند (EN)</label>
-                        <input class="form-control" type="text" id="variantNameEn" placeholder="Enter brand name">
+                    <div class="col-12 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="variantNameEn" placeholder="Enter brand name">
+                            <label class="form-label" for="variantNameEn">اسم البراند (EN)</label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1076,15 +1194,19 @@
             </div>
             <div class="side-panel__body">
                 <div class="row gx-3">
-                    <div class="col-12 mb-3">
-                        <label class="form-label" for="variantNameAr">اسم العلامة (ع)</label>
-                        <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم العلامة">
+                    <div class="col-12 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="variantNameAr" placeholder="أدخل اسم العلامة">
+                            <label class="form-label" for="variantNameAr">اسم العلامة (ع)</label>
+                        </div>
                     </div>
                 </div>
                 <div class="row gx-3">
-                    <div class="col-12 mb-3">
-                        <label class="form-label" for="variantNameEn">اسم العلامة (EN)</label>
-                        <input class="form-control" type="text" id="variantNameEn" placeholder="Enter tag name">
+                    <div class="col-12 mb-4">
+                        <div class="floating-label-control">
+                            <input class="form-control" type="text" id="variantNameEn" placeholder="Enter tag name">
+                            <label class="form-label" for="variantNameEn">اسم العلامة (EN)</label>
+                        </div>
                     </div>
                 </div>
             </div>
