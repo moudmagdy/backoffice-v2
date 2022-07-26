@@ -4586,7 +4586,10 @@ table.table--with-gaps tbody tr.selected {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 37.5rem;
+  width: 30rem;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   height: 100%;
   background-color: #fff;
   z-index: 13;
@@ -4613,7 +4616,8 @@ table.table--with-gaps tbody tr.selected {
   min-height: 3.625rem;
   max-height: 3.625rem;
   color: #050505;
-  background-color: #F5F5F5;
+  background-color: #fff;
+  border-bottom: 0.03125rem solid #D6D6D6;
   padding: 0.3125rem 1.25rem;
 }
 .side-panel__header .back-btn {

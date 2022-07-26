@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <title>الـمنتجات المخفية - الادارة</title>
+    <title>الـمنتجات - الادارة</title>
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="css/datepicker-bs5.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -41,10 +41,10 @@
                         </a>
                         <ol class="submenu">
                             <li>
-                                <a href="products-list.html" class="active">المنتجات</a>
+                                <a href="products-list.html">المنتجات</a>
                             </li>
                             <li>
-                                <a href="product-settings.html">إعدادات المنتجات</a>
+                                <a href="product-settings.html" class="active">إعدادات المنتجات</a>
                             </li>
                         </ol>
                     </li>
@@ -88,85 +88,47 @@
             </button>
             <header>
                 <div class="page-title">
-                    <h1>الـمنتجات الـمخفية</h1>
-                </div>
-                <div class="page-controls">
-                    <div class="search-control">
-                        <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم المنتج أو الباركود">
-                        <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
-                    </div>
-                    <button class="page-filters__trigger" type="button"></button>
-                </div>
-                <button type="button" class="help-btn">تريـد مساعدة؟</button>
-                <div class="d-flex gap-2 ms-auto">
-                    <button class="btn btn-outline-primary with-return-icon" type="button" onclick="window.location.href='products-list.html'">عودة للمنتجات النشطة</button>
+                    <h1>إعدادات الـمنتجـات</h1>
                 </div>
             </header>
             <section>
-                <div class="page-filters-container">
-                    <div class="page-filters">
-                        <div class="page-filters__item">
-                            <label class="page-filters__label">متاح للبيع</label>
-                            <select class="form-select">
-                                <option value="" selected>الكل</option>
-                            </select>
-                        </div>
-                        <div class="page-filters__item">
-                            <label class="page-filters__label">الفئة</label>
-                            <select class="form-select">
-                                <option value="" selected>الكل</option>
-                            </select>
-                        </div>
-                        <div class="page-filters__item">
-                            <label class="page-filters__label">العلامة التجارية</label>
-                            <select class="form-select">
-                                <option value="" selected>الكل</option>
-                            </select>
-                        </div>
-                        <div class="page-filters__item">
-                            <label class="page-filters__label">الفئة الفرعية</label>
-                            <select class="form-select">
-                                <option value="" selected>الكل</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
                 <div class="scrollable-content">
                     <div class="table__container">
                         <table>
                             <thead>
                                 <tr>
-                                    <th>المنتـج</th>
-                                    <th>الباركـود</th>
-                                    <th>سعـر التكلفـة</th>
-                                    <th>سعـر البيـع</th>
-                                    <th>كمية المخزون</th>
-                                    <th>علامة تجارية</th>
-                                    <th>الفئة</th>
-                                    <th>الحالة</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <a href="product-view.html">صابون جونسون، قطعة</a>
-                                    </td>
-                                    <td>125847788522</td>
-                                    <td>0.00</td>
-                                    <td>15.00</td>
-                                    <td>85</td>
-                                    <td>جونسون</td>
-                                    <td>عناية بالبشرة</td>
-                                    <td>
-                                        <div class="form-switch">
-                                            <label class="activation-state" for="productSwitch1">غير نشط</label>
-                                            <input class="form-switch-input" type="checkbox" id="productSwitch1">
-                                            <label class="form-switch-btn" for="productSwitch1"></label>
-                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+                <div class="table-pagination">
+                    <div class="table-pagination__navigation">
+                        <button class="table-pagination__btn previous--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة السابقة"></button>
+                        <button class="table-pagination__btn next--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة التالية"></button>
+                    </div>
+                    <div class="table-pagination__pager">
+                        <label class="table-pagination__detail" for="pageNumber">الصفحة</label>
+                        <input class="table-pagination__input" type="text" name="" id="pageNumber" value="1" size="auto">
+                        <span class="table-pagination__detail">من 139</span>
+                    </div>
+                    <div class="table-pagination__rows">
+                        <label class="table-pagination__detail" for="rowsNumber">عدد الصفوف</label>
+                        <select class="table-pagination__select" name="" id="rowsNumber">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
                     </div>
                 </div>
             </section>
@@ -214,43 +176,6 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="activateProductModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-sm">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="d-flex mb-3">
-                            <svg width="85" height="85" viewBox="0 0 96 96">
-                                <path d="M48,0A48,48,0,1,1,0,48,48,48,0,0,1,48,0Z" fill="#F7F7F7"></path>
-                                <path d="M27.18,47.86C29,37.13,37.56,29,47.86,29s18.88,8.13,20.68,18.86c-1.8,10.73-10.37,18.86-20.68,18.86S29,58.59,27.18,47.86ZM47.86,58.34c5.28,0,9.56-4.69,9.56-10.48s-4.28-10.48-9.56-10.48S38.3,42.07,38.3,47.86,42.58,58.34,47.86,58.34Zm0-4.19a6,6,0,0,1-5.73-6.29,6,6,0,0,1,5.73-6.29,6,6,0,0,1,5.74,6.29,6,6,0,0,1-5.74,6.29Z" fill="#1877f2"></path>
-                            </svg>
-                        </div>
-                        <h3 class="modal-subtitle">تنشيط الـمنتج</h3>
-                        <div class="callout callout--info">
-                            <p>هل توافق على تنشيط المنتج؟</p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-link btn-sm" data-bs-dismiss="modal">تراجع</button>
-                        <button type="button" class="btn btn-primary btn-sm" data-toast-toggle="toast" data-toast-target="#activateProductToast" data-bs-dismiss="modal">تنشيط</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="toast-container pb-3 bottom-0 start-50 translate-middle-x">
-            <div class="toast success-toast" id="activateProductToast" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-body">
-                    <div class="toast-details">
-                        <svg width="18" viewBox="0 0 23.27 20.57">
-                            <path d="M0,10.29A12.05,12.05,0,0,1,11.64,0,12.05,12.05,0,0,1,23.27,10.29,12.05,12.05,0,0,1,11.64,20.57,12.05,12.05,0,0,1,0,10.29ZM11.64,16A5.55,5.55,0,0,0,17,10.29a5.56,5.56,0,0,0-5.38-5.72,5.56,5.56,0,0,0-5.38,5.72A5.56,5.56,0,0,0,11.64,16Zm0-2.29a3.33,3.33,0,0,1-3.23-3.42,3.33,3.33,0,0,1,3.23-3.43,3.32,3.32,0,0,1,3.22,3.43,3.33,3.33,0,0,1-3.22,3.43Z" fill="#fff"></path>
-                        </svg>
-                        <p>تم اظهار المنتج بنجاح</p>
-                    </div>
-                </div>
-                <div class="toast-footer">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-            </div>
-        </div>
     </main>
     <div class="page-preloader">
         <div class="loading-bar">
@@ -265,35 +190,11 @@
     </div>
     <script src="js/popper.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/datepicker.min.js" defer></script>
+    <script src="js/ar.js" defer></script>
     <script src="js/components/main-menu.module.js" type="module"></script>
     <script src="js/components/filters.module.js" type="module"></script>
     <script src="js/main.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const activateProductSwitchBtn = document.querySelector('.form-switch-btn');
-            const activateProductModal = new bootstrap.Modal('#activateProductModal');
-            const activateProductBtn = document.querySelector('[data-toast-target="#activateProductToast"]');
-            const activateProductToast = document.querySelector('#activateProductToast');
-
-            activateProductSwitchBtn.addEventListener('click', (e) => {
-                let switchBtnId = activateProductSwitchBtn.getAttribute('for');
-
-                if (!document.querySelector('#' + switchBtnId + '').checked) {
-                    e.preventDefault();
-                    activateProductModal.show();
-                }
-            });
-
-            activateProductBtn.addEventListener('click', () => {
-                document.querySelector('#productSwitch1').checked = true;
-                document.querySelector('[for="productSwitch1"].activation-state').textContent = "نشط"
-            });
-
-            // activateProductToast.addEventListener('hidden.bs.toast', () => {
-            //     window.location.href = "products-list.html";
-            // });
-        });
-    </script>
 </body>
 
 </html>
