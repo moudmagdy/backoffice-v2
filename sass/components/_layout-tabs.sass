@@ -2,7 +2,6 @@
     border-color: #E4E6EB
     margin-bottom: rem(15px)
 
-    .nav-item
     .nav-link
         position: relative
         +flex-center
@@ -52,4 +51,11 @@
             &::after
                 width: 100%
 
-.tab-content
+    header &
+        --bs-nav-tabs-border-width: 0
+        border: none
+        margin-top: rem(-12.5px)
+        margin-bottom: rem(-12.5px)
+
+        .nav-link
+            padding-block: 1.375rem
