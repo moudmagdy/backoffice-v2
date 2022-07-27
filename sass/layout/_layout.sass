@@ -143,6 +143,14 @@ main
         &:last-of-type
             flex-grow: 1
 
+        & > .tab-content
+            height: 100%
+
+            & > .active
+                display: flex
+                flex-direction: column
+                height: inherit
+
         .sub-title
             display: flex
             align-items: center

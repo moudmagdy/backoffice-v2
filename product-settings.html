@@ -90,7 +90,7 @@
                 <div class="page-title">
                     <h1>إعدادات الـمنتجـات</h1>
                 </div>
-                <ul class="nav nav-tabs" id="productSettingsTab" role="tablist">
+                <ul class="nav nav-tabs" id="productSettings-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="units-tab" data-bs-toggle="tab" data-bs-target="#units-tab-pane" type="button" role="tab" aria-controls="units-tab-pane" aria-selected="true">الوحـدات</button>
                     </li>
@@ -109,45 +109,248 @@
                 </ul>
             </header>
             <section>
-                <div class="scrollable-content">
-                    <div class="table__container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="tab-content" id="productSettings-tabContent">
+                    <div class="tab-pane fade show active" id="units-tab-pane" role="tabpanel" aria-labelledby="nav-units-tab" tabindex="0">
+                        <div class="scrollable-content">
+                            <div class="table__container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>الوحـدة</th>
+                                            <th>الرمز المختصر</th>
+                                            <th>الوحدة الأكبر</th>
+                                            <th>الوحدة الأصغر</th>
+                                            <th>تتيح كسور</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>كرتونــة</td>
+                                            <td>كـ</td>
+                                            <td>-</td>
+                                            <td>علبة</td>
+                                            <td>
+                                                <span class="available">نعم</span>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>علبـة</td>
+                                            <td>ع</td>
+                                            <td>كرتونة</td>
+                                            <td>قطعة</td>
+                                            <td>
+                                                <span class="not-available">لا</span>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>قطعــة</td>
+                                            <td>ق</td>
+                                            <td>علبة</td>
+                                            <td>-</td>
+                                            <td>
+                                                <span class="available">نعم</span>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="table-pagination">
+                            <div class="table-pagination__navigation">
+                                <button class="table-pagination__btn previous--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة السابقة"></button>
+                                <button class="table-pagination__btn next--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة التالية"></button>
+                            </div>
+                            <div class="table-pagination__pager">
+                                <label class="table-pagination__detail" for="pageNumber">الصفحة</label>
+                                <input class="table-pagination__input" type="text" name="" id="pageNumber" value="1" size="auto">
+                                <span class="table-pagination__detail">من 139</span>
+                            </div>
+                            <div class="table-pagination__rows">
+                                <label class="table-pagination__detail" for="rowsNumber">عدد الصفوف</label>
+                                <select class="table-pagination__select" name="" id="rowsNumber">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="variants-tab-pane" role="tabpanel" aria-labelledby="nav-variants-tab" tabindex="0">
+                        <div class="scrollable-content">
+                            <div class="table__container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="table-pagination">
+                            <div class="table-pagination__navigation">
+                                <button class="table-pagination__btn previous--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة السابقة"></button>
+                                <button class="table-pagination__btn next--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة التالية"></button>
+                            </div>
+                            <div class="table-pagination__pager">
+                                <label class="table-pagination__detail" for="pageNumber">الصفحة</label>
+                                <input class="table-pagination__input" type="text" name="" id="pageNumber" value="1" size="auto">
+                                <span class="table-pagination__detail">من 139</span>
+                            </div>
+                            <div class="table-pagination__rows">
+                                <label class="table-pagination__detail" for="rowsNumber">عدد الصفوف</label>
+                                <select class="table-pagination__select" name="" id="rowsNumber">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="categories-tab-pane" role="tabpanel" aria-labelledby="nav-categories-tab" tabindex="0">
+                        <div class="scrollable-content">
+                            <div class="table__container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="table-pagination">
+                            <div class="table-pagination__navigation">
+                                <button class="table-pagination__btn previous--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة السابقة"></button>
+                                <button class="table-pagination__btn next--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة التالية"></button>
+                            </div>
+                            <div class="table-pagination__pager">
+                                <label class="table-pagination__detail" for="pageNumber">الصفحة</label>
+                                <input class="table-pagination__input" type="text" name="" id="pageNumber" value="1" size="auto">
+                                <span class="table-pagination__detail">من 139</span>
+                            </div>
+                            <div class="table-pagination__rows">
+                                <label class="table-pagination__detail" for="rowsNumber">عدد الصفوف</label>
+                                <select class="table-pagination__select" name="" id="rowsNumber">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="brands-tab-pane" role="tabpanel" aria-labelledby="nav-brands-tab" tabindex="0">
+                        <div class="scrollable-content">
+                            <div class="table__container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="table-pagination">
+                            <div class="table-pagination__navigation">
+                                <button class="table-pagination__btn previous--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة السابقة"></button>
+                                <button class="table-pagination__btn next--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة التالية"></button>
+                            </div>
+                            <div class="table-pagination__pager">
+                                <label class="table-pagination__detail" for="pageNumber">الصفحة</label>
+                                <input class="table-pagination__input" type="text" name="" id="pageNumber" value="1" size="auto">
+                                <span class="table-pagination__detail">من 139</span>
+                            </div>
+                            <div class="table-pagination__rows">
+                                <label class="table-pagination__detail" for="rowsNumber">عدد الصفوف</label>
+                                <select class="table-pagination__select" name="" id="rowsNumber">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tags-tab-pane" role="tabpanel" aria-labelledby="nav-tags-tab" tabindex="0">
+                        <div class="scrollable-content">
+                            <div class="table__container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="table-pagination">
+                            <div class="table-pagination__navigation">
+                                <button class="table-pagination__btn previous--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة السابقة"></button>
+                                <button class="table-pagination__btn next--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة التالية"></button>
+                            </div>
+                            <div class="table-pagination__pager">
+                                <label class="table-pagination__detail" for="pageNumber">الصفحة</label>
+                                <input class="table-pagination__input" type="text" name="" id="pageNumber" value="1" size="auto">
+                                <span class="table-pagination__detail">من 139</span>
+                            </div>
+                            <div class="table-pagination__rows">
+                                <label class="table-pagination__detail" for="rowsNumber">عدد الصفوف</label>
+                                <select class="table-pagination__select" name="" id="rowsNumber">
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="table-pagination">
-                    <div class="table-pagination__navigation">
-                        <button class="table-pagination__btn previous--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة السابقة"></button>
-                        <button class="table-pagination__btn next--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة التالية"></button>
-                    </div>
-                    <div class="table-pagination__pager">
-                        <label class="table-pagination__detail" for="pageNumber">الصفحة</label>
-                        <input class="table-pagination__input" type="text" name="" id="pageNumber" value="1" size="auto">
-                        <span class="table-pagination__detail">من 139</span>
-                    </div>
-                    <div class="table-pagination__rows">
-                        <label class="table-pagination__detail" for="rowsNumber">عدد الصفوف</label>
-                        <select class="table-pagination__select" name="" id="rowsNumber">
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
-                        </select>
-                    </div>
-                </div>
+
             </section>
         </div>
         <div class="notifications-panel">

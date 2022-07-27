@@ -2487,6 +2487,19 @@ main header .page-title h1 {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.single-column-layout > section > .tab-content {
+  height: 100%;
+}
+.single-column-layout > section > .tab-content > .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: inherit;
+}
 .single-column-layout > section .sub-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8433,47 +8446,6 @@ section .page-card:nth-last-child(-n+2) {
 .client__data .client__name a:hover {
   color: #1877F2;
   color: var(--color-brand);
-}
-
-.table__actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1.25rem;
-}
-
-.edit-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.3125rem;
-  text-decoration: none;
-}
-.edit-btn span {
-  font-size: 0.75rem;
-  color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: color 0.3s;
-  -o-transition: color 0.3s;
-  transition: color 0.3s;
-}
-.edit-btn svg {
-  width: 1.125rem;
-  height: 1.125rem;
-  fill: #CBD0D6;
-  -webkit-transition: fill 0.3s;
-  -o-transition: fill 0.3s;
-  transition: fill 0.3s;
-}
-.edit-btn:hover span {
-  color: #1877F2;
-  color: var(--color-brand);
-}
-.edit-btn:hover svg {
-  fill: #1877F2;
-  fill: var(--color-brand);
 }
 
 [dir=rtl] .client__phone,

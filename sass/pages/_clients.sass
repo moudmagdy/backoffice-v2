@@ -172,34 +172,6 @@
             &:hover
                 +var(color, color-brand)
 
-.table__actions
-    display: flex
-    gap: rem(20px)
-
-.edit-btn
-    display: flex
-    align-items: center
-    gap: rem(5px)
-    text-decoration: none
-
-    span
-        font-size: rem(12px)
-        color: rgba(0, 0, 0, 0.5)
-        transition: color 0.3s
-
-    svg
-        width: rem(18px)
-        height: rem(18px)
-        fill: #CBD0D6
-        transition: fill 0.3s
-
-    &:hover
-        span
-            +var(color, color-brand)
-
-        svg
-            +var(fill, color-brand)
-
 .client__phone,
 .invoices-number
     [dir="rtl"] &
