@@ -14,7 +14,8 @@
 @import './components/buttons';
 @import './components/flex-table';
 @import './components/modal-reset';
-@import './components/search-bar';
+@import './components/search-control';
+@import './components/sub-header';
 @import './components/table';
 @import './components/layout-tabs';
 @import './components/page-navigation';
@@ -36,11 +37,12 @@
 @import './components/help-btn';
 @import './components/accordion';
 @import './components/table-pagination';
+@import './components/tags-bar';
 
+@import './pages/product';
+@import './pages/product-catalogue';
 @import './pages/login';
 @import './pages/home';
-@import './pages/products';
-@import './pages/product';
 @import './pages/clients';
 @import './pages/add-product';
 @import './pages/purchases';

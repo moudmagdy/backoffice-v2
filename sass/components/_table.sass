@@ -1,6 +1,7 @@
 .table__container
     width: 100%
     padding-inline: rem(14px)
+    padding-top: rem(5px)
 
 table
     position: relative
@@ -44,10 +45,10 @@ table
                 +var(color, color-brand)
 
             [dir="rtl"] &
-                font-family: 'NotoSansArabic-SemiBold', sans-serif
+                font-family: 'NotoSansArabic-Medium', sans-serif
 
             [dir="ltr"] &
-                font-family: 'NotoSans-SemiBold', sans-serif
+                font-family: 'NotoSans-Medium', sans-serif
 
     &:not(.table--with-gaps)
         width: 100%
@@ -157,4 +158,17 @@ table
 
                     box-shadow: 0 0 0 1.5px $color-brand
 
-.table__actions
+.table-actions
+    display: flex
+    gap: rem(25px)
+
+    &__btn
+        background-color: transparent
+        border: none
+        padding: 0
+
+        svg
+            width: rem(15px)
+            height: rem(15px)
+            object-fit: contain
+            +var(fill, color-brand)

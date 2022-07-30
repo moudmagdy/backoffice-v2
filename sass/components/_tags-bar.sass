@@ -1,0 +1,117 @@
+.tags-bar
+    padding: rem(8px) rem(22px)
+
+.filter-tags-container
+    position: relative
+    overflow: hidden
+
+.filter-tags
+    display: flex
+    gap: rem(10px)
+    width: 100%
+    overflow-y: clip
+    overflow-x: auto
+    +scrollbar-hidden
+
+    &__btn
+        display: inline-flex
+        line-height: 1
+        font-size: rem(12px)
+        color: #6D7175
+        background-color: #F7F7F7
+        white-space: nowrap
+        border: none
+        border-radius: rem(18px)
+        padding: rem(12px) rem(10px)
+        transition: all 0.3s ease-in-out
+
+        &:hover
+            +var(color, color-brand)
+
+        &.active
+            +var(color, color-brand)
+            background-color: #EDF6FF
+
+    &__nav
+        position: absolute
+        inset: 0
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        pointer-events: none
+        z-index: 1
+
+        &::after,
+        &::before
+            content: ""
+            position: absolute
+            width: rem(120px)
+            height: 100%
+            pointer-events: none
+            z-index: -1
+            transition: all 0.3s ease-in-out
+
+            [dir="ltr"] &
+                transform: scaleX(-1)
+
+        &::before
+            inset-inline-start: 0
+            background-image: linear-gradient(to left, #fff , rgba(255, 255, 255, 0.6), transparent)
+
+        &::after
+            inset-inline-end: 0
+            background-image: linear-gradient(to right, #fff , rgba(255, 255, 255, 0.6), transparent)
+
+    &__nav-btn
+        +inline-flex-center
+        width: rem(30px)
+        height: rem(30px)
+        background-color: #F7F7F7
+        border: none
+        border-radius: 50%
+        pointer-events: auto
+        padding: 0
+        transition: all 0.3s ease-in-out
+
+        svg
+            width: rem(10px)
+            height: rem(10px)
+            object-fit: contain
+            object-position: center
+            fill: #202223
+            transition: fill 0.3s ease-in-out
+
+            [dir="ltr"] &
+                transform: scaleX(-1)
+
+        &.btn--prev
+            svg
+                margin-inline-end: 2px
+
+        &.btn--next
+            svg
+                margin-inline-start: 2px
+
+        &:hover
+            +var(background-color, color-brand)
+
+            svg
+                fill: #fff
+
+    &__nav
+        &.prev-disabled
+            &::before
+                opacity: 0
+
+            .btn--prev
+                opacity: 0
+                pointer-events: none
+
+        &.next-disabled
+            &::after
+                opacity: 0
+
+            .btn--next
+                opacity: 0
+                pointer-events: none

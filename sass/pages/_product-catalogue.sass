@@ -1,0 +1,122 @@
+.product-catalogue-page
+
+    .catalogue-pay-btn
+        display: flex
+        align-items: center
+        gap: rem(40px)
+        line-height: 1.75
+        font-size: rem(12px)
+
+        .product-label
+            opacity: 0.5
+
+        .total-price
+            position: relative
+            display: inline-flex
+            align-items: center
+            padding-inline-start: rem(10px)
+            margin-inline-start: rem(10px)
+
+            &::before
+                content: ""
+                position: absolute
+                inset-inline-start: 0
+                width: rem(1px)
+                height: rem(10px)
+                background-color: rgba(255, 255, 255, 0.5)
+
+    .catalogue-products
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(212px, 1fr))
+        gap: rem(18px)
+        width: 100%
+        padding-inline: rem(14px)
+        padding-top: rem(5px)
+
+        &__card
+            position: relative
+            display: flex
+            align-items: center
+            gap: rem(10px)
+            background-color: #F7F7F7
+            border: rem(2px) solid #F7F7F7
+            border-radius: rem(12px)
+            cursor: pointer
+            padding: rem(10px)
+            transition: border-color 0.3s ease-in-out
+
+            &.selected
+                +var(border-color, color-brand)
+
+            &__image
+                width: rem(75px)
+                height: rem(75px)
+                background-color: rgba(223, 223, 223, 0.4)
+                border-radius: rem(8px)
+
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: contain
+                    border-radius: rem(8px)
+                    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.09))
+
+            &__details
+                display: flex
+                flex-direction: column
+                gap: rem(5px)
+
+            &__title
+                font-size: rem(12px)
+                margin: 0
+
+            &__btn
+                position: relative
+                max-width: rem(70px)
+                line-height: 1
+                font-size: rem(10px)
+                text-align: start
+                +var(color, color-brand)
+                background-color: #E1ECFA
+                border: none
+                border-radius: rem(11px)
+                padding: rem(6px) rem(8px)
+
+                [dir="rtl"] &
+                    font-family: 'NotoSansArabic-Medium', sans-serif
+
+                [dir="ltr"] &
+                    font-family: 'NotoSans-Medium', sans-serif
+
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 0
+                    inset-inline-end: 0
+                    +flex-center
+                    width: rem(22px)
+                    height: rem(22px)
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5.92 9.58'%3E%3Cpath d='M4.79,0,5.92,1.13,2.26,4.79,5.92,8.45,4.79,9.58,0,4.79Z' fill='%231877f2'/%3E%3C/svg%3E")
+                    background-repeat: no-repeat
+                    background-size: rem(7px) rem(7px)
+                    background-position: center
+
+            .form-check-input
+                position: absolute
+                top: rem(16px)
+                inset-inline-start: rem(16px)
+                width: rem(16px)
+                height: rem(16px)
+                margin: 0 !important
+
+                &:checked
+                    &[type="checkbox"]
+                        background-size: rem(8.5px) rem(8.5px)
+
+.catalogue-total-count
+    position: relative
+    display: inline-flex
+    font-size: rem(12px)
+    border-inline-start: rem(0.5px) solid rgba(32, 34, 35, 0.25)
+    padding-inline-start: rem(15px)
+    margin-inline-start: rem(15px)

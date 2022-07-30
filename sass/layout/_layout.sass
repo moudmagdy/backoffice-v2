@@ -79,8 +79,10 @@ main
     display: flex
     flex-direction: column
     align-content: flex-start
+    max-width: 1440px
     height: 100%
     padding: rem(20px) rem(60px)
+    margin-inline: auto
     transition: padding 0.3s
 
     @media (max-width: 1200px)
@@ -138,7 +140,6 @@ main
 
         &:first-of-type
             flex-grow: 0
-            padding-top: rem(5px)
 
         &:last-of-type
             flex-grow: 1

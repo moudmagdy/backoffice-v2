@@ -45,6 +45,9 @@
                             <li>
                                 <a href="product-settings.html">إعدادات المنتجات</a>
                             </li>
+                            <li>
+                                <a href="product-catalogue.html">كتالوج المنتجات</a>
+                            </li>
                         </ol>
                     </li>
                 </ol>
@@ -727,13 +730,14 @@
                     </div>
                 </div>
                 <div class="row gx-3">
-                    <div class="col-12 mb-4">
+                    <div class="col-12">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="allowFractions">
                             <label class="form-check-label" for="allowFractions">تتيح كسور</label>
                         </div>
                     </div>
                 </div>
+                <hr>
                 <div class="row gx-3">
                     <div class="col-12 mb-4">
                         <div class="form-check">
@@ -743,8 +747,9 @@
                     </div>
                 </div>
                 <div class="d-none" data-check="linkedToOtherUnitsCheck">
-                    <div class="row gx-3">
-                        <div class="col-12 col-md-6 mb-4">
+                    <div class="row mb-4">
+                        <label for="" class="col-sm-3 col-form-label">الوحدة الأكبـر</label>
+                        <div class="col-sm-9">
                             <div class="floating-label-control">
                                 <select class="form-select">
                                     <option selected>اختر الوحدة</option>
@@ -752,10 +757,13 @@
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                 </select>
-                                <label class="form-label" for="">الوحدة الأكبـر</label>
+                                <label class="form-label" for="">اسـم الوحدة</label>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 mb-4">
+                    </div>
+                    <div class="row mb-4">
+                        <label for="" class="col-sm-3 col-form-label">الوحدة الأصغر</label>
+                        <div class="col-sm-9">
                             <div class="floating-label-control">
                                 <select class="form-select">
                                     <option selected>اختر الوحدة</option>
@@ -763,7 +771,7 @@
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                 </select>
-                                <label class="form-label" for="">الوحدة الأصغر</label>
+                                <label class="form-label" for="">اسـم الوحدة</label>
                             </div>
                         </div>
                     </div>
@@ -775,7 +783,7 @@
         </div>
         <div class="side-panel" data-panel="add-variant" data-panel-hidden="true" tabindex="-1" aria-hidden="true">
             <div class="side-panel__header">
-                <h4 class="side-panel__title">إضافة متغير</h4>
+                <h4 class="side-panel__title">إضافـة متغـيــر</h4>
                 <button type="button" class="side-panel__close-btn" data-dismiss="panel">
                     <svg viewBox="0 0 20 20">
                         <path d="M18.64,20,10,11.36,1.36,20,0,18.64,8.64,10,0,1.36,1.36,0,10,8.64,18.64,0,20,1.36,11.36,10,20,18.64Z"></path>
@@ -792,13 +800,14 @@
                     </div>
                 </div>
                 <div class="row gx-3">
-                    <div class="col-12 mb-4">
+                    <div class="col-12">
                         <div class="floating-label-control">
                             <input class="form-control" type="text" id="variantNameEn" placeholder="Enter variant name">
                             <label class="form-label" for="variantNameEn">اسم المتغير (EN)</label>
                         </div>
                     </div>
                 </div>
+                <hr>
                 <div class="row">
                     <div class="col-12">
                         <h5 class="side-panel__subtitle">قيم الـمتغيـر</h5>
@@ -808,7 +817,7 @@
                     <div class="col-12">
                         <ul class="list-unstyled draggable-list">
                             <li class="d-flex gap-2 draggable mb-3" draggable="true">
-                                <button type="button" class="drag-handle">
+                                <button type="button" class="drag-handle" data-bs-toggle="tooltip" data-bs-title="اسحب للتحرك">
                                     <svg viewBox="0 0 12 16">
                                         <path d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0ZM2,6A2,2,0,1,1,0,8,2,2,0,0,1,2,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,2,12ZM10,0A2,2,0,1,1,8,2,2,2,0,0,1,10,0Zm0,6A2,2,0,1,1,8,8,2,2,0,0,1,10,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,10,12Z"></path>
                                     </svg>
@@ -838,7 +847,7 @@
                                 </button>
                             </li>
                             <li class="d-flex gap-2 draggable mb-3" draggable="true">
-                                <button type="button" class="drag-handle">
+                                <button type="button" class="drag-handle" data-bs-toggle="tooltip" data-bs-title="اسحب للتحرك">
                                     <svg viewBox="0 0 12 16">
                                         <path d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0ZM2,6A2,2,0,1,1,0,8,2,2,0,0,1,2,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,2,12ZM10,0A2,2,0,1,1,8,2,2,2,0,0,1,10,0Zm0,6A2,2,0,1,1,8,8,2,2,0,0,1,10,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,10,12Z"></path>
                                     </svg>
@@ -868,7 +877,7 @@
                                 </button>
                             </li>
                             <li class="d-flex gap-2 draggable mb-3" draggable="true">
-                                <button type="button" class="drag-handle">
+                                <button type="button" class="drag-handle" data-bs-toggle="tooltip" data-bs-title="اسحب للتحرك">
                                     <svg viewBox="0 0 12 16">
                                         <path d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0ZM2,6A2,2,0,1,1,0,8,2,2,0,0,1,2,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,2,12ZM10,0A2,2,0,1,1,8,2,2,2,0,0,1,10,0Zm0,6A2,2,0,1,1,8,8,2,2,0,0,1,10,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,10,12Z"></path>
                                     </svg>
@@ -929,13 +938,14 @@
                     </div>
                 </div>
                 <div class="row gx-3">
-                    <div class="col-12 mb-4">
+                    <div class="col-12">
                         <div class="floating-label-control">
                             <input class="form-control" type="text" id="variantNameEn" placeholder="Enter category name">
                             <label class="form-label" for="variantNameEn">اسم الفئة (EN)</label>
                         </div>
                     </div>
                 </div>
+                <hr>
                 <div class="row">
                     <div class="col-12">
                         <h5 class="side-panel__subtitle">الفـئــــات الفرعيــة</h5>
@@ -945,7 +955,7 @@
                     <div class="col-12">
                         <ul class="list-unstyled draggable-list">
                             <li class="d-flex gap-2 draggable mb-3" draggable="true">
-                                <button type="button" class="drag-handle">
+                                <button type="button" class="drag-handle" data-bs-toggle="tooltip" data-bs-title="اسحب للتحرك">
                                     <svg viewBox="0 0 12 16">
                                         <path d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0ZM2,6A2,2,0,1,1,0,8,2,2,0,0,1,2,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,2,12ZM10,0A2,2,0,1,1,8,2,2,2,0,0,1,10,0Zm0,6A2,2,0,1,1,8,8,2,2,0,0,1,10,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,10,12Z"></path>
                                     </svg>
@@ -971,7 +981,7 @@
                                 </button>
                             </li>
                             <li class="d-flex gap-2 draggable mb-3" draggable="true">
-                                <button type="button" class="drag-handle">
+                                <button type="button" class="drag-handle" data-bs-toggle="tooltip" data-bs-title="اسحب للتحرك">
                                     <svg viewBox="0 0 12 16">
                                         <path d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0ZM2,6A2,2,0,1,1,0,8,2,2,0,0,1,2,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,2,12ZM10,0A2,2,0,1,1,8,2,2,2,0,0,1,10,0Zm0,6A2,2,0,1,1,8,8,2,2,0,0,1,10,6Zm0,6a2,2,0,1,1-2,2A2,2,0,0,1,10,12Z"></path>
                                     </svg>

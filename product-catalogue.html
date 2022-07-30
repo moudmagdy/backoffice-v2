@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <title>الـمنتجات - الادارة</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/datepicker-bs5.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="product-catalogue-page">
+        <div class="main-menu">
+            <div class="main-menu__header">
+                <a href="#" class="main-menu__toggle">
+                    <svg width="34" height="34" viewBox="0 0 34 34">
+                        <path d="M0,1.1h34v4H0V1.1z M0,15h34v4H0V15z M0,28.9h34v4H0V28.9z"></path>
+                    </svg>
+                </a>
+            </div>
+            <nav class="menu__nav">
+                <ol class="menu__list">
+                    <li>
+                        <a href="index.html">
+                            <svg width="34" height="34" viewBox="0 0 34 34">
+                                <path d="M27.8,32.8H6.2c-0.9,0-1.6-0.7-1.5-1.6V16.7H0L16,1.6C16.5,1,17.5,1,18,1.6l16,15.1h-4.6v14.5 C29.4,32.1,28.7,32.8,27.8,32.8z M7.7,29.6h18.5V13.7L17,5l-9.3,8.8V29.6z M17,23.2c-2.2,0.1-4.1-1.6-4.2-3.9 c-0.1-2.2,1.6-4.1,3.9-4.2c2.2-0.1,4.1,1.6,4.2,3.9c0,0.1,0,0.1,0,0.2C20.9,21.3,19.2,23.1,17,23.2z"></path>
+                            </svg>
+                            <span>الرئيسية</span>
+                        </a>
+                    </li>
+                    <li class="has--submenu submenu--opened">
+                        <a href="#" class="active">
+                            <svg width="34" height="34" viewBox="0 0 34 34">
+                                <path d="M3.4,5.2v23.7h27.2V5.2H3.4z M1.7,1.8h30.6c0.9,0,1.7,0.8,1.7,1.7v27.1c0,0.9-0.8,1.7-1.7,1.7c0,0,0,0,0,0H1.7 c-0.9,0-1.7-0.8-1.7-1.7c0,0,0,0,0,0V3.5C0,2.5,0.8,1.8,1.7,1.8C1.7,1.8,1.7,1.8,1.7,1.8z M6.8,8.5h5.1v16.9H6.8L6.8,8.5z M13.6,8.5 H17v16.9h-3.4L13.6,8.5z M18.7,8.5h1.7v16.9h-1.7V8.5z M22.1,8.5h5.1v16.9h-5.1V8.5z"></path>
+                            </svg>
+                            <span>المنتجات</span>
+                        </a>
+                        <ol class="submenu">
+                            <li>
+                                <a href="products-list.html">المنتجات</a>
+                            </li>
+                            <li>
+                                <a href="product-settings.html">إعدادات المنتجات</a>
+                            </li>
+                            <li>
+                                <a href="product-catalogue.html" class="active">كتالوج المنتجات</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </nav>
+            <div class="main-menu__footer">
+                <a href="" class="main-menu__notifications">
+                    <svg width="34" height="34" viewBox="0 0 34 34">
+                        <path d="M29.6,26.4l0.6,0.8c0.3,0.3,0.2,0.8-0.2,1.1c-0.1,0.1-0.3,0.2-0.5,0.2H4.4c-0.4,0-0.8-0.4-0.8-0.8 c0-0.2,0.1-0.3,0.2-0.5l0.6-0.8V12.6C4.4,5.7,10,0,17,0s12.6,5.7,12.6,12.6c0,0,0,0,0,0L29.6,26.4z M13,30H21c0,2.2-1.8,4-4,4 S13,32.2,13,30C13,30,13,30,13,30z"></path>
+                    </svg>
+                    <span>الإشعارات</span>
+                    <span class="notifications-count">12</span>
+                </a>
+                <div class="main-menu__profile">
+                    <a href="">
+                        <img src="https://www.fillmurray.com/36/36" alt="">
+                        <span>حمدي النعسان</span>
+                    </a>
+                    <div class="profile__menu">
+                        <a href="profile.html">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M2 3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993zM4 5v14h16V5H4zm2 2h6v6H6V7zm2 2v2h2V9H8zm-2 6h12v2H6v-2zm8-8h4v2h-4V7zm0 4h4v2h-4v-2z"></path>
+                            </svg>
+                            <span>الملف الشخصي</span>
+                        </a>
+                        <a href="">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12,22C6.5,22,2,17.5,2,12S6.5,2,12,2c3.1,0,6.1,1.5,8,4h-2.7C14,3.1,8.9,3.4,6,6.7S3.4,15.1,6.7,18c3,2.7,7.6,2.7,10.6,0 H20C18.1,20.5,15.1,22,12,22z M19,16v-3h-8v-2h8V8l5,4L19,16z"></path>
+                            </svg>
+                            <span>تسجيل الخروج</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="single-column-layout">
+            <button type="button" class="main-menu__toggle">
+                <svg width="34" height="34" viewBox="0 0 34 34">
+                    <path d="M0,1.1h34v4H0V1.1z M0,15h34v4H0V15z M0,28.9h34v4H0V28.9z"></path>
+                </svg>
+            </button>
+            <header>
+                <div class="page-title">
+                    <h1>إعدادات الـمنتجـات</h1>
+                </div>
+                <div class="search-control">
+                    <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم الفئـة أو الفئـة الفرعية">
+                    <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                </div>
+            </header>
+            <section>
+                <div class="sub-header">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="selectAllCards">
+                        <label class="form-check-label" for="selectAllCards">تحديد الكل</label>
+                    </div>
+                    <span class="catalogue-total-count">73 فئة فرعية = 5820 منتج</span>
+                    <div class="d-flex gap-2 ms-auto">
+                        <button type="button" class="btn btn-primary catalogue-pay-btn">
+                            <span>دفــع وتنـزيل</span>
+                            <span>
+                                <span>0</span>
+                                <span class="product-label">منتج</span>
+                                <span class="total-price">0.00</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tags-bar">
+                    <div class="filter-tags-container">
+                        <div class="filter-tags">
+                            <button type="button" class="filter-tags__btn active">الكل</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                            <button type="button" class="filter-tags__btn">منظفات منزلية</button>
+                        </div>
+                        <div class="filter-tags__nav prev-disabled">
+                            <button type="button" class="filter-tags__nav-btn btn--prev">
+                                <svg viewBox="0 0 8.12 13.41">
+                                    <path d="M1.41,13.41,0,12,5.29,6.71,0,1.41,1.41,0,8.12,6.71Z"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="filter-tags__nav-btn btn--next">
+                                <svg viewBox="0 0 8.12 13.41">
+                                    <path d="M6.71,0,8.12,1.41,2.83,6.71,8.12,12,6.71,13.41,0,6.71Z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="scrollable-content">
+                    <div class="catalogue-products">
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                        <div class="catalogue-products__card">
+                            <div class="catalogue-products__card__image">
+                                <img src="images/dettol.png" alt="">
+                            </div>
+                            <div class="catalogue-products__card__details">
+                                <h4 class="catalogue-products__card__title">منظفات منزلية</h4>
+                                <button type="button" class="catalogue-products__card__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">458</button>
+                            </div>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="notifications-panel">
+            <div class="notifications-panel__header">
+                <h2>التنبيهات</h2>
+                <span class="notifications-panel__count">(5)</span>
+            </div>
+            <div class="notifications-panel__body">
+                <div class="notifications__message new--message">
+                    <div class="notifications__message__header">
+                        <h5 class="notifications__message__title">غلق وردية</h5>
+                        <span class="notifications__message__source">(فرع مدينة نصر / الرئيسي)</span>
+                        <span class="notifications__message__date">منذ 4 دقائق</span>
+                    </div>
+                    <div class="notifications__message__body">
+                        <span class="notifications__message__details">رصيد الغلق <span class="fw-bold">3450.50</span></span>
+                    </div>
+                </div>
+                <div class="notifications__message">
+                    <div class="notifications__message__header">
+                        <h5 class="notifications__message__title">فتح وردية جديدة</h5>
+                        <span class="notifications__message__source">(فرع مدينة نصر / الرئيسي)</span>
+                        <span class="notifications__message__date">منذ 10 ساعات</span>
+                    </div>
+                    <div class="notifications__message__body">
+                        <span class="notifications__message__details">رصيد الفتح <span class="fw-bold">00.00</span></span>
+                    </div>
+                </div>
+                <div class="notifications__message new--message danger">
+                    <div class="notifications__message__header">
+                        <h5 class="notifications__message__title">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12,22C6.5,22,2,17.5,2,12S6.5,2,12,2s10,4.5,10,10S17.5,22,12,22z M12,20c4.4,0,8-3.6,8-8s-3.6-8-8-8s-8,3.6-8,8 S7.6,20,12,20z M11,15h2v2h-2V15z M11,7h2v6h-2V7z"></path>
+                            </svg>
+                            <span>رصيد افتتاحى غير متطابق</span>
+                        </h5>
+                        <span class="notifications__message__source">(فرع مدينة نصر / الرئيسي)</span>
+                        <span class="notifications__message__date">منذ 10 ساعات</span>
+                    </div>
+                    <div class="notifications__message__body">
+                        <span class="notifications__message__details">الموظف <span class="fw-bold">علاء الدين بهجت</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="page-preloader">
+        <div class="loading-bar">
+            <div class="loading-line"></div>
+            <div class="loading-line"></div>
+        </div>
+        <div class="loading-logo">
+            <svg width="28" height="28" viewBox="0 0 28 28">
+                <path d="M5.6,3.7c4-2.6,9.1-2.7,13.2-0.3l-3.4,4.4c-0.9-0.4-1.9-0.7-2.9-0.7c-1.1,0-2.2,0.3-3.1,0.8L5.6,3.7z M12.4,26.4C5.5,26.4,0,20.8,0,14c0-2.3,0.6-4.5,1.8-6.4l4.3,3.9c-1.4,3.5,0.2,7.4,3.7,8.8c1.9,0.8,4.1,0.7,5.8-0.3l0,0h0.1 c1.8-1.1,3-2.9,3.3-5v-0.2h-3c-0.1,0-0.1,0-0.1-0.1s0-0.1,0-0.2l0,0l6.2-8h0.1l0,0l0,0l5.6,8l0,0c0,0,0.1,0.1,0,0.2 c0,0.1-0.1,0.1-0.1,0.1h-3.1V15C24.3,21.3,18.9,26.4,12.4,26.4"></path>
+            </svg>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">منظفات منـزليـة</h5>
+                    <div class="search-control">
+                        <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم الفئـة أو الفئـة الفرعية">
+                        <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column overflow-hidden px-0 pt-0 pb-2 without-gutter">
+                    <div class="sub-header">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="selectAllCards">
+                            <label class="form-check-label" for="selectAllCards">تحديد الكل</label>
+                        </div>
+                        <span class="catalogue-total-count">5820 منتج</span>
+                    </div>
+                    <div class="scrollable-content">
+                        <div class="table__container pt-0">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>المنتـج</th>
+                                        <th>الباركـود</th>
+                                        <th>التكلفة</th>
+                                        <th>البيـع</th>
+                                        <th>البرانـد</th>
+                                        <th>الفئــة</th>
+                                        <th>الفئـة الفرعية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="">صابون جونسون، قطعة</a>
+                                        </td>
+                                        <td>1125330052</td>
+                                        <td>5.75</td>
+                                        <td>7.50</td>
+                                        <td>جونسون&جونسون</td>
+                                        <td>عنايـة بالبشرة</td>
+                                        <td>زيـوت</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="">صابون جونسون، قطعة</a>
+                                        </td>
+                                        <td>1125330052</td>
+                                        <td>5.75</td>
+                                        <td>7.50</td>
+                                        <td>جونسون&جونسون</td>
+                                        <td>عنايـة بالبشرة</td>
+                                        <td>زيـوت</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="">صابون جونسون، قطعة</a>
+                                        </td>
+                                        <td>1125330052</td>
+                                        <td>5.75</td>
+                                        <td>7.50</td>
+                                        <td>جونسون&جونسون</td>
+                                        <td>عنايـة بالبشرة</td>
+                                        <td>زيـوت</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="">صابون جونسون، قطعة</a>
+                                        </td>
+                                        <td>1125330052</td>
+                                        <td>5.75</td>
+                                        <td>7.50</td>
+                                        <td>جونسون&جونسون</td>
+                                        <td>عنايـة بالبشرة</td>
+                                        <td>زيـوت</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="">صابون جونسون، قطعة</a>
+                                        </td>
+                                        <td>1125330052</td>
+                                        <td>5.75</td>
+                                        <td>7.50</td>
+                                        <td>جونسون&جونسون</td>
+                                        <td>عنايـة بالبشرة</td>
+                                        <td>زيـوت</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="">صابون جونسون، قطعة</a>
+                                        </td>
+                                        <td>1125330052</td>
+                                        <td>5.75</td>
+                                        <td>7.50</td>
+                                        <td>جونسون&جونسون</td>
+                                        <td>عنايـة بالبشرة</td>
+                                        <td>زيـوت</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="">صابون جونسون، قطعة</a>
+                                        </td>
+                                        <td>1125330052</td>
+                                        <td>5.75</td>
+                                        <td>7.50</td>
+                                        <td>جونسون&جونسون</td>
+                                        <td>عنايـة بالبشرة</td>
+                                        <td>زيـوت</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="">صابون جونسون، قطعة</a>
+                                        </td>
+                                        <td>1125330052</td>
+                                        <td>5.75</td>
+                                        <td>7.50</td>
+                                        <td>جونسون&جونسون</td>
+                                        <td>عنايـة بالبشرة</td>
+                                        <td>زيـوت</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="">صابون جونسون، قطعة</a>
+                                        </td>
+                                        <td>1125330052</td>
+                                        <td>5.75</td>
+                                        <td>7.50</td>
+                                        <td>جونسون&جونسون</td>
+                                        <td>عنايـة بالبشرة</td>
+                                        <td>زيـوت</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="">صابون جونسون، قطعة</a>
+                                        </td>
+                                        <td>1125330052</td>
+                                        <td>5.75</td>
+                                        <td>7.50</td>
+                                        <td>جونسون&جونسون</td>
+                                        <td>عنايـة بالبشرة</td>
+                                        <td>زيـوت</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="table-pagination">
+                        <div class="table-pagination__navigation">
+                            <button class="table-pagination__btn previous--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة السابقة"></button>
+                            <button class="table-pagination__btn next--btn" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="الصفحة التالية"></button>
+                        </div>
+                        <div class="table-pagination__pager">
+                            <label class="table-pagination__detail" for="pageNumber">الصفحة</label>
+                            <input class="table-pagination__input" type="text" name="" id="pageNumber" value="1" size="auto">
+                            <span class="table-pagination__detail">من 139</span>
+                        </div>
+                        <div class="table-pagination__rows">
+                            <label class="table-pagination__detail" for="rowsNumber">عدد الصفوف</label>
+                            <select class="table-pagination__select" name="" id="rowsNumber">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/popper.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/datepicker.min.js" defer></script>
+    <script src="js/ar.js" defer></script>
+    <script src="js/components/main-menu.module.js" type="module"></script>
+    <script src="js/components/side-panel.module.js" type="module" defer></script>
+    <script src="js/components/filter-tags.module.js" type="module" defer></script>
+    <script src="js/main.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cardChecks = document.querySelectorAll('.catalogue-products__card .form-check-input');
+
+            cardChecks.forEach(check => {
+                check.addEventListener('change', () => {
+                    if (check.checked) {
+                        check.closest('.catalogue-products__card').classList.add('selected');
+                    } else {
+                        check.closest('.catalogue-products__card').classList.remove('selected');
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

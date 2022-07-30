@@ -3,8 +3,6 @@ const searchControlInput = document.querySelector('.search-control__input');
 const searchControlRemoveBtn = document.querySelector('.search-control__remove-btn');
 const labelTriggerModal = document.querySelectorAll('label[data-bs-toggle="modal"]');
 const toastTriggers = document.querySelectorAll('[data-toast-toggle="toast"]');
-
-
 const floatingLabelControls = document.querySelectorAll('.floating-label-control .form-control');
 
 function floatLabels() {

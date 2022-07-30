@@ -333,10 +333,12 @@
             fill: #FF6B73
 
 .drag-handle
+    display: flex
     align-self: center
     background-color: transparent
     border: none
-    padding: 0
+    border-radius: rem(2px)
+    padding: rem(5px) rem(4px)
 
     svg
         fill: #8C9196
@@ -346,5 +348,8 @@
         transition: fill 0.3s ease-in-out
 
     &:hover
+        cursor: grab
+        background-color: #E8E8E8
+
         svg
             +var(fill, color-brand)
