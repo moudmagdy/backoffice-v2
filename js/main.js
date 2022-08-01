@@ -5,6 +5,19 @@ const labelTriggerModal = document.querySelectorAll('label[data-bs-toggle="modal
 const toastTriggers = document.querySelectorAll('[data-toast-toggle="toast"]');
 const floatingLabelControls = document.querySelectorAll('.floating-label-control .form-control');
 
+const headerTabs = document.querySelector('header .nav-tabs');
+const pageDirection = document.querySelector('html').getAttribute('dir');
+const btnPrevDirection = pageDirection == 'rtl' ? 'right' : 'left';
+const btnNextDirection = pageDirection == 'rtl' ? 'left' : 'right';
+
+if (headerTabs) {
+    headerTabs.addEventListener('wheel', (evt) => {
+        evt.preventDefault();
+
+        pageDirection == 'rtl' ? headerTabs.scrollLeft -= evt.deltaY : headerTabs.scrollLeft += evt.deltaY;
+    });
+}
+
 function floatLabels() {
     if (this && this.value) {
         this.closest('.floating-label-control').classList.add('has-value');

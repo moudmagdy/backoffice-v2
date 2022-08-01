@@ -18,6 +18,8 @@ body
         transition: background-color 0.3s
 
 *
+    +scrollbar
+    scroll-behavior: smooth
     outline: none
 
     &:focus
@@ -509,6 +511,7 @@ hr
     display: flex
     align-items: center
     gap: rem(4px)
+    +var(color, color-text-primary)
 
     &::before
         content: ""
@@ -519,16 +522,12 @@ hr
         background-size: contain
 
 .available
-    +var(color, color-text-primary)
-
     &::before
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.13 9.3'%3E%3Cpath d='M5,9.3l-5-5L1.13,3.2,5,7l7-7,1.13,1.13Z' transform='translate(0 0)' fill='%23202223'/%3E%3C/svg%3E")
 
 .not-available
-    +var(color, color-danger)
-
     &::before
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.12 11.12'%3E%3Cpath d='M6.69,5.56,11.12,10,10,11.12,5.56,6.69,1.13,11.12,0,10,4.43,5.56,0,1.13,1.13,0,5.56,4.43,10,0l1.14,1.13Z' transform='translate(0 0)' fill='%23f55f5f'/%3E%3C/svg%3E")
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.12 11.12'%3E%3Cpath d='M6.69,5.56,11.12,10,10,11.12,5.56,6.69,1.13,11.12,0,10,4.43,5.56,0,1.13,1.13,0,5.56,4.43,10,0l1.14,1.13Z' transform='translate(0 0)' fill='%23202223'/%3E%3C/svg%3E")
 
 .no-bg
     background-color: transparent !important

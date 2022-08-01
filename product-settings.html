@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <title>الـمنتجات - الادارة</title>
+    <title>إعدادات المنتجات - الادارة</title>
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="css/datepicker-bs5.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <main class="">
+    <main class="product-settings-page">
         <div class="main-menu">
             <div class="main-menu__header">
                 <a href="#" class="main-menu__toggle">
@@ -115,11 +115,30 @@
                 <div class="tab-content" id="productSettings-tabContent">
                     <div class="tab-pane fade show active" id="units-tab-pane" role="tabpanel" aria-labelledby="nav-units-tab" tabindex="0">
                         <div class="sub-header">
-                            <div class="search-control">
-                                <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم الوحدة">
-                                <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                            <div class="page-controls">
+                                <div class="search-control">
+                                    <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم الوحدة">
+                                    <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                                </div>
+                                <div class="dropdown header__dropdown d-block d-md-none">
+                                    <button type="button" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg width="10" height="2" viewBox="0 0 10 2">
+                                            <path d="M10,1c0,0.6-0.4,1-1,1S8,1.6,8,1s0.4-1,1-1S10,0.4,10,1z M6,1c0,0.6-0.4,1-1,1S4,1.6,4,1s0.4-1,1-1 S6,0.4,6,1z M2,1c0,0.6-0.4,1-1,1S0,1.6,0,1s0.4-1,1-1S2,0.4,2,1z"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="">
+                                        <li>
+                                            <button type="button" class="dropdown-item" data-panel-target="add-unit">
+                                                <svg viewBox="0 0 14 14">
+                                                    <path d="M11,6.78H6.78V11H5.22V6.78H1V5.22H5.22V1H6.78V5.22H11Z"></path>
+                                                </svg>
+                                                <span>إضافة وحـدة</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="d-flex gap-2 ms-auto">
+                            <div class="d-none d-md-flex gap-2 ms-auto">
                                 <button class="btn btn-primary with-plus-icon" type="button" data-panel-target="add-unit">إضافة وحـدة</button>
                             </div>
                         </div>
@@ -239,11 +258,30 @@
                     </div>
                     <div class="tab-pane fade" id="variants-tab-pane" role="tabpanel" aria-labelledby="nav-variants-tab" tabindex="0">
                         <div class="sub-header">
-                            <div class="search-control">
-                                <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم المتغير أو قيمة المتغير">
-                                <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                            <div class="page-controls">
+                                <div class="search-control">
+                                    <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم المتغير أو قيمة المتغير">
+                                    <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                                </div>
+                                <div class="dropdown header__dropdown d-block d-md-none">
+                                    <button type="button" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg width="10" height="2" viewBox="0 0 10 2">
+                                            <path d="M10,1c0,0.6-0.4,1-1,1S8,1.6,8,1s0.4-1,1-1S10,0.4,10,1z M6,1c0,0.6-0.4,1-1,1S4,1.6,4,1s0.4-1,1-1 S6,0.4,6,1z M2,1c0,0.6-0.4,1-1,1S0,1.6,0,1s0.4-1,1-1S2,0.4,2,1z"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="">
+                                        <li>
+                                            <button type="button" class="dropdown-item" data-panel-target="add-variant">
+                                                <svg viewBox="0 0 14 14">
+                                                    <path d="M11,6.78H6.78V11H5.22V6.78H1V5.22H5.22V1H6.78V5.22H11Z"></path>
+                                                </svg>
+                                                <span>إضافة متغير</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="d-flex gap-2 ms-auto">
+                            <div class="d-none d-md-flex gap-2 ms-auto">
                                 <button class="btn btn-primary with-plus-icon" type="button" data-panel-target="add-variant">إضافة متغير</button>
                             </div>
                         </div>
@@ -337,11 +375,30 @@
                     </div>
                     <div class="tab-pane fade" id="categories-tab-pane" role="tabpanel" aria-labelledby="nav-categories-tab" tabindex="0">
                         <div class="sub-header">
-                            <div class="search-control">
-                                <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم الفئـة أو الفئـة الفرعية">
-                                <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                            <div class="page-controls">
+                                <div class="search-control">
+                                    <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم الفئـة أو الفئـة الفرعية">
+                                    <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                                </div>
+                                <div class="dropdown header__dropdown d-block d-md-none">
+                                    <button type="button" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg width="10" height="2" viewBox="0 0 10 2">
+                                            <path d="M10,1c0,0.6-0.4,1-1,1S8,1.6,8,1s0.4-1,1-1S10,0.4,10,1z M6,1c0,0.6-0.4,1-1,1S4,1.6,4,1s0.4-1,1-1 S6,0.4,6,1z M2,1c0,0.6-0.4,1-1,1S0,1.6,0,1s0.4-1,1-1S2,0.4,2,1z"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="">
+                                        <li>
+                                            <button type="button" class="dropdown-item" data-panel-target="add-category">
+                                                <svg viewBox="0 0 14 14">
+                                                    <path d="M11,6.78H6.78V11H5.22V6.78H1V5.22H5.22V1H6.78V5.22H11Z"></path>
+                                                </svg>
+                                                <span>إضافة فئــة</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="d-flex gap-2 ms-auto">
+                            <div class="d-none d-md-flex gap-2 ms-auto">
                                 <button class="btn btn-primary with-plus-icon" type="button" data-panel-target="add-category">إضافة فئــة</button>
                             </div>
                         </div>
@@ -433,11 +490,30 @@
                     </div>
                     <div class="tab-pane fade" id="brands-tab-pane" role="tabpanel" aria-labelledby="nav-brands-tab" tabindex="0">
                         <div class="sub-header">
-                            <div class="search-control">
-                                <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم البرانـد">
-                                <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                            <div class="page-controls">
+                                <div class="search-control">
+                                    <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم البرانـد">
+                                    <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                                </div>
+                                <div class="dropdown header__dropdown d-block d-md-none">
+                                    <button type="button" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg width="10" height="2" viewBox="0 0 10 2">
+                                            <path d="M10,1c0,0.6-0.4,1-1,1S8,1.6,8,1s0.4-1,1-1S10,0.4,10,1z M6,1c0,0.6-0.4,1-1,1S4,1.6,4,1s0.4-1,1-1 S6,0.4,6,1z M2,1c0,0.6-0.4,1-1,1S0,1.6,0,1s0.4-1,1-1S2,0.4,2,1z"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="">
+                                        <li>
+                                            <button type="button" class="dropdown-item" data-panel-target="add-brand">
+                                                <svg viewBox="0 0 14 14">
+                                                    <path d="M11,6.78H6.78V11H5.22V6.78H1V5.22H5.22V1H6.78V5.22H11Z"></path>
+                                                </svg>
+                                                <span>إضافة براند</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="d-flex gap-2 ms-auto">
+                            <div class="d-none d-md-flex gap-2 ms-auto">
                                 <button class="btn btn-primary with-plus-icon" type="button" data-panel-target="add-brand">إضافة براند</button>
                             </div>
                         </div>
@@ -552,11 +628,30 @@
                     </div>
                     <div class="tab-pane fade" id="tags-tab-pane" role="tabpanel" aria-labelledby="nav-tags-tab" tabindex="0">
                         <div class="sub-header">
-                            <div class="search-control">
-                                <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم العلامة">
-                                <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                            <div class="page-controls">
+                                <div class="search-control">
+                                    <input class="search-control__input" type="search" name="AppSearch" placeholder="ابحث باسم العلامة">
+                                    <button class="search-control__remove-btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="إزالة البحث"></button>
+                                </div>
+                                <div class="dropdown header__dropdown d-block d-md-none">
+                                    <button type="button" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg width="10" height="2" viewBox="0 0 10 2">
+                                            <path d="M10,1c0,0.6-0.4,1-1,1S8,1.6,8,1s0.4-1,1-1S10,0.4,10,1z M6,1c0,0.6-0.4,1-1,1S4,1.6,4,1s0.4-1,1-1 S6,0.4,6,1z M2,1c0,0.6-0.4,1-1,1S0,1.6,0,1s0.4-1,1-1S2,0.4,2,1z"></path>
+                                        </svg>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="">
+                                        <li>
+                                            <button type="button" class="dropdown-item" data-panel-target="add-tag">
+                                                <svg viewBox="0 0 14 14">
+                                                    <path d="M11,6.78H6.78V11H5.22V6.78H1V5.22H5.22V1H6.78V5.22H11Z"></path>
+                                                </svg>
+                                                <span>إضافة علامـة</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="d-flex gap-2 ms-auto">
+                            <div class="d-none d-md-flex gap-2 ms-auto">
                                 <button class="btn btn-primary with-plus-icon" type="button" data-panel-target="add-tag">إضافة علامـة</button>
                             </div>
                         </div>
@@ -1125,6 +1220,19 @@
     <script src="js/components/main-menu.module.js" type="module"></script>
     <script src="js/components/side-panel.module.js" type="module" defer></script>
     <script src="js/main.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const linkedToOtherUnitsCheck = document.querySelector('#linkedToOtherUnitsCheck');
+
+            linkedToOtherUnitsCheck.addEventListener('change', () => {
+                if (linkedToOtherUnitsCheck.checked) {
+                    document.querySelector('[data-check="linkedToOtherUnitsCheck"]').classList.remove('d-none');
+                } else {
+                    document.querySelector('[data-check="linkedToOtherUnitsCheck"]').classList.add('d-none');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -13,7 +13,7 @@
         border: none
         border-radius: 0
         padding: rem(20px) rem(25px)
-        transition: all 0.3s ease-in-out
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out
 
         [dir="rtl"] &
             font-family: 'NotoSansArabic-Medium', sans-serif
@@ -53,9 +53,19 @@
 
     header &
         --bs-nav-tabs-border-width: 0
-        border: none
         margin-top: rem(-12.5px)
         margin-bottom: rem(-12.5px)
 
+        @media (max-width: 768px)
+            flex-wrap: nowrap
+            width: 100%
+            overflow-x: auto
+            +scrollbar-hidden
+            margin-top: 0
+            margin-bottom: 0
+
         .nav-link
             padding-block: 1.375rem
+
+            @media (max-width: 768px)
+                padding: rem(15px) rem(25px)

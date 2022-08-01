@@ -90,7 +90,7 @@
             </button>
             <header class="header--floated">
                 <div class="page-title">
-                    <h1>إعدادات الـمنتجـات</h1>
+                    <h1>إضافـة منتـج</h1>
                 </div>
                 <div class="d-flex gap-2 ms-auto">
                     <button type="submit" class="btn btn-primary">حفظ وإنهاء</button>
@@ -114,8 +114,8 @@
                                 <div class="accordion-body p-0 no-bg">
                                     <ul class="product-data">
                                         <li class="product-data__item">
-                                            <div class="row g-3">
-                                                <div class="col-12 col-sm-6 mb-3">
+                                            <div class="row g-3 mb-3">
+                                                <div class="col-12 col-sm-6">
                                                     <div class="floating-label-control">
                                                         <input type="text" class="form-control" id="productName" placeholder="اكتب اسم المنتج">
                                                         <label class="form-label" for="productName">
@@ -124,7 +124,7 @@
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-sm-6 mb-3">
+                                                <div class="col-12 col-sm-6">
                                                     <div class="custom-select">
                                                         <div class="custom-select__text-input floating-label-control">
                                                             <input class="form-control" type="text" name="" id="productUnit" placeholder="اختر وحدة">
@@ -190,51 +190,30 @@
                                                 <button type="button" class="info-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="إضافة الوحدات تتيح إضافة منتجات اخرى مختلفة في الوحدات وتحمل نفس المعلومات الأساسية"></button>
                                             </div>
                                             <div class="d-none" data-check="hasUnitsSwitch">
-                                                <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
-                                                    <div class="col">
-                                                        <div class="floating-label-control">
-                                                            <select class="form-select" id="greatUnit">
-                                                                <option value="" selected>اختر وحدة</option>
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                            </select>
-                                                            <label class="form-label" for="greatUnit">الوحدة الكبرى</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col d-flex align-items-center">
+                                                <div class="row pt-3">
+                                                    <label for="" class="col-sm-3 col-form-label">
+                                                        <span>الوحدة الاساسية</span>
                                                         <img class="mathematical-sign-icon" src="images/equal-sign-icon.svg" alt="=">
-                                                        <div class="floating-label-control">
-                                                            <select class="form-select" id="smallUnit">
-                                                                <option value="" selected>اختر وحدة</option>
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                            </select>
-                                                            <label class="form-label" for="smallUnit">الوحدة الوسطى</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col d-flex align-items-center">
-                                                        <img class="mathematical-sign-icon" src="images/multiply-sign-icon.svg" alt="+">
-                                                        <div class="floating-label-control">
-                                                            <input type="text" class="form-control" id="piecesNumber" placeholder="">
-                                                            <label class="form-label" for="piecesNumber">عدد القطع</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col d-flex align-items-center">
-                                                        <img class="mathematical-sign-icon" src="images/equal-sign-icon.svg" alt="=">
-                                                        <div class="floating-label-control">
-                                                            <select class="form-select" id="smallUnit">
-                                                                <option value="" selected>اختر وحدة</option>
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                            </select>
-                                                            <label class="form-label" for="smallUnit">الوحدة الصغرى</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col d-flex align-items-center">
-                                                        <img class="mathematical-sign-icon" src="images/multiply-sign-icon.svg" alt="+">
-                                                        <div class="floating-label-control">
-                                                            <input type="text" class="form-control" id="piecesNumber" placeholder="">
-                                                            <label class="form-label" for="piecesNumber">عدد القطع</label>
+                                                    </label>
+                                                    <div class="col-sm-9">
+                                                        <div class="row g-3">
+                                                            <div class="col-12 col-sm-4">
+                                                                <div class="floating-label-control">
+                                                                    <input class="form-control" type="text" name="" id="">
+                                                                    <label class="form-label" for="">عدد القطع</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-8">
+                                                                <div class="floating-label-control">
+                                                                    <select class="form-select">
+                                                                        <option selected>اختر الوحدة</option>
+                                                                        <option value="1">One</option>
+                                                                        <option value="2">Two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                                    <label class="form-label" for="">الوحدة</label>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

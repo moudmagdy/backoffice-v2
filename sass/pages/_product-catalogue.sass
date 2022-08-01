@@ -1,11 +1,20 @@
 .product-catalogue-page
+    @media (max-width: 576px)
+        overflow: auto
+
+    .single-column-layout
+        @media (max-width: 576px)
+            height: auto
 
     .catalogue-pay-btn
         display: flex
         align-items: center
-        gap: rem(40px)
+        gap: rem(70px)
         line-height: 1.75
         font-size: rem(12px)
+
+        @media (max-width: 576px)
+            width: 100%
 
         .product-label
             opacity: 0.5
@@ -41,7 +50,6 @@
             background-color: #F7F7F7
             border: rem(2px) solid #F7F7F7
             border-radius: rem(12px)
-            cursor: pointer
             padding: rem(10px)
             transition: border-color 0.3s ease-in-out
 

@@ -13,7 +13,7 @@ main
 
     header
         .page-title
-            flex-basis: rem(150px)
+            flex-basis: rem(165px)
             display: flex
             align-items: center
             height: rem(40px)
@@ -102,7 +102,7 @@ main
         border-radius: rem(8px) rem(8px) 0 0
         z-index: 10
         padding: rem(12.5px) rem(22px)
-        transition: all 0.3s ease-in-out
+        // transition: all 0.3s ease-in-out
 
         &.header--floated
             border-radius: rem(8px)
@@ -200,26 +200,25 @@ main
     gap: rem(15px)
     background-color: transparent
     border-radius: 0
-    overflow: hidden
-    // padding: rem(15px) 0 0
 
     @media (max-width: 1024px)
-        flex-wrap: wrap
+        flex-direction: column
         align-content: flex-start
-        overflow-y: scroll
-        +scrollbar
-        scroll-behavior: smooth
-        padding-inline-end: rem(10px)
         padding-bottom: rem(15px)
 
     .layout__col
         position: relative
         display: flex
         flex-direction: column
-        flex: 1 1 100%
-        overflow-y: auto
-        +scrollbar-hidden
-        scroll-behavior: smooth
+        width: calc(50% - 7.5px)
+
+        @media (max-width: 1024px)
+            width: 100%
+
+        @media (min-width: 1024px)
+            overflow-y: auto
+            +scrollbar-hidden
+            scroll-behavior: smooth
 
         &.has--white-bg
             background-color: #fff
