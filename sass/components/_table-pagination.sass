@@ -5,6 +5,13 @@
     align-items: center
     padding-inline: rem(22px)
     padding-block: rem(20px) rem(10px)
+    margin-top: rem(12px)
+
+    @media (max-width: 576px)
+        gap: rem(10px) rem(20px)
+
+    @media (max-width: 480px)
+        gap: rem(10px) rem(15px)
 
     &::before
         content: ""
@@ -28,18 +35,22 @@
     &__pager
         margin-inline-start: rem(15px)
 
+        @media (max-width: 576px)
+            margin-inline-start: 0
+
     &__rows
         position: relative
         padding-inline-start: rem(15px)
         margin-inline-start: rem(40px)
 
-        @media (max-width: 576px)
-            margin-inline-start: rem(15px)
+        // @media (max-width: 576px)
+        //     margin-inline-start: rem(15px)
 
-        @media (max-width: 480px)
-            flex: 1 1 100%
+        @media (max-width: 576px)
+            // flex: 1 1 100%
             padding-inline-start: 0
-            margin-top: rem(15px)
+            margin-inline-start: 0
+            // margin-top: rem(15px)
 
         &::before
             content: ""
@@ -51,7 +62,7 @@
             background-color: rgba(32, 34, 35, 0.25)
             transform: translateY(-50%)
 
-            @media (max-width: 480px)
+            @media (max-width: 576px)
                 display: none
 
     &__btn
